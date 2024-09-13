@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5fafd;
+}
+
+.learn-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    background-color: #f5fafd;
+}
+
+.text-container {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 48px;
+    color: #1c50ff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #1c50ff;
+    line-height: 1.6;
+}
+
+.pattern-container {
+    max-width: 40%;
+}
+
+.pattern {
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(to bottom right, #1c50ff 25%, transparent 25%),
+        linear-gradient(to top right, #1c50ff 25%, transparent 25%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+/* New Section CSS */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Carousel Section */
+.carousel-section {
+    background-color: #f5fafd;
+    padding: 50px 100px;
+}
+
+.carousel-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+    /* Added border for separator */
+}
+
+.tab {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #1c50ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab:hover {
+    color: #0056b3;
+    /* Slightly darker blue on hover */
+}
+
+.tab.active {
+    border-bottom: 2px solid #1c50ff;
+    color: #1c50ff;
+    font-weight: bold;
+}
+
+.carousel-content {
+    position: relative;
+    padding-top: 20px;
+}
+
+.content-item {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content-item.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.text-and-image {
+    display: flex;
+    background-color: #1c50ff;
+    padding: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    align-items: center;
+    /* Align image and text vertically centered */
+}
+
+.text-and-image .text {
+    flex: 1;
+}
+
+.text-and-image img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.carousel-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* White transparent overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+.hero-button span {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+
+
+/* Ambitious Individuals Section */
+.ambitious-section {
+    background-color: #f5fafd;
+    padding: 100px 0;
+}
+
+.ambitious-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ambitious-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.ambitious-text h1 {
+    font-size: 40px;
+    color: #1c50ff;
+    margin-bottom: 20px;
+}
+
+.ambitious-text p {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.ambitious-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.ambitious-text ul li {
+    font-size: 18px;
+    color: #1c50ff;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.ambitious-text ul li::before {
+    content: '♦';
+    position: absolute;
+    left: 0;
+    color: #1c50ff;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #1c50ff;
+    border: 2px solid #1c50ff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #1c50ff;
+    color: #ffffff;
+}
+
+.ambitious-image {
+    flex: 1;
+    text-align: right;
+}
+
+.ambitious-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Kickstart Your Journey Section */
+.journey-section {
+    background-color: #f5fafd;
+    padding: 100px 0;
+}
+
+.journey-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.journey-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.journey-text h1 {
+    font-size: 40px;
+    color: #1c50ff;
+    margin-bottom: 20px;
+}
+
+.journey-text p {
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.journey-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* Journey Boxes */
+.journey-box {
+    background-color: #1c50ff;
+    color: #ffffff;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 80px; /* Set initial height */
+    transition: max-height 0.4s ease-in-out;
+}
+
+.journey-box.open {
+    max-height: 500px; /* Expand to show content */
+    transition: max-height 0.4s ease-in-out;
+}
+
+.journey-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.journey-box .box-content {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.journey-box.open .box-content {
+    opacity: 1;
+    max-height: 1000px; /* Adjust as per content */
+}
+
+.journey-box:hover {
+    transform: translateY(-10px);
+}
+
+.journey-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.journey-box ul li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.journey-box ul li::before {
+    content: '♦';
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+
+/* Tips for Applying Section */
+.tips-section {
+    padding: 50px 100px;
+    background-color: #f5fafd;
+}
+
+.tips-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tips-section h1 {
+    font-size: 32px;
+    color: #1c50ff;
+    margin-bottom: 30px;
+}
+
+.tip-item {
+    border-bottom: 1px solid #1c50ff;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #1c50ff;
+}
+
+.tip-header span {
+    font-size: 24px;
+}
+
+.tip-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    padding: 0 20px;
+}
+
+.tip-item.active .tip-content {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.tip-item.active .tip-header span {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
