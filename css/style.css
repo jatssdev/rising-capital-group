@@ -1432,6 +1432,7 @@ section .videos .arrows svg {
 
 }
 
+
 .heroCareer .careers h1 span {
     color: var(--primary);
     margin-left: 80px;
@@ -1542,7 +1543,7 @@ section .videos .arrows svg {
     justify-content: space-between;
     align-items: center;
     color: white;
-    height: 40vh;
+    min-height: 40vh;
     background-color: var(--primary);
 }
 
@@ -1634,4 +1635,68 @@ section .videos .arrows svg {
     font-weight: 400;
     color: var(--primary);
     font-size: 45px;
+}
+
+
+@media screen and (max-width:1500px) {
+    .heroCareer .careers h1 {
+        font-size: 3rem;
+
+
+    }
+
+    .heroCareer .careers {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .heroCareer .careers h1 {
+        font-size: 2rem;
+
+
+    }
+    .hero .content h1{
+        font-size: 3rem;
+    }
+
+
+}
+
+@media screen and (max-width:1000px) {
+    .heroCareer .careers {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .heroCareer .careers h1 {
+        font-size: 3rem;
+
+
+    }
+
+
+}
+
+@media screen and (max-width:800px) {
+
+
+    .heroCareer .careers h1 {
+        font-size: 2rem;
+
+
+    }
+    .hero .content h1{
+        font-size: 2rem;
+    }
+
+    .heroCareer .careers h1 span {
+        margin-left: 0;
+    }
+    .creative-testimonial--slider .numberDetails2{
+        flex-direction: column;
+    }
+    .creative-testimonial--slider .numberDetails2 > div{
+        width: 100%;
+    }
 }

@@ -262,14 +262,39 @@ $(document).ready(function () {
             enabled: true,
             onlyInViewport: true,
         },
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 3, // Default value for large screens
+        spaceBetween: 40, // Default value for large screens
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
         effect: 'slide',
+
+        // Add breakpoints for responsive behavior
+        breakpoints: {
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            // when window width is >= 992px (large tablets)
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is >= 768px (tablets)
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is < 768px (mobile phones)
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
     });
+
     // var swiper = new Swiper(".swiper-container-h1", {
     //     direction: "horizontal",
     //     effect: "slide",
