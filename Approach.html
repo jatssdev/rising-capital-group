@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sequential Line Animations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 40px 150px;
+            margin: 0;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: white;
+            color: #0032ff;
+            font-size: 40px;
+            font-weight: bold;
+            height: 200px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Infographic Section */
+        .infographic {
+            font-size: 28px;
+            text-align: left;
+            position: relative;
+            background-color: #000080;
+            color: white;
+            padding-top: 60px;
+            /* Additional padding for spacing */
+            padding-bottom: 60px;
+        }
+
+        /* Wrapper for each statistic */
+        .infographic .stat {
+            position: relative;
+            padding-left: 50px;
+            /* Adjusted padding for spacing */
+            margin: 40px 0;
+        }
+
+        .infographic .number {
+            margin: 0;
+            position: relative;
+        }
+
+        .infographic .label {
+            font-size: 18px;
+            color: lightgreen;
+            margin: 5px 0 0 0;
+        }
+
+        .infographic .number::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            /* Adjusted position for the line */
+            top: 0;
+            width: 2px;
+            background-color: lightgreen;
+            transform-origin: bottom;
+            height: 0%;
+        }
+
+        /* Keyframes for the line animation */
+        @keyframes drawAndHideLine {
+            0% {
+                height: 0%;
+            }
+
+            10% {
+                height: 100%;
+            }
+
+            20% {
+                height: 100%;
+            }
+
+            30% {
+                height: 0%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+
+        /* Total duration of one full cycle */
+        :root {
+            --total-duration: 25s;
+        }
+
+        /* Apply the animation with adjusted delays */
+        .infographic .stat:nth-child(1) .number::before {
+            animation: drawAndHideLine var(--total-duration) infinite;
+            animation-delay: 0s;
+        }
+
+        .infographic .stat:nth-child(2) .number::before {
+            animation: drawAndHideLine var(--total-duration) infinite;
+            animation-delay: calc(-1 * (var(--total-duration) - 5s));
+        }
+
+        .infographic .stat:nth-child(3) .number::before {
+            animation: drawAndHideLine var(--total-duration) infinite;
+            animation-delay: calc(-1 * (var(--total-duration) - 10s));
+        }
+
+        .infographic .stat:nth-child(4) .number::before {
+            animation: drawAndHideLine var(--total-duration) infinite;
+            animation-delay: calc(-1 * (var(--total-duration) - 15s));
+        }
+
+        .infographic .stat:nth-child(5) .number::before {
+            animation: drawAndHideLine var(--total-duration) infinite;
+            animation-delay: calc(-1 * (var(--total-duration) - 20s));
+        }
+
+        /* Entrepreneurial Investing Section */
+        section.entrepreneurial-investing {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+        }
+
+        section.entrepreneurial-investing h2 {
+            color: #000080;
+            margin-bottom: 20px;
+        }
+
+        section.entrepreneurial-investing p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .blocks {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .block {
+            width: 250px;
+            height: 250px;
+            background-color: #0032ff;
+            /* Theme color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .block .plus {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px 150px;
+            background-color: #000080;
+            /* Dark blue background */
+            color: white;
+        }
+
+        .testimonial-image {
+            flex: 1 1 45%;
+            position: relative;
+            height: 300px;
+            background: url('./assets/images/Approach/Ajay-Quote-Card-1920x700_v2-3840x0-c-default.png') no-repeat center center/cover;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        }
+
+        .testimonial-content {
+            flex: 1 1 45%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testimonial-quote {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+
+            .testimonial-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .testimonial-image,
+            .testimonial-content {
+                flex-basis: 100%;
+                max-width: none;
+            }
+
+            .testimonial-image {
+                height: 200px;
+            }
+
+            .blocks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .block {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+
+        /* New Investment Strategies Styles */
+        .investment-strategies {
+            background-color: #ffffff;
+            /* White background */
+            color: #0d3cff;
+            /* Dark text for readability */
+            padding: 40px 150px;
+            /* Consistent with other sections */
+            text-align: left;
+        }
+
+        .investment-strategies h2 {
+            color: #0d3cff;
+            /* Dark blue to match header */
+            margin-bottom: 20px;
+        }
+
+        .investment-strategies p {
+            max-width: 800px;
+            color: #0d3cff;
+            /* Ensuring text does not span too wide */
+            margin-bottom: 30px;
+        }
+
+        .strategy-rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .strategy-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+            /* Full width to accommodate two columns */
+        }
+
+        .strategy {
+            width: 48%;
+            /* Slightly less than half to fit two columns with some space */
+        }
+
+        .strategy h3 {
+            color: #0d3cff;
+            /* Dark blue for titles */
+            margin-bottom: 10px;
+        }
+
+        .strategy p {
+            line-height: 1.6;
+            /* Improved readability */
+            border-bottom: 1px solid #ccc;
+            /* Light gray line under text */
+            padding-bottom: 10px;
+            color: #0d3cff;
+            /* Space below text before the line */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .strategy-row {
+                flex-direction: column;
+            }
+
+            .strategy {
+                width: 100%;
+                /* Each strategy takes full width on small screens */
+                margin-bottom: 20px;
+                /* Space between stacked strategies */
+            }
+        }
+
+
+        /* Styles for Rigorous Approach to Compliance Section */
+        .compliance-section {
+            background-color: #f4f4f4;
+            /* Light grey background for contrast */
+            color: #0d3cff;
+            /* Dark text for readability */
+            padding: 40px 150px;
+            /* Consistent padding with other sections */
+            text-align: left;
+            /* Text alignment */
+        }
+
+        .compliance-section h2 {
+            color: #0d3cff;
+            /* Dark blue for heading */
+            margin-bottom: 20px;
+            /* Space below the heading */
+        }
+
+        .compliance-section p {
+            margin-bottom: 20px;
+            /* Space below each paragraph */
+            max-width: 800px;
+            /* Max width for better readability */
+        }
+
+        .compliance-rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .compliance-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+            /* Full width to accommodate two columns */
+        }
+
+        .compliance-officer {
+            width: 48%;
+            /* Each officer takes slightly less than half the row */
+            margin-bottom: 20px;
+            /* Space between entries */
+        }
+
+        .compliance-officer h3 {
+            color: #0d3cff;
+            /* Dark blue for officer names */
+            margin-bottom: 10px;
+            /* Space below the name */
+        }
+
+        .compliance-officer p {
+            line-height: 1.6;
+            /* Line height for readability */
+            margin-bottom: 10px;
+            /* Space before the link */
+        }
+
+        .compliance-officer a {
+            color: #0d3cff;
+            /* Link color */
+            text-decoration: none;
+            /* No underline */
+        }
+
+        /* Responsive Design for compliance section */
+        @media (max-width: 768px) {
+            .compliance-row {
+                flex-direction: column;
+            }
+
+            .compliance-officer {
+                width: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+
+
+        /* Explore Our Network Section Styles */
+        .explore-network {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust height as needed */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Center the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .explore-network .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the entire section area */
+            z-index: -1;
+            /* Ensure the video stays in the background */
+        }
+
+        .explore-network .content {
+            z-index: 2;
+            /* Higher index to keep content above the video */
+        }
+
+        .explore-network h2 {
+            margin: 0;
+            font-size: 3em;
+            /* Large text size */
+        }
+
+        .explore-network button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            /* Theme blue background */
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .explore-network button:hover {
+            background-color: #004c99;
+            /* Darker blue on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .explore-network {
+                height: 300px;
+                /* Smaller height on mobile devices */
+            }
+
+            .explore-network h2 {
+                font-size: 2em;
+                /* Smaller text on mobile devices */
+            }
+        }
+
+
+        .videoSection {
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        section .videos img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+        }
+
+        section .videos {
+            position: relative;
+        }
+
+        section .videos video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        section .videos .videoModel {
+            background-color: #0000009b;
+            padding: 0;
+
+            height: 100vh;
+            width: 100%;
+            transition: .5s;
+            overflow: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 100;
+        }
+
+        section .videos .videoModel .closebtn {
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        section .videos .videoModel .closebtn svg {
+            height: 50px;
+            stroke: white;
+            width: 50px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <section class="header">
+        <div>
+            Independent decisions, <br>
+            collaborative culture, <br>
+            united mission
+        </div>
+    </section>
+
+    <!-- Infographic Section -->
+    <section class="infographic">
+        <div class="stat">
+            <p class="number">140+</p>
+            <p class="label">EMPLOYEE LOCATIONS</p>
+        </div>
+        <div class="stat">
+            <p class="number">100+</p>
+            <p class="label">GLOBAL EXCHANGES</p>
+        </div>
+        <div class="stat">
+            <p class="number">12M+</p>
+            <p class="label">DAILY AVERAGE TRADES</p>
+        </div>
+        <div class="stat">
+            <p class="number">45+</p>
+            <p class="label">CURRENCIES TRADED IN</p>
+        </div>
+        <div class="stat">
+            <p class="number">5,800+</p>
+            <p class="label">EMPLOYEES GLOBALLY</p>
+        </div>
+    </section>
+
+    <!-- Entrepreneurial Investing Section -->
+    <section class="entrepreneurial-investing">
+        <h2>Entrepreneurial investing at scale</h2>
+        <p>Millennium seeks to empower talented professionals with the sophisticated expertise, resources, and
+            technology to pursue high-quality returns for investors.</p>
+        <div class="blocks">
+            <div class="block">
+                <span class="plus">+</span>
+                Committed to consistency and stability
+            </div>
+            <div class="block">
+                <span class="plus">+</span>
+                Scale and reach
+            </div>
+            <div class="block">
+                <span class="plus">+</span>
+                Specialization and expertise
+            </div>
+            <div class="block">
+                <span class="plus">+</span>
+                Deep investment in technology
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-image">
+            <div class="image-overlay"></div>
+        </div>
+        <div class="testimonial-content">
+            <p class="testimonial-quote">
+                “We are differentiated by our scale, level of specialization, and entrepreneurial culture. This
+                combination enables Millennium to pursue opportunities and remain nimble.”
+            </p>
+            <p class="testimonial-author">
+                Ajay Nagpal<br>
+                President and Chief Operating Officer
+            </p>
+        </div>
+    </section>
+
+
+    <section class="investment-strategies">
+        <h2>Investment strategies</h2>
+        <p>Millennium seeks to pursue a diverse range of investment strategies across industry sectors, asset classes
+            and geographies.</p>
+        <div class="strategy-rows">
+            <div class="strategy-row">
+                <div class="strategy">
+                    <h3>Fundamental Equity</h3>
+                    <p>Conduct fundamental research on companies both as generalists and as specialists within a
+                        particular sector or sub-sector.</p>
+                </div>
+                <div class="strategy">
+                    <h3>Equity Arbitrage</h3>
+                    <p>Pursue a range of systematic and fundamental arbitrage strategies across a company's capital
+                        structure and a variety of derivatives.</p>
+                </div>
+            </div>
+            <div class="strategy-row">
+                <div class="strategy">
+                    <h3>Fixed Income</h3>
+                    <p>Manage various strategies such as rates, macro, credit, mortgages and asset-backed securities.
+                    </p>
+                </div>
+                <div class="strategy">
+                    <h3>Commodities</h3>
+                    <p>Deploy a range of investment strategies across energy, metals, agricultural and soft commodities
+                        markets.</p>
+                </div>
+            </div>
+            <div class="strategy-row">
+                <div class="strategy">
+                    <h3>Quantitative Strategies</h3>
+                    <p>Build and enhance investment processes that are primarily systematically driven and focused on a
+                        variety of asset classes.</p>
+                </div>
+                <!-- Placeholder for an additional strategy if necessary -->
+                <div class="strategy"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="videoSection"></section>
+    <div class="videos">
+        <div class="creative-fullpage--slider">
+            <div class="banner-horizental">
+                <div class="swiper swiper-container-h">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <video autoplay loop muted>
+                                    <source src="./assets/heroVideo1.mp4" type="video/mp4">
+                                </video>
+                                <div class="swiper-content" data-swiper-parallax="2000">
+                                    <div class="title-area">
+                                        <!-- title-area -->
+                                        <p class="tag">OUR VISION</p>
+                                        <a href="#" class="title"> DESIGN </a>
+                                        <!-- title area -->
+                                    </div>
+                                    <p class="disc">
+                                        Credibly leverage existing business experiences through
+                                        <br>
+                                        magnetic mindshare. Synergistically exploit
+                                        <br>
+                                        efficient partnerships world-class applications.
+                                    </p>
+                                    <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn openVideoModel"
+                                            data-video="./assets/heroVideo1.mp4" role="button" href="#0">
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                        class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path
+                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">Take A Look</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <video autoplay loop muted>
+                                    <source src="./assets/heroVideo2.mp4" type="video/mp4">
+                                </video>
+                                <div class="swiper-content" data-swiper-parallax="2000">
+                                    <div class="title-area">
+                                        <!-- title-area -->
+                                        <p class="tag">INSPIRATION</p>
+                                        <a href="#" class="title"> MOTION </a>
+                                        <!-- title area -->
+                                    </div>
+                                    <p class="disc">
+                                        Conveniently formulate progressive users for error-free
+                                        <br>
+                                        interfaces. Monotonectally deploy superior
+                                        <br>
+                                        relationships without seamless infomediaries.
+                                    </p>
+                                    <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn openVideoModel"
+                                            data-video="./assets/heroVideo2.mp4" role="button" href="#0">
+
+
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                        class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path
+                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">See More</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <video autoplay loop muted>
+                                    <source src="./assets/heroVideo1.mp4" type="video/mp4">
+                                </video>
+                                <div class="swiper-content" data-swiper-parallax="2000">
+                                    <div class="title-area">
+                                        <!-- title-area -->
+                                        <a href="#" class="title"> ENGINE </a>
+                                        <!-- title area -->
+                                    </div>
+                                    <p class="disc">
+                                        Conveniently formulate progressive users for error-free
+                                        <br>
+                                        interfaces. Monotonectally deploy superior
+                                        <br>
+                                        relationships without seamless infomediaries.
+                                    </p>
+                                    <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn openVideoModel"
+                                            data-video="./assets/heroVideo1.mp4" role="button" href="#0">
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                        class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path
+                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">Take A Look</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-wrapper creative-button--wrapper">
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="right-arrow" width="30" height="30"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="left-arrow" width="30" height="30"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="slider-pagination-area">
+                        <h5 class="slide-range one">01</h5>
+                        <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
+                            <span class="swiper-pagination-progressbar-fill"
+                                style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 1500ms;"></span>
+                        </div>
+                        <h5 class="slide-range three">03</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videoModel">
+            <video controls id="modelPreviewVideo" src="./assets/heroVideo1.mp4"></video>
+            <div class="closebtn" id="closeVideoModel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+
+
+    <!-- New Rigorous Approach to Compliance Section -->
+    <section class="compliance-section">
+        <h2>Rigorous approach to compliance</h2>
+        <p>We are focused on effectively navigating our dynamic and multi-jurisdictional regulatory environment. Our
+            professionals in-house legal and compliance team provide control, guidance, and oversight.</p>
+        <p>Nearly a decade ago, we established a Regulatory and Compliance Advisory Council comprised of external
+            industry experts. The council helps us gain a more comprehensive perspective on critical regulatory
+            developments and adapt our policies and procedures in accordance with best practice.</p>
+        <div class="compliance-rows">
+            <!-- Each row contains two compliance officer entries -->
+            <div class="compliance-row">
+                <div class="compliance-officer">
+                    <h3>Jay Clayton</h3>
+                    <p>Former Chairman of the SEC and Senior Policy Advisor and Of Counsel to Sullivan & Cromwell and
+                        Adjunct Professor, Wharton Business School and Carey Law School, University of Pennsylvania</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="compliance-officer">
+                    <h3>Sir Howard Davies</h3>
+                    <p>Former Executive Chairman of the UK Financial Services Authority (now Financial Conduct
+                        Authority) and former Director of the London School of Economics and Political Science and
+                        Non-Executive Chairman of NatWest Group</p>
+                    <a href="#">Read more</a>
+                </div>
+
+            </div>
+            <div class="compliance-row">
+                <div class="compliance-officer">
+                    <h3>Louis Freeh</h3>
+                    <p>Former Federal District Court Judge and Former Director of the FBI</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="compliance-officer">
+                    <h3>Joseph Grundfest</h3>
+                    <p>Former Commissioner of the SEC and Professor at Stanford University School of Law</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="compliance-row">
+                <div class="compliance-officer">
+                    <h3>Sy Lorne</h3>
+                    <p>Former General Counsel of the SEC</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="compliance-officer">
+                    <h3>Andre Owens</h3>
+                    <p>Partner at WilmerHale and former Member of the Counseling and Regulatory Policy Group of the
+                        SEC’s Office of General Counsel and former Counsel to SEC Commissioner Steven M. H. Wallman</p>
+                    <a href="#">Read more</a>
+                </div>
+
+            </div>
+            <div class="compliance-row">
+                <div class="compliance-officer">
+                    <h3>Aulana Peters</h3>
+                    <p>Former Commissioner of the SEC and retired Partner of Gibson, Dunn & Crutcher</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="explore-network">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="./assets/videos/MLP.mp4" type="video/mp4">
+            <!-- Add other video formats or a fallback message here if necessary -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h2>Explore our network</h2>
+            <button>Global Presence</button>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/Approach.js"></script>
+
+
+</body>
+
+</html>
