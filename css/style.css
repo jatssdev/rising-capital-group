@@ -1625,6 +1625,7 @@ section .videos .arrows svg {
     background-color: white;
     margin: 0 auto;
     border-radius: 10px;
+    min-height: 300px;
     width: 70%;
     padding: 50px;
 }
@@ -1656,7 +1657,8 @@ section .videos .arrows svg {
 
 
     }
-    .hero .content h1{
+
+    .hero .content h1 {
         font-size: 3rem;
     }
 
@@ -1686,17 +1688,20 @@ section .videos .arrows svg {
 
 
     }
-    .hero .content h1{
+
+    .hero .content h1 {
         font-size: 2rem;
     }
 
     .heroCareer .careers h1 span {
         margin-left: 0;
     }
-    .creative-testimonial--slider .numberDetails2{
+
+    .creative-testimonial--slider .numberDetails2 {
         flex-direction: column;
     }
-    .creative-testimonial--slider .numberDetails2 > div{
+
+    .creative-testimonial--slider .numberDetails2>div {
         width: 100%;
     }
 }
