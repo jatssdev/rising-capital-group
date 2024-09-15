@@ -519,7 +519,7 @@ $(document).ready(function () {
                 spaceBetween: 20
             },
             // when window width is < 768px (mobile phones)
-            10: {
+            350: {
                 slidesPerView: 1,
                 spaceBetween: 10
             }
@@ -626,6 +626,7 @@ $(document).ready(function () {
     $('header').mouseleave(hideDrop);
 
     function showDrop() {
+
         let val = $(this).data('drop'); // Get the data-drop value (people/careers)
         let className = '.dropdown .' + val; // Target the correct ul and heading
 
@@ -654,7 +655,9 @@ $(document).ready(function () {
 
     $target.on('click', function () {
         const $this = $(this);
+        let $arrow = $this.find('.accordion-header');
 
+        $arrow.toggleClass(ACTIVE_CLASS);
         $this.toggleClass(ACTIVE_CLASS);
         $this.siblings('.accordion-contents').stop().slideToggle();
 
@@ -664,8 +667,6 @@ $(document).ready(function () {
         //     visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
         // }
     })
-
-
     function checkScreenSize() {
         if ($(window).width() <= 768) {
             $('header .specialAnchor').addClass('disabled').on('click', function (e) {

@@ -25,7 +25,7 @@
         /* Header Section */
         .header2 {
             background-color: white;
-            color: #0032ff;
+            color: var(--primary);
             font-size: 40px;
             font-weight: bold;
             height: 200px;
@@ -39,7 +39,7 @@
             font-size: 28px;
             text-align: left;
             position: relative;
-            background-color: #000080;
+            background-color: var(--primary);
             color: white;
             padding-top: 60px;
             /* Additional padding for spacing */
@@ -139,7 +139,7 @@
         }
 
         section.entrepreneurial-investing h2 {
-            color: #000080;
+            color: var(--primary);
             margin-bottom: 20px;
         }
 
@@ -159,7 +159,7 @@
         .block {
             width: 250px;
             height: 250px;
-            background-color: #0032ff;
+            background-color: var(--primary);
             /* Theme color */
             display: flex;
             align-items: center;
@@ -186,7 +186,7 @@
             flex-wrap: wrap;
             align-items: center;
             padding: 40px 150px;
-            background-color: #000080;
+            background-color: var(--primary);
             /* Dark blue background */
             color: white;
         }
@@ -263,7 +263,7 @@
         .investment-strategies {
             background-color: #ffffff;
             /* White background */
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark text for readability */
             padding: 40px 150px;
             /* Consistent with other sections */
@@ -271,14 +271,14 @@
         }
 
         .investment-strategies h2 {
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark blue to match header */
             margin-bottom: 20px;
         }
 
         .investment-strategies p {
             max-width: 800px;
-            color: #0d3cff;
+            color: var(--primary);
             /* Ensuring text does not span too wide */
             margin-bottom: 30px;
         }
@@ -303,7 +303,7 @@
         }
 
         .strategy h3 {
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark blue for titles */
             margin-bottom: 10px;
         }
@@ -314,7 +314,7 @@
             border-bottom: 1px solid #ccc;
             /* Light gray line under text */
             padding-bottom: 10px;
-            color: #0d3cff;
+            color: var(--primary);
             /* Space below text before the line */
         }
 
@@ -337,7 +337,7 @@
         .compliance-section {
             background-color: #f4f4f4;
             /* Light grey background for contrast */
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark text for readability */
             padding: 40px 150px;
             /* Consistent padding with other sections */
@@ -346,7 +346,7 @@
         }
 
         .compliance-section h2 {
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark blue for heading */
             margin-bottom: 20px;
             /* Space below the heading */
@@ -381,7 +381,7 @@
         }
 
         .compliance-officer h3 {
-            color: #0d3cff;
+            color: var(--primary);
             /* Dark blue for officer names */
             margin-bottom: 10px;
             /* Space below the name */
@@ -395,7 +395,7 @@
         }
 
         .compliance-officer a {
-            color: #0d3cff;
+            color: var(--primary);
             /* Link color */
             text-decoration: none;
             /* No underline */
@@ -455,7 +455,7 @@
         .explore-network button {
             font-size: 1.2em;
             padding: 10px 20px;
-            background-color: #0066cc;
+            background-color: var(--primary);
             /* Theme blue background */
             border: none;
             color: white;
@@ -464,7 +464,7 @@
         }
 
         .explore-network button:hover {
-            background-color: #004c99;
+            background-color: var(--primary);
             /* Darker blue on hover */
         }
 
@@ -539,6 +539,33 @@
         header img {
             width: 120px !important;
         }
+
+        .hero-section {
+            width: 100%;
+
+            /* Changed from 100vw to 100% */
+            padding: 100px 0;
+            background-color: #eaf3f8;
+        }
+
+        .hero-section .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text-content {
+            max-width: 600px;
+        }
+
+        .hero-section h1,
+        .hero-section h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: "sans-serif";
+        }
     </style>
 </head>
 
@@ -546,7 +573,7 @@
     <header class="header" id="header">
         <nav class="navbar container">
             <section class="navbar__left">
-                <a href="#" class="brand">
+                <a href="/" class="brand">
                     <img src="./assets/logo.png" alt="">
                 </a>
                 <div class="burger" id="burger">
@@ -565,12 +592,13 @@
                     <ul class="menu__inner">
                         <li class="menu__item"><a href="./Approach.html" class="menu__link">Approach</a></li>
                         <li class="menu__item menu__dropdown">
-                            <a href="./people.html" class="menu__link">
+                            <a href="./people.html" class="menu__link specialAnchor">
                                 People
                                 <i class="bx bx-chevron-right"></i>
                             </a>
                             <div class="submenu megamenu__normal">
                                 <ul class="submenu__list">
+                                    <li><a class="specialLink" href="./people.html">People</a></li>
                                     <li><a href="./people-leadership.html">Leadership</a></li>
                                     <li><a href="./people-Investment.html">Investment Professionals</a></li>
                                     <li><a href="./people-technology.html">Technology</a></li>
@@ -579,12 +607,13 @@
                             </div>
                         </li>
                         <li class="menu__item menu__dropdown">
-                            <a href="./Careers.html" class="menu__link">
+                            <a href="./Careers.html" class="menu__link specialAnchor">
                                 Careers
                                 <i class="bx bx-chevron-right"></i>
                             </a>
                             <div class="submenu megamenu__normal">
                                 <ul class="submenu__list">
+                                    <li><a class="specialLink" href="./Careers.html">Careers</a></li>
                                     <li><a href="./life-at-risingcapital.html">Life at Rising Capital</a></li>
                                     <li><a href="./careers-students.html">Students</a></li>
                                     <li><a href="./jobs.html">Jobs</a></li>
@@ -605,11 +634,17 @@
         </nav>
     </header>
     <!-- Header Section -->
-    <section class="header2">
-        <div>
-            Independent decisions, <br>
-            collaborative culture, <br>
-            united mission
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="text-content">
+                <h1> Independent decisions,
+
+                </h1>
+                <h1> collaborative culture,</h1>
+                <h1> united mission</h1>
+
+            </div>
         </div>
     </section>
 
@@ -722,201 +757,202 @@
     </section>
 
 
-    <section class="videoSection"></section>
-    <div class="videos">
-        <div class="creative-fullpage--slider">
-            <div class="banner-horizental">
-                <div class="swiper swiper-container-h">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="slider-inner" data-swiper-parallax="100">
-                                <video autoplay loop muted>
-                                    <source src="./assets/heroVideo1.mp4" type="video/mp4">
-                                </video>
-                                <div class="swiper-content" data-swiper-parallax="2000">
-                                    <div class="title-area">
-                                        <!-- title-area -->
-                                        <p class="tag">OUR VISION</p>
-                                        <a href="#" class="title"> DESIGN </a>
-                                        <!-- title area -->
-                                    </div>
-                                    <p class="disc">
-                                        Credibly leverage existing business experiences through
-                                        <br>
-                                        magnetic mindshare. Synergistically exploit
-                                        <br>
-                                        efficient partnerships world-class applications.
-                                    </p>
-                                    <div class="creative-btn--wrap">
-                                        <a class="creative-slide--btn openVideoModel"
-                                            data-video="./assets/heroVideo1.mp4" role="button" href="#0">
-                                            <div class="creative-btn--circle">
-                                                <div class="circle">
-                                                    <div class="circle-fill"></div>
-                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-                                                        class="circle-outline">
-                                                        <circle cx="25" cy="25" r="23"></circle>
-                                                    </svg>
-                                                    <div class="circle-icon">
-                                                        <svg viewBox="0 0 12 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
-                                                            <path
-                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
-                                                            </path>
+
+    <section class="videoSection-aproach">
+        <div class="videos">
+            <div class="creative-fullpage--slider">
+                <div class="banner-horizental">
+                    <div class="swiper swiper-container-h">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider-inner" data-swiper-parallax="100">
+                                    <video autoplay loop muted>
+                                        <source src="./assets/heroVideo1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="swiper-content" data-swiper-parallax="2000">
+                                        <div class="title-area">
+                                            <!-- title-area -->
+                                            <p class="tag">OUR VISION</p>
+                                            <a href="#" class="title"> DESIGN </a>
+                                            <!-- title area -->
+                                        </div>
+                                        <p class="disc">
+                                            Credibly leverage existing business experiences through
+                                            <br>
+                                            magnetic mindshare. Synergistically exploit
+                                            <br>
+                                            efficient partnerships world-class applications.
+                                        </p>
+                                        <div class="creative-btn--wrap">
+                                            <a class="creative-slide--btn openVideoModel"
+                                                data-video="./assets/heroVideo1.mp4" role="button" href="#0">
+                                                <div class="creative-btn--circle">
+                                                    <div class="circle">
+                                                        <div class="circle-fill"></div>
+                                                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                            class="circle-outline">
+                                                            <circle cx="25" cy="25" r="23"></circle>
                                                         </svg>
+                                                        <div class="circle-icon">
+                                                            <svg viewBox="0 0 12 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                                <path
+                                                                    d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="creative-btn--label">
-                                                <div class="creative-btn__text">Take A Look</div>
-                                                <div class="creative-btn__border"></div>
-                                            </div>
-                                        </a>
+                                                <div class="creative-btn--label">
+                                                    <div class="creative-btn__text">Take A Look</div>
+                                                    <div class="creative-btn__border"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider-inner" data-swiper-parallax="100">
+                                    <video autoplay loop muted>
+                                        <source src="./assets/heroVideo2.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="swiper-content" data-swiper-parallax="2000">
+                                        <div class="title-area">
+                                            <!-- title-area -->
+                                            <p class="tag">INSPIRATION</p>
+                                            <a href="#" class="title"> MOTION </a>
+                                            <!-- title area -->
+                                        </div>
+                                        <p class="disc">
+                                            Conveniently formulate progressive users for error-free
+                                            <br>
+                                            interfaces. Monotonectally deploy superior
+                                            <br>
+                                            relationships without seamless infomediaries.
+                                        </p>
+                                        <div class="creative-btn--wrap">
+                                            <a class="creative-slide--btn openVideoModel"
+                                                data-video="./assets/heroVideo2.mp4" role="button" href="#0">
+
+
+                                                <div class="creative-btn--circle">
+                                                    <div class="circle">
+                                                        <div class="circle-fill"></div>
+                                                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                            class="circle-outline">
+                                                            <circle cx="25" cy="25" r="23"></circle>
+                                                        </svg>
+                                                        <div class="circle-icon">
+                                                            <svg viewBox="0 0 12 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                                <path
+                                                                    d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="creative-btn--label">
+                                                    <div class="creative-btn__text">See More</div>
+                                                    <div class="creative-btn__border"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider-inner" data-swiper-parallax="100">
+                                    <video autoplay loop muted>
+                                        <source src="./assets/heroVideo1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="swiper-content" data-swiper-parallax="2000">
+                                        <div class="title-area">
+                                            <!-- title-area -->
+                                            <a href="#" class="title"> ENGINE </a>
+                                            <!-- title area -->
+                                        </div>
+                                        <p class="disc">
+                                            Conveniently formulate progressive users for error-free
+                                            <br>
+                                            interfaces. Monotonectally deploy superior
+                                            <br>
+                                            relationships without seamless infomediaries.
+                                        </p>
+                                        <div class="creative-btn--wrap">
+                                            <a class="creative-slide--btn openVideoModel"
+                                                data-video="./assets/heroVideo1.mp4" role="button" href="#0">
+                                                <div class="creative-btn--circle">
+                                                    <div class="circle">
+                                                        <div class="circle-fill"></div>
+                                                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+                                                            class="circle-outline">
+                                                            <circle cx="25" cy="25" r="23"></circle>
+                                                        </svg>
+                                                        <div class="circle-icon">
+                                                            <svg viewBox="0 0 12 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                                <path
+                                                                    d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="creative-btn--label">
+                                                    <div class="creative-btn__text">Take A Look</div>
+                                                    <div class="creative-btn__border"></div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="swiper-slide">
-                            <div class="slider-inner" data-swiper-parallax="100">
-                                <video autoplay loop muted>
-                                    <source src="./assets/heroVideo2.mp4" type="video/mp4">
-                                </video>
-                                <div class="swiper-content" data-swiper-parallax="2000">
-                                    <div class="title-area">
-                                        <!-- title-area -->
-                                        <p class="tag">INSPIRATION</p>
-                                        <a href="#" class="title"> MOTION </a>
-                                        <!-- title area -->
-                                    </div>
-                                    <p class="disc">
-                                        Conveniently formulate progressive users for error-free
-                                        <br>
-                                        interfaces. Monotonectally deploy superior
-                                        <br>
-                                        relationships without seamless infomediaries.
-                                    </p>
-                                    <div class="creative-btn--wrap">
-                                        <a class="creative-slide--btn openVideoModel"
-                                            data-video="./assets/heroVideo2.mp4" role="button" href="#0">
-
-
-                                            <div class="creative-btn--circle">
-                                                <div class="circle">
-                                                    <div class="circle-fill"></div>
-                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-                                                        class="circle-outline">
-                                                        <circle cx="25" cy="25" r="23"></circle>
-                                                    </svg>
-                                                    <div class="circle-icon">
-                                                        <svg viewBox="0 0 12 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
-                                                            <path
-                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="creative-btn--label">
-                                                <div class="creative-btn__text">See More</div>
-                                                <div class="creative-btn__border"></div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="swiper-button-wrapper creative-button--wrapper">
+                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="right-arrow" width="30" height="30"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="left-arrow" width="30" height="30"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
                             </div>
                         </div>
-
-                        <div class="swiper-slide">
-                            <div class="slider-inner" data-swiper-parallax="100">
-                                <video autoplay loop muted>
-                                    <source src="./assets/heroVideo1.mp4" type="video/mp4">
-                                </video>
-                                <div class="swiper-content" data-swiper-parallax="2000">
-                                    <div class="title-area">
-                                        <!-- title-area -->
-                                        <a href="#" class="title"> ENGINE </a>
-                                        <!-- title area -->
-                                    </div>
-                                    <p class="disc">
-                                        Conveniently formulate progressive users for error-free
-                                        <br>
-                                        interfaces. Monotonectally deploy superior
-                                        <br>
-                                        relationships without seamless infomediaries.
-                                    </p>
-                                    <div class="creative-btn--wrap">
-                                        <a class="creative-slide--btn openVideoModel"
-                                            data-video="./assets/heroVideo1.mp4" role="button" href="#0">
-                                            <div class="creative-btn--circle">
-                                                <div class="circle">
-                                                    <div class="circle-fill"></div>
-                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-                                                        class="circle-outline">
-                                                        <circle cx="25" cy="25" r="23"></circle>
-                                                    </svg>
-                                                    <div class="circle-icon">
-                                                        <svg viewBox="0 0 12 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
-                                                            <path
-                                                                d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="creative-btn--label">
-                                                <div class="creative-btn__text">Take A Look</div>
-                                                <div class="creative-btn__border"></div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="slider-pagination-area">
+                            <h5 class="slide-range one">01</h5>
+                            <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
+                                <span class="swiper-pagination-progressbar-fill"
+                                    style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 1500ms;"></span>
                             </div>
+                            <h5 class="slide-range three">03</h5>
                         </div>
-                    </div>
-                    <div class="swiper-button-wrapper creative-button--wrapper">
-                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="right-arrow" width="30" height="30"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="left-arrow" width="30" height="30"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="slider-pagination-area">
-                        <h5 class="slide-range one">01</h5>
-                        <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
-                            <span class="swiper-pagination-progressbar-fill"
-                                style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 1500ms;"></span>
-                        </div>
-                        <h5 class="slide-range three">03</h5>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="videoModel">
-            <video controls id="modelPreviewVideo" src="./assets/heroVideo1.mp4"></video>
-            <div class="closebtn" id="closeVideoModel">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
+            <div class="videoModel">
+                <video controls id="modelPreviewVideo" src="./assets/heroVideo1.mp4"></video>
+                <div class="closebtn" id="closeVideoModel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
             </div>
         </div>
-    </div>
 
     </section>
 

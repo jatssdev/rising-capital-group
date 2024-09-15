@@ -181,6 +181,8 @@ section.accordionPeople img {
 
 .accordion-header {
     background-color: white;
+    border-bottom: 1px solid gray;
+
     padding: 30px 50px;
     /* border-bottom: 1p solid black; */
     transform: scale(1);
@@ -189,20 +191,20 @@ section.accordionPeople img {
     cursor: pointer;
 }
 
-.accordion-header:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
+.accordion-header:after {
+    content: "►";
     position: absolute;
-    z-index: 1;
-    top: 0;
-    left: auto;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    box-shadow: none;
-    transition: width 1s cubic-bezier(0.99, 0.01, 0, 1.01), box-shadow 1s ease-in-out;
+    right: 20px;
+    top: 50%;
+
+}
+
+.accordion-header.is-active:after {
+    content: "▼";
+}
+
+.accordion-item {
+    border-bottom: 1px solid gray;
 }
 
 .accordion-header span {
