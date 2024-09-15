@@ -519,7 +519,7 @@ $(document).ready(function () {
                 spaceBetween: 20
             },
             // when window width is < 768px (mobile phones)
-            350: {
+            100: {
                 slidesPerView: 1,
                 spaceBetween: 10
             }
