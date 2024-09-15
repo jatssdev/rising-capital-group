@@ -519,7 +519,7 @@ $(document).ready(function () {
                 spaceBetween: 20
             },
             // when window width is < 768px (mobile phones)
-            350: {
+            10: {
                 slidesPerView: 1,
                 spaceBetween: 10
             }
@@ -664,6 +664,30 @@ $(document).ready(function () {
         //     visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
         // }
     })
+
+
+    function checkScreenSize() {
+        if ($(window).width() <= 768) {
+            $('header .specialAnchor').addClass('disabled').on('click', function (e) {
+                e.preventDefault(); // Disable the link
+            });
+            $('header .specialLink').show()
+        } else {
+            $('header .specialAnchor').removeClass('disabled').off('click'); // Enable the link if screen is larger
+            $('header .specialLink').hide()
+
+        }
+    }
+
+    // Check screen size on page load
+
+    checkScreenSize();
+
+
+    // Re-check on window resize
+    $(window).resize(function () {
+        checkScreenSize();
+    });
 
 
 });

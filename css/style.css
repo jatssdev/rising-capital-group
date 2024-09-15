@@ -178,6 +178,10 @@ img {
     box-shadow: var(--shadow-medium);
 }
 
+.header .specialLink {
+    display: none;
+}
+
 .header.is-active {
     height: 100vh;
 }
@@ -989,8 +993,7 @@ section .videos video {
 
 section .videos .videoModel {
     background-color: #0000009b;
-    padding: 0;
-
+    padding: 100px;
     height: 100vh;
     width: 100%;
     transition: .5s;
@@ -1388,31 +1391,6 @@ section .videos .arrows svg {
     }
 }
 
-/* ====================== Responsive Iphone =============================== */
-@media screen and (max-width: 767px) {
-    .swiper-slide .slider-inner .swiper-content .title-area .title {
-        font-size: 64px;
-    }
-
-    .swiper-slide .slider-inner .swiper-content .title-area .tag {
-        margin-bottom: 0px;
-    }
-
-    .swiper-slide .slider-inner .swiper-content p.disc {
-        margin: 20px auto 20px auto;
-        font-size: 16px;
-        width: 95%;
-    }
-
-    .swiper-container-h .slider-pagination-area {
-        display: none;
-    }
-
-    .swiper-slide .slider-inner .swiper-content p.disc br {
-        display: none;
-    }
-}
-
 .heroCareer {
     background-color: white;
     z-index: 1;
@@ -1441,93 +1419,6 @@ section .videos .arrows svg {
 .heroCareer .careers .info p {
     color: gray;
 }
-
-.fotterWrapper {
-    padding: 50px;
-    position: relative;
-    z-index: 8;
-    background-color: var(--primary);
-}
-
-.fotterWrapper .fwrap {
-    display: flex;
-    justify-content: space-between;
-}
-
-.fotterWrapper .fwrap .links {
-    padding-right: 150px;
-}
-
-.fotterWrapper .fwrap .links p {
-    padding: 10px 0;
-}
-
-.fwrap .links p a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: 17px;
-}
-
-
-
-.fwrap .fImg img {
-    width: 200px;
-    padding-top: 10px;
-
-}
-
-.fNav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 0;
-    color: white;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    margin-top: 70px;
-}
-
-.fNav ul {
-    display: flex;
-    gap: 20px;
-}
-
-.fNav ul li {
-    list-style-type: none;
-}
-
-.fNav .copyRight {
-    width: 32%;
-    text-align: center;
-
-}
-
-.fNav .copyRight p {
-    font-weight: 800;
-    font-size: 13px;
-    color: white;
-}
-
-.fNav .icons {
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-}
-
-.fNav .icons i {
-    border: 1px solid hsla(0, 0%, 100%, 0.3);
-    border-radius: 50%;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.fNav .icons i:hover {
-    color: hsla(0, 0%, 100%, 0.3);
-}
-
 
 
 
@@ -1704,5 +1595,104 @@ section .videos .arrows svg {
 
     .creative-testimonial--slider .numberDetails2>div {
         width: 100%;
+    }
+}
+
+/* footer  */
+.fotterWrapper {
+    position: relative;
+    z-index: 10;
+    color: white;
+
+    background-color: var(--primary);
+    padding: 100px 100px 20px;
+}
+
+.fotterWrapper img {
+    width: 100px;
+}
+
+.fotterWrapper .fwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fotterWrapper hr {
+    border-color: white;
+    margin: 20px 0;
+}
+
+.fotterWrapper .footeroffooter {
+    text-align: center;
+}
+
+.fotterWrapper ul li {
+    margin: 8px 0;
+}
+
+.fotterWrapper .icons {
+    margin-top: 10px;
+}
+
+.fotterWrapper .icons i {
+    margin: 0 10px;
+
+}
+
+/* footer  */
+
+
+/* ====================== Responsive Iphone =============================== */
+@media screen and (max-width: 767px) {
+    .swiper-slide .slider-inner .swiper-content .title-area .title {
+        font-size: 64px;
+    }
+
+    .swiper-slide .slider-inner .swiper-content .title-area .tag {
+        margin-bottom: 0px;
+    }
+
+    .swiper-slide .slider-inner .swiper-content p.disc {
+        margin: 20px auto 20px auto;
+        font-size: 16px;
+        width: 95%;
+    }
+
+    .swiper-container-h .slider-pagination-area {
+        display: none;
+    }
+
+    .swiper-slide .slider-inner .swiper-content p.disc br {
+        display: none;
+    }
+
+    .videoModel {
+        padding: 0 !important;
+    }
+
+    .fotterWrapper {
+
+        padding: 30px 30px 20px;
+    }
+
+    .heroCareer .careers {
+        padding: 50px;
+    }
+
+    .heading {
+        font-size: 25px !important;
+    }
+
+    .creative-testimonial--slider .swiper-slide--inner {
+        min-height: unset;
+    }
+
+    a {
+        pointer-events: none;
+        color: gray;
+    }
+    .btn{
+        padding: 10px 50px 10px 10px;
     }
 }
