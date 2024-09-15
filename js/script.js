@@ -648,6 +648,23 @@ $(document).ready(function () {
         $('.navLinksToggle').toggleClass('active');
     })
 
+    const $target = $('.js-accordion-header');
+    const ACTIVE_CLASS = 'is-active';
+    const visible = $('.accordion-contents:visible');
+
+    $target.on('click', function () {
+        const $this = $(this);
+
+        $this.toggleClass(ACTIVE_CLASS);
+        $this.siblings('.accordion-contents').stop().slideToggle();
+
+        // if ($this.hasClass(ACTIVE_CLASS)) {
+        //     $target.removeClass(ACTIVE_CLASS);
+        //     $this.addClass(ACTIVE_CLASS);
+        //     visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
+        // }
+    })
+
 
 });
 
