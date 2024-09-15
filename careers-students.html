@@ -6,10 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn. Contribute. Grow.</title>
     <link rel="stylesheet" href="./css/careers-students.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <section class="navbar__left">
+                <a href="#" class="brand">
+                    <img src="./assets/logo.png" alt="">
+                </a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span>
+                        <span class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item"><a href="./Approach.html" class="menu__link">Approach</a></li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="./people.html" class="menu__link">
+                                People
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./people-leadership.html">Leadership</a></li>
+                                    <li><a href="./people-Investment.html">Investment Professionals</a></li>
+                                    <li><a href="./people-technology.html">Technology</a></li>
+                                    <li><a href="./people-core.html">Core Infrastructure</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="./Careers.html" class="menu__link">
+                                Careers
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./life-at-risingcapital.html">Life at Rising Capital</a></li>
+                                    <li><a href="./careers-students.html">Students</a></li>
+                                    <li><a href="./jobs.html">Jobs</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link">Global Presence</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="navbar__right">
+                <button class="switch" id="switch">
+                    <span class="switch__light"><i class="bx bx-sun"></i></span>
+                    <span class="switch__dark"><i class="bx bx-moon"></i></span>
+                </button>
+            </section>
+        </nav>
+    </header>
     <!-- Learn Section -->
     <section class="learn-section">
         <div class="text-container">
@@ -252,6 +314,7 @@
 
 
     <script src="js/careers-students.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

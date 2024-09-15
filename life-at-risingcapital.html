@@ -13,44 +13,67 @@
 </head>
 
 <body>
-    <navbar class="navbarmenu">
-        <div class="nav-log">
-            <img src="../assets/logo.png" alt="Logo" height="50px" width="50px">
-        </div>
-        <div class="Navber-menu">
-            <ul class="Navber-menu-ul " style="">
-                <li>Approach /</li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        People
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: blue;">
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Leadership</a></li>
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Investment Professionals</a></li>
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Technology</a></li>
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Core Infrastructure</a></li>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <section class="navbar__left">
+                <a href="#" class="brand">
+                    <img src="./assets/logo.png" alt="">
+                </a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span>
+                        <span class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item"><a href="./Approach.html" class="menu__link">Approach</a></li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="./people.html" class="menu__link">
+                                People
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./people-leadership.html">Leadership</a></li>
+                                    <li><a href="./people-Investment.html">Investment Professionals</a></li>
+                                    <li><a href="./people-technology.html">Technology</a></li>
+                                    <li><a href="./people-core.html">Core Infrastructure</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item menu__dropdown">
+                            <a href="./Careers.html" class="menu__link">
+                                Careers
+                                <i class="bx bx-chevron-right"></i>
+                            </a>
+                            <div class="submenu megamenu__normal">
+                                <ul class="submenu__list">
+                                    <li><a href="./life-at-risingcapital.html">Life at Rising Capital</a></li>
+                                    <li><a href="./careers-students.html">Students</a></li>
+                                    <li><a href="./jobs.html">Jobs</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link">Global Presence</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Careers
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Life at Millenniun</a></li>
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Students</a></li>
-                        <li><a class="dropdown-item" style="color: blue;" href="#">/ Jobs</a></li>
-                    </ul>
-                </li>
-                <li>Gloabal Presence /</li>
-            </ul>
-        </div>
-
-        <div class="navbar-menu-login" style="padding-bottom: 30px;">
-            <a href="">Investor Login /</a>
-        </div>
-    </navbar>
+                </div>
+            </section>
+            <section class="navbar__right">
+                <button class="switch" id="switch">
+                    <span class="switch__light"><i class="bx bx-sun"></i></span>
+                    <span class="switch__dark"><i class="bx bx-moon"></i></span>
+                </button>
+            </section>
+        </nav>
+    </header>
 
     <div class="row " style="background-color:#eaf3f8;">
         <div class="col-md-7 left-side">
