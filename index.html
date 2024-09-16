@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Particles Over Video Background</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -83,14 +85,14 @@
             <!-- <canvas id="field"></canvas> -->
             <div id="particles-js"></div>
             <div class="content">
-                <div class="line">
+                <div class="line" data-aos="zoom-in">
                     <div></div> <span>scroll</span>
                 </div>
                 <div class="text">
-                    <h1>Built for an </h1>
-                    <h1>ever-changing world
+                    <h1 data-aos="fade-down" data-aos-delay="800">Built for an </h1>
+                    <h1 data-aos="fade-down" data-aos-delay="500">ever-changing world
                     </h1>
-                    <h3>Delivering High Performance with Integrity</h3>
+                    <h3 data-aos="fade-down">Delivering High Performance with Integrity</h3>
                 </div>
             </div>
             <div class="video" id="backgroundVideo">
@@ -108,7 +110,8 @@
 
             <div class="testimonial-row">
                 <div>
-                    <h2 class="testimonial-heading heading">Trusted by the world's fastest growing companies</h2>
+                    <h2 class="testimonial-heading heading" data-aos="fade-down">Trusted by the world's fastest growing
+                        companies</h2>
                     <div class="testimonial-wrap">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
@@ -116,44 +119,44 @@
                                 <div class="swiper-slide">
                                     <div class="swiper-slide--inner">
                                         <div>
-                                            <h1 class="heading">35+</h1>
-                                            <p class="heading">Years of Evolution</p>
+                                            <h1 class="heading" data-aos="fade-right">35+</h1>
+                                            <p class="heading" data-aos="fade-left">Years of Evolution</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="swiper-slide--inner">
                                         <div>
-                                            <h1 class="heading">$68.2BN+</h1>
+                                            <h1 class="heading" data-aos="fade-right">$68.2BN+</h1>
 
-                                            <p class="heading">AUM</p>
+                                            <p class="heading" data-aos="fade-left">AUM</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="swiper-slide--inner">
                                         <div>
-                                            <h1 class="heading">5,700+</h1>
+                                            <h1 class="heading" data-aos="fade-right">5,700+</h1>
 
-                                            <p class="heading">Employees Globally</p>
+                                            <p class="heading" data-aos="fade-left">Employees Globally</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="swiper-slide--inner">
                                         <div>
-                                            <h1 class="heading">140+</h1>
+                                            <h1 class="heading" data-aos="fade-right">140+</h1>
 
-                                            <p class="heading">Employee Locations</p>
+                                            <p class="heading" data-aos="fade-left">Employee Locations</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="swiper-slide--inner">
                                         <div>
-                                            <h1 class="heading">330+</h1>
+                                            <h1 class="heading" data-aos="fade-right">330+</h1>
 
-                                            <p class="heading">Investment Teams</p>
+                                            <p class="heading" data-aos="fade-left">Investment Teams</p>
                                         </div>
                                     </div>
                                 </div>
@@ -171,12 +174,13 @@
         </div>
         <div class="numberDetails2">
             <div>
-                <h1>Rising Capital Group is a global, diversified alternative investment firm with the mission
+                <h1 data-aos="fade-right">Rising Capital Group is a global, diversified alternative investment firm with
+                    the mission
                     to deliver
                     high-quality returns for our investors.</h1>
             </div>
             <div>
-                <button class="btn">
+                <button data-aos="fade-left" class="btn">
                     <div>
                         <span>Discover our approach</span>
                         <div class="arrow-container">
@@ -204,7 +208,7 @@
                 <div class="banner-horizental">
                     <div class="swiper swiper-container-h">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-aos="fade">
                                 <div class="slider-inner" data-swiper-parallax="100">
                                     <video autoplay loop muted>
                                         <source src="./assets/heroVideo1.mp4" type="video/mp4">
@@ -254,7 +258,7 @@
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-aos="fade">
                                 <div class="slider-inner" data-swiper-parallax="100">
                                     <video autoplay loop muted>
                                         <source src="./assets/heroVideo2.mp4" type="video/mp4">
@@ -306,7 +310,7 @@
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-aos="fade">
                                 <div class="slider-inner" data-swiper-parallax="100">
                                     <video autoplay loop muted>
                                         <source src="./assets/heroVideo1.mp4" type="video/mp4">
@@ -398,14 +402,15 @@
     <section class="heroCareer">
         <div class="careers">
             <h1>
-                <p>Work with</p>
-                <span>Exceptional Talent</span>
+                <p data-aos="fade-right">Work with</p>
+                <span data-aos="fade-left">Exceptional Talent</span>
             </h1>
             <div class="info">
-                <p>Here, you’ll be energized by the people around you. Investment professionals, engineers and
+                <p data-aos="fade-down">Here, you’ll be energized by the people around you. Investment professionals,
+                    engineers and
                     quantitative researchers come together to learn from each other and quickly build extraordinary
                     careers.</p>
-                <button class="btn">
+                <button data-aos="fade-down" class="btn">
                     <div>
                         <span>Discover our approach</span>
                         <div class="arrow-container">
@@ -477,6 +482,7 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/script.js"></script>
 </body>

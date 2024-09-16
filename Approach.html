@@ -8,16 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
     <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        section {
+        section.page {
             padding: 40px 150px;
             margin: 0;
         }
@@ -228,7 +220,7 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            section {
+            section.page {
                 padding: 20px;
             }
 
@@ -488,7 +480,7 @@
             left: 0;
         }
 
-        section .videos img {
+        section.page .videos img {
             -ms-interpolation-mode: bicubic;
             border: 0;
             vertical-align: middle;
@@ -496,17 +488,17 @@
             height: auto;
         }
 
-        section .videos {
+        section.page .videos {
             position: relative;
         }
 
-        section .videos video {
+        section.page .videos video {
             width: 100%;
             height: 100%;
             object-fit: fill;
         }
 
-        section .videos .videoModel {
+        section.page .videos .videoModel {
             background-color: #0000009b;
             padding: 0;
 
@@ -521,23 +513,19 @@
             z-index: 100;
         }
 
-        section .videos .videoModel .closebtn {
+        section.page .videos .videoModel .closebtn {
             cursor: pointer;
             position: absolute;
             top: 20px;
             right: 20px;
         }
 
-        section .videos .videoModel .closebtn svg {
+        section.page .videos .videoModel .closebtn svg {
             height: 50px;
             stroke: white;
             width: 50px;
 
 
-        }
-
-        header img {
-            width: 120px !important;
         }
 
         .hero-section {
@@ -567,6 +555,8 @@
             font-family: "sans-serif";
         }
     </style>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -633,9 +623,8 @@
             </section>
         </nav>
     </header>
-    <!-- Header Section -->
 
-    <section class="hero-section">
+    <section class="hero-section page">
         <div class="container">
             <div class="text-content">
                 <h1> Independent decisions,
@@ -649,7 +638,7 @@
     </section>
 
     <!-- Infographic Section -->
-    <section class="infographic">
+    <section class="infographic page">
         <div class="stat">
             <p class="number">140+</p>
             <p class="label">EMPLOYEE LOCATIONS</p>
@@ -673,7 +662,7 @@
     </section>
 
     <!-- Entrepreneurial Investing Section -->
-    <section class="entrepreneurial-investing">
+    <section class="entrepreneurial-investing page">
         <h2>Entrepreneurial investing at scale</h2>
         <p>Millennium seeks to empower talented professionals with the sophisticated expertise, resources, and
             technology to pursue high-quality returns for investors.</p>
@@ -698,7 +687,7 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="testimonial-section">
+    <section class="testimonial-section page">
         <div class="testimonial-image">
             <div class="image-overlay"></div>
         </div>
@@ -715,7 +704,7 @@
     </section>
 
 
-    <section class="investment-strategies">
+    <section class="investment-strategies page">
         <h2>Investment strategies</h2>
         <p>Millennium seeks to pursue a diverse range of investment strategies across industry sectors, asset classes
             and geographies.</p>
@@ -758,7 +747,7 @@
 
 
 
-    <section class="videoSection-aproach">
+    <section class="videoSection-aproach page">
         <div class="videos">
             <div class="creative-fullpage--slider">
                 <div class="banner-horizental">
@@ -959,7 +948,7 @@
 
 
     <!-- New Rigorous Approach to Compliance Section -->
-    <section class="compliance-section">
+    <section class="compliance-section page">
         <h2>Rigorous approach to compliance</h2>
         <p>We are focused on effectively navigating our dynamic and multi-jurisdictional regulatory environment. Our
             professionals in-house legal and compliance team provide control, guidance, and oversight.</p>
@@ -1021,7 +1010,7 @@
     </section>
 
 
-    <section class="explore-network">
+    <section class="explore-network page">
         <video autoplay loop muted playsinline class="background-video">
             <source src="./assets/videos/MLP.mp4" type="video/mp4">
             <!-- Add other video formats or a fallback message here if necessary -->
@@ -1040,10 +1029,8 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="js/Approach.js"></script>
-    <script src="js/script.js"></script>
-
-
 </body>
 
 </html>

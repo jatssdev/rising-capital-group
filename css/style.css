@@ -194,6 +194,7 @@ img {
     background-color: var(--color2);
 }
 
+
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -1412,6 +1413,7 @@ section .videos .arrows svg {
 .heroCareer .careers h1 span {
     color: var(--primary);
     margin-left: 80px;
+    display: inline-block;
 }
 
 .heroCareer .careers .info p {
@@ -1621,6 +1623,11 @@ section .videos .arrows svg {
     padding: 100px 100px 20px;
 }
 
+footer a {
+    color: white;
+}
+
+
 .fotterWrapper img {
     width: 100px;
 }
@@ -1632,16 +1639,18 @@ section .videos .arrows svg {
 }
 
 .fotterWrapper hr {
-    border-color: white;
+    border: 1px solid white !important;
     margin: 20px 0;
+    border-radius: 50%;
+
 }
 
 .fotterWrapper .footeroffooter {
     text-align: center;
 }
 
-.fotterWrapper .footeroffooter .icons a {
-    color: white;
+.fotterWrapper .footeroffooter {
+    text-align: center;
 }
 
 .fotterWrapper ul li {
@@ -1721,6 +1730,8 @@ section .videos .arrows svg {
     section.accordionPeople .cards {
         padding: 10px;
     }
+
+
 
     section.accordionPeople .cardd {
         padding: 20px;

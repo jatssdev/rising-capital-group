@@ -81,7 +81,7 @@ section.team .col1 h1 {
 
 section.accordionPeople {
     padding: 100px;
-    
+
 }
 
 section.accordionPeople .cardd {
@@ -111,6 +111,7 @@ section.accordionPeople .cards {
     /* background-color: red; */
     min-height: 190vh;
     padding: 50px;
+    overflow: hidden;
 }
 
 section.accordionPeople hr {
@@ -156,6 +157,12 @@ section.accordionPeople>h1 {
     color: var(--primary);
 }
 
+section.accordionPeople>p {
+
+    text-align: center;
+    color: var(--primary);
+}
+
 section.accordionPeople img {
     width: 100%;
 }
@@ -197,6 +204,7 @@ section.accordionPeople img {
     position: absolute;
     right: 20px;
     top: 50%;
+    transform: translateY(-50%);
 
 }
 

@@ -1,3 +1,5 @@
+AOS.init();
+
 // header 
 const menu = document.querySelector(".menu");
 const menuInner = menu.querySelector(".menu__inner");
@@ -5,10 +7,10 @@ const menuArrow = menu.querySelector(".menu__arrow");
 const menuTitle = menu.querySelector(".menu__title");
 const burger = document.querySelector(".burger");
 const overlay = document.querySelector(".overlay");
+const header = document.querySelector("#header");
 
 // Navbar Menu Toggle Function
 function toggleMenu() {
-
     header.classList.toggle("is-active");
     menu.classList.toggle("is-active");
     overlay.classList.toggle("is-active");
