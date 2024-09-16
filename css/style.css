@@ -1640,6 +1640,10 @@ section .videos .arrows svg {
     text-align: center;
 }
 
+.fotterWrapper .footeroffooter .icons a {
+    color: white;
+}
+
 .fotterWrapper ul li {
     margin: 8px 0;
 }
