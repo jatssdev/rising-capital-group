@@ -25,9 +25,27 @@ body {
     /* Adds some padding for smaller screens */
 }
 
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    background-color: #fff;
+    left: 0;
+    /* background-color: red; */
+    height: 100%;
+}
+
 /* Hero Section */
 .hero-section {
+    z-index: 2;
     width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 50vh;
     /* Changed from 100vw to 100% */
     padding: 100px 0;
     background-color: #eaf3f8;
@@ -35,6 +53,7 @@ body {
 
 .hero-section .container {
     display: flex;
+    padding-top: 100px;
     justify-content: space-between;
 }
 
@@ -53,10 +72,10 @@ h2 {
 }
 
 p {
-    margin: 40px 0;
-    font-size: 1.1rem;
+    margin: 20px 0;
+    /* font-size: 1.1rem; */
     line-height: 1.6;
-    color: var(--primary);
+    /* color: var(--primary); */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -148,7 +167,7 @@ p {
 
 .strategy-box {
     background-color: white;
-    padding: 20px;
+    /* padding: 20px;\ */
     border-radius: 8px;
 }
 
@@ -471,7 +490,7 @@ section .videos .videoModel .closebtn svg {
 /* Hero Section Styles */
 .hero-section-end {
     position: relative;
-    height: 400px;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;

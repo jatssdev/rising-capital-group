@@ -37,21 +37,21 @@ $(document).ready(function () {
         }
     });
 });
-    const swiperr = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        slidesPerView: 3,
-        spaceBetween: 40,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        effect: 'slide',
-    });
+const swiperr = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    effect: 'slide',
+});

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Driven by Ambition and Opportunity</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/people-Investment.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -14,75 +15,78 @@
 </head>
 
 <body>
+
   <header class="header" id="header">
     <nav class="navbar container">
-        <section class="navbar__left">
-            <a href="/" class="brand">
-                <img src="./assets/logo.png" alt="">
-            </a>
-            <div class="burger" id="burger">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </div>
-        </section>
-        <section class="navbar__center">
-            <span class="overlay"></span>
-            <div class="menu" id="menu">
-                <div class="menu__header">
-                    <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span>
-                    <span class="menu__title"></span>
-                </div>
-                <ul class="menu__inner">
-                    <li class="menu__item"><a href="./Approach.html" class="menu__link">Approach</a></li>
-                    <li class="menu__item menu__dropdown">
-                        <a href="./people.html" class="menu__link specialAnchor">
-                            People
-                            <i class="bx bx-chevron-right"></i>
-                        </a>
-                        <div class="submenu megamenu__normal">
-                            <ul class="submenu__list">
-                                <li><a class="specialLink" href="./people.html">People</a></li>
-                                <li><a href="./people-leadership.html">Leadership</a></li>
-                                <li><a href="./people-Investment.html">Investment Professionals</a></li>
-                                <li><a href="./people-technology.html">Technology</a></li>
-                                <li><a href="./people-core.html">Core Infrastructure</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__item menu__dropdown">
-                        <a href="./Careers.html" class="menu__link specialAnchor">
-                            Careers
-                            <i class="bx bx-chevron-right"></i>
-                        </a>
-                        <div class="submenu megamenu__normal">
-                            <ul class="submenu__list">
-                                <li><a class="specialLink" href="./Careers.html">Careers</a></li>
-                                <li><a href="./life-at-risingcapital.html">Life at Rising Capital</a></li>
-                                <li><a href="./careers-students.html">Students</a></li>
-                                <li><a href="./jobs.html">Jobs</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link">Global Presence</a>
-                    </li>
+      <section class="navbar__left">
+        <a href="/" class="brand">
+          <img src="./assets/logo.png" alt="">
+        </a>
+        <div class="burger" id="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+      </section>
+      <section class="navbar__center">
+        <span class="overlay"></span>
+        <div class="menu" id="menu">
+          <div class="menu__header">
+            <span class="menu__arrow"><i class="bx bx-chevron-left"></i></span>
+            <span class="menu__title"></span>
+          </div>
+          <ul class="menu__inner">
+            <li class="menu__item"><a href="./Approach.html" class="menu__link">Approach</a></li>
+            <li class="menu__item menu__dropdown">
+              <a href="./people.html" class="menu__link specialAnchor">
+                People
+                <i class="bx bx-chevron-right"></i>
+              </a>
+              <div class="submenu megamenu__normal">
+                <ul class="submenu__list">
+                  <li><a class="specialLink" href="./people.html">People</a></li>
+                  <li><a href="./people-leadership.html">Leadership</a></li>
+                  <li><a href="./people-Investment.html">Investment Professionals</a></li>
+                  <li><a href="./people-technology.html">Technology</a></li>
+                  <li><a href="./people-core.html">Core Infrastructure</a></li>
                 </ul>
-            </div>
-        </section>
-        <section class="navbar__right">
-            <button class="switch" id="switch">
-                <span class="switch__light"><i class="bx bx-sun"></i></span>
-                <span class="switch__dark"><i class="bx bx-moon"></i></span>
-            </button>
-        </section>
+              </div>
+            </li>
+            <li class="menu__item menu__dropdown">
+              <a href="./Careers.html" class="menu__link specialAnchor">
+                Careers
+                <i class="bx bx-chevron-right"></i>
+              </a>
+              <div class="submenu megamenu__normal">
+                <ul class="submenu__list">
+                  <li><a class="specialLink" href="./Careers.html">Careers</a></li>
+                  <li><a href="./life-at-risingcapital.html">Life at Rising Capital</a></li>
+                  <li><a href="./careers-students.html">Students</a></li>
+                  <li><a href="./jobs.html">Jobs</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link">Global Presence</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="navbar__right">
+        <button class="switch" id="switch">
+          <span class="switch__light"><i class="bx bx-sun"></i></span>
+          <span class="switch__dark"><i class="bx bx-moon"></i></span>
+        </button>
+      </section>
     </nav>
-</header>
+  </header>
   <!-- Hero Section -->
   <section class="hero-section">
+    <div id="tsparticles"></div>
     <div class="container">
       <div class="text-content">
-        <h1>Driven by ambition<br> and opportunity</h1>
-        <p>Our teams operate within a collaborative environment surrounded by experts, leveraging our sophisticated
+        <h1 data-aos="fade-down" data-aos-delay="500" class="heading">Driven by ambition<br> and opportunity</h1>
+        <p data-aos="fade-down">Our teams operate within a collaborative environment surrounded by experts, leveraging
+          our sophisticated
           global platform and an experienced management team.</p>
       </div>
     </div>
@@ -91,7 +95,8 @@
   <!-- Image Section -->
   <section class="image-section">
     <div class="container">
-      <img src="images/people-investment/IP-Hero-Retouched.jpg" alt="Person working in front of a computer">
+      <img data-aos="zoom-in" src="assets/images/people-investment/IP-Hero-Retouched.jpg"
+        alt="Person working in front of a computer">
     </div>
   </section>
 
@@ -99,18 +104,19 @@
   <section class="investment-section">
     <div class="container">
       <div class="text-content">
-        <h2>Empowering investment professionals</h2>
-        <p>Investment teams around the world are empowered to build and grow their businesses. We strive for them to be
+        <h2 data-aos="fade-down">Empowering investment professionals</h2>
+        <p data-aos="fade-down">Investment teams around the world are empowered to build and grow their businesses. We
+          strive for them to be
           more successful here than anywhere else.</p>
       </div>
       <div class="boxes-container">
-        <div class="box" onclick="toggleBox(this)">
+        <div data-aos="fade-right" class="box" onclick="toggleBox(this)">
           <h3>Capital stability</h3>
           <div class="box-content">
             <p>Take advantage of a capital base that enables focus and provides opportunities to scale...</p>
           </div>
         </div>
-        <div class="box" onclick="toggleBox(this)">
+        <div data-aos="fade-left" class="box" onclick="toggleBox(this)">
           <h3>Autonomy and collaboration</h3>
           <div class="box-content">
             <p>Our platform fosters autonomy, while allowing teams to collaborate globally to share knowledge...</p>
@@ -124,35 +130,36 @@
   <!-- Trading Strategies Section -->
   <section class="trading-strategies-section">
     <div class="container">
-      <h2>Broad, diverse trading strategies</h2>
-      <p>Millennium participates in major markets around the world and works to continually evaluate new strategies that
+      <h2 data-aos="fade-down">Broad, diverse trading strategies</h2>
+      <p data-aos="fade-down">Millennium participates in major markets around the world and works to continually
+        evaluate new strategies that
         fit our risk and return characteristics. We work to maintain agility at scale, which enables us to pursue new
         investment opportunities in a meaningful way.</p>
       <div class="trading-strategies">
-        <div class="strategy-box">
+        <div class="strategy-box" data-aos="zoom-in">
           <h3>Fundamental Equity</h3>
           <p>Conduct fundamental research on companies both as a generalist and specialist within a particular sector or
             sub-sector.</p>
           <hr>
         </div>
-        <div class="strategy-box">
+        <div class="strategy-box" data-aos="zoom-in">
           <h3>Equity Arbitrage</h3>
           <p>Pursue a variety of systematic and fundamental arbitrage strategies across different parts of a company’s
             capital structure and a variety of derivatives.</p>
           <hr>
         </div>
-        <div class="strategy-box">
+        <div class="strategy-box" data-aos="zoom-in">
           <h3>Fixed Income</h3>
           <p>Manage various strategies such as rates, macro, credit, mortgages and asset-backed securities</p>
           <hr>
         </div>
-        <div class="strategy-box">
+        <div class="strategy-box" data-aos="zoom-in">
           <h3>Commodities</h3>
           <p>Deploy a range of investment strategies across energy, metals, agricultural and soft commodities markets.
           </p>
           <hr>
         </div>
-        <div class="strategy-box">
+        <div class="strategy-box" data-aos="zoom-in">
           <h3>Quantitative Strategies</h3>
           <p>Build and enhance investment processes that are primarily systematically driven and focused on a variety of
             asset classes.
@@ -165,7 +172,7 @@
 
 
 
-  <section class="videoSection">
+  <section class="videoSection" data-aos="fade">
     <div class="videos">
       <div class="creative-fullpage--slider">
         <div class="banner-horizental">
@@ -174,7 +181,7 @@
               <div class="swiper-slide">
                 <div class="slider-inner" data-swiper-parallax="100">
                   <video autoplay loop muted>
-                    <source src="./videos/MLP.mp4" type="video/mp4">
+                    <source src="./assets/videos/newVideoToBeAdded.mp4" type="video/mp4">
                   </video>
                   <div class="swiper-content" data-swiper-parallax="2000">
                     <div class="title-area">
@@ -223,7 +230,7 @@
               <div class="swiper-slide">
                 <div class="slider-inner" data-swiper-parallax="100">
                   <video autoplay loop muted>
-                    <source src="./videos/MLP.mp4" type="video/mp4">
+                    <source src="./assets/heroVideo2.mp4" type="video/mp4">
                   </video>
                   <div class="swiper-content" data-swiper-parallax="2000">
                     <div class="title-area">
@@ -274,7 +281,7 @@
               <div class="swiper-slide">
                 <div class="slider-inner" data-swiper-parallax="100">
                   <video autoplay loop muted>
-                    <source src="./videos/MLP.mp4" type="video/mp4">
+                    <source src="./assets/heroVideo1.mp4" type="video/mp4">
                   </video>
                   <div class="swiper-content" data-swiper-parallax="2000">
                     <div class="title-area">
@@ -361,13 +368,30 @@
 
   <section class="hero-section-end">
     <video autoplay muted loop id="hero-video">
-      <source src="./videos/MLP.mp4" type="video/mp4">
+      <source src="./assets/videos/Charlotte-5s-Preview-for-Core.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="overlay"></div> <!-- Transparent overlay -->
     <div class="hero-text">
-      <h1>Get to know the Millennium team</h1>
-      <button class="hero-button">People <span>→</span></button>
+      <h1 data-aos="fade-down">Get to know the rising capital group's team</h1>
+      <button data-aos="fade-down" style="background-color: transparent;" data-aos="fade-down" class="btn">
+        <div>
+          <span>People</span>
+          <div class="arrow-container">
+            <div class="slash"></div>
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+              xml:space="preserve">
+              <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+C255,161.018,253.42,157.202,250.606,154.389z" />
+            </svg>
+          </div>
+        </div>
+      </button>
     </div>
   </section>
 
@@ -376,44 +400,51 @@
       <div class="fImg">
         <img src="./assets/logo-white.png" alt="" />
       </div>
+      <div class="fNav">
+        <ul>
+          <li>Privacy</li>
+          <li>Terms of use</li>
+          <li>careers</li>
+          <li>News and sights</li>
+        </ul>
 
-      <div class="links">
-        <p><a href="">Our Teams</a></p>
-        <p><a href="">What we do</a></p>
-        <p><a href="">Careers</a></p>
-        <p><a href="">New and Insights</a></p>
       </div>
     </div>
-
-    <div class="fNav">
-      <ul>
-        <li>Privacy</li>
-        <li>Terms of use</li>
-        <li>careers</li>
-        <li>News and sights</li>
-      </ul>
+    <hr>
+    <div class="footeroffooter">
       <div class="copyRight">
         <p>
-          Copyright © Citadel Enterprise Americas LLC or one of its
+          Copyright © Rising Capital Group Enterprise Americas LLC or one of its
           affiliates. All rights reserved.
         </p>
       </div>
       <div class="icons">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-youtube"></i>
+        <a href="https://in.linkedin.com/company/rising-capital-group
+            "> <i class="fa-brands fa-linkedin"></i></i></a>
+        <a href="https://www.instagram.com/risingcapitalgroup/
+            "><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/risingcapitalgroup
+            "> <i class="fa-brands fa-facebook"></i></a>
+        <a href="https://m.youtube.com/channel/UCL2tlLhyPpneiLJrRooW5jw
+            "><i class="fa-brands fa-youtube"></i></a>
+
+
+
+
       </div>
     </div>
+
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
 
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/people-Investment.js"></script>
   <script src="./js/script.js"></script>
 
