@@ -1,162 +1,530 @@
-section.accordionPeople .cardd {
-    display: grid;
-    padding: 50px;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
+    padding: 40px 150px;
+    margin: 0;
+}
+
+/* Header Section */
+.header2 {
+    background-color: white;
+    color: var(--primary);
+    font-size: 40px;
+    font-weight: bold;
+    height: 200px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* Infographic Section */
+.infographic {
+    font-size: 28px;
+    text-align: left;
+    position: relative;
     background-color: var(--primary);
-    grid-template-columns: 30% 70%;
-    gap: 50px;
-    border-radius: 10px;
+    color: white;
+    padding-top: 60px;
+    /* Additional padding for spacing */
+    padding-bottom: 60px;
+}
+
+/* Wrapper for each statistic */
+.infographic .stat {
+    position: relative;
+    padding-left: 50px;
+    /* Adjusted padding for spacing */
+    margin: 40px 0;
+}
+
+.infographic .number {
+    margin: 0;
+    position: relative;
+}
+
+.infographic .label {
+    font-size: 18px;
+    color: lightgreen;
+    margin: 5px 0 0 0;
+}
+
+.infographic .number::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    /* Adjusted position for the line */
+    top: 0;
+    width: 2px;
+    background-color: lightgreen;
+    transform-origin: bottom;
+    height: 0%;
+}
+
+/* Keyframes for the line animation */
+@keyframes drawAndHideLine {
+    0% {
+        height: 0%;
+    }
+
+    10% {
+        height: 100%;
+    }
+
+    20% {
+        height: 100%;
+    }
+
+    30% {
+        height: 0%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+/* Total duration of one full cycle */
+:root {
+    --total-duration: 25s;
+}
+
+/* Apply the animation with adjusted delays */
+.infographic .stat:nth-child(1) .number::before {
+    animation: drawAndHideLine var(--total-duration) infinite;
+    animation-delay: 0s;
+}
+
+.infographic .stat:nth-child(2) .number::before {
+    animation: drawAndHideLine var(--total-duration) infinite;
+    animation-delay: calc(-1 * (var(--total-duration) - 5s));
+}
+
+.infographic .stat:nth-child(3) .number::before {
+    animation: drawAndHideLine var(--total-duration) infinite;
+    animation-delay: calc(-1 * (var(--total-duration) - 10s));
+}
+
+.infographic .stat:nth-child(4) .number::before {
+    animation: drawAndHideLine var(--total-duration) infinite;
+    animation-delay: calc(-1 * (var(--total-duration) - 15s));
+}
+
+.infographic .stat:nth-child(5) .number::before {
+    animation: drawAndHideLine var(--total-duration) infinite;
+    animation-delay: calc(-1 * (var(--total-duration) - 20s));
+}
+
+/* Entrepreneurial Investing Section */
+section.entrepreneurial-investing {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+section.entrepreneurial-investing h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+section.entrepreneurial-investing p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.block {
+    width: 250px;
+    height: 250px;
+    background-color: var(--primary);
+    /* Theme color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+}
+
+.block .plus {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 150px;
+    background-color: var(--primary);
+    /* Dark blue background */
+    color: white;
+}
+
+.testimonial-image {
+    flex: 1 1 45%;
+    position: relative;
+    height: 300px;
+    background: url('./assets/images/Approach/Ajay-Quote-Card-1920x700_v2-3840x0-c-default.png') no-repeat center center/cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.testimonial-content {
+    flex: 1 1 45%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-quote {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    .testimonial-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .testimonial-image,
+    .testimonial-content {
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .testimonial-image {
+        height: 200px;
+    }
+
+    .blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* New Investment Strategies Styles */
+.investment-strategies {
+    background-color: #ffffff;
+    /* White background */
+    color: var(--primary);
+    /* Dark text for readability */
+    padding: 40px 150px;
+    /* Consistent with other sections */
+    text-align: left;
+}
+
+.investment-strategies h2 {
+    color: var(--primary);
+    /* Dark blue to match header */
+    margin-bottom: 20px;
+}
+
+.investment-strategies p {
+    max-width: 800px;
+    color: var(--primary);
+    /* Ensuring text does not span too wide */
+    margin-bottom: 30px;
+}
+
+.strategy-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.strategy-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Full width to accommodate two columns */
+}
+
+.strategy {
+    width: 48%;
+    /* Slightly less than half to fit two columns with some space */
+}
+
+.strategy h3 {
+    color: var(--primary);
+    /* Dark blue for titles */
+    margin-bottom: 10px;
+}
+
+.strategy p {
+    line-height: 1.6;
+    /* Improved readability */
+    border-bottom: 1px solid #ccc;
+    /* Light gray line under text */
+    padding-bottom: 10px;
+    color: var(--primary);
+    /* Space below text before the line */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .strategy-row {
+        flex-direction: column;
+    }
+
+    .strategy {
+        width: 100%;
+        /* Each strategy takes full width on small screens */
+        margin-bottom: 20px;
+        /* Space between stacked strategies */
+    }
+}
+
+
+/* Styles for Rigorous Approach to Compliance Section */
+.compliance-section {
+    background-color: #f4f4f4;
+    /* Light grey background for contrast */
+    color: var(--primary);
+    /* Dark text for readability */
+    padding: 40px 150px;
+    /* Consistent padding with other sections */
+    text-align: left;
+    /* Text alignment */
+}
+
+.compliance-section h2 {
+    color: var(--primary);
+    /* Dark blue for heading */
+    margin-bottom: 20px;
+    /* Space below the heading */
+}
+
+.compliance-section p {
+    margin-bottom: 20px;
+    /* Space below each paragraph */
+    max-width: 800px;
+    /* Max width for better readability */
+}
+
+.compliance-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.compliance-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Full width to accommodate two columns */
+}
+
+.compliance-officer {
+    width: 48%;
+    /* Each officer takes slightly less than half the row */
+    margin-bottom: 20px;
+    /* Space between entries */
+}
+
+.compliance-officer h3 {
+    color: var(--primary);
+    /* Dark blue for officer names */
+    margin-bottom: 10px;
+    /* Space below the name */
+}
+
+.compliance-officer p {
+    line-height: 1.6;
+    /* Line height for readability */
+    margin-bottom: 10px;
+    /* Space before the link */
+}
+
+.compliance-officer a {
+    color: var(--primary);
+    /* Link color */
+    text-decoration: none;
+    /* No underline */
+}
+
+/* Responsive Design for compliance section */
+@media (max-width: 768px) {
+    .compliance-row {
+        flex-direction: column;
+    }
+
+    .compliance-officer {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
+
+
+/* Explore Our Network Section Styles */
+.explore-network {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Adjust height as needed */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Center the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-network .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire section area */
+    z-index: -1;
+    /* Ensure the video stays in the background */
+}
+
+.explore-network .content {
+    z-index: 2;
+    /* Higher index to keep content above the video */
+}
+
+.explore-network h2 {
+    margin: 0;
+    font-size: 3em;
+    /* Large text size */
+}
+
+.explore-network button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    /* Theme blue background */
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-network button:hover {
+    background-color: var(--primary);
+    /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .explore-network {
+        height: 300px;
+        /* Smaller height on mobile devices */
+    }
+
+    .explore-network h2 {
+        font-size: 2em;
+        /* Smaller text on mobile devices */
+    }
+}
+
+
+.videoSection {
     position: sticky;
     top: 0;
-    margin: 50px 0;
-    color: white;
-
+    left: 0;
 }
 
-section.accordionPeople .cardd2 {
-    top: 90px;
+section .videos img {
+    -ms-interpolation-mode: bicubic;
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
 }
 
-section.accordionPeople .cardd3 {
-    top: 180px;
-
+section .videos {
+    position: relative;
 }
 
-section.accordionPeople .cards {
-    /* background-color: red; */
-    min-height: 190vh;
-    padding: 50px;
+section .videos video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+section .videos .videoModel {
+    background-color: #0000009b;
+    padding: 0;
+
+    height: 100vh;
+    width: 100%;
+    transition: .5s;
     overflow: hidden;
-}
-
-section.accordionPeople hr {
-    background-color: white;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 40px;
-    border: 100%;
-    box-shadow: 0 3px 10px white;
-}
-
-section.accordionPeople .cardd h1 {
-    font-size: 30px;
-}
-
-section.accordionPeople .cardd p {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-section.accordionPeople .cardd button {
-    background-color: transparent;
-    color: white;
-    border-color: white;
-
-}
-
-section.accordionPeople .cardd .slash {
-
-    background-color: white;
-
-}
-
-section.accordionPeople .cardd svg {
-
-    fill: white;
-
-}
-
-section.accordionPeople>h1 {
-    font-size: 40px;
-    text-align: center;
-    color: var(--primary);
-}
-
-section.accordionPeople>p {
-
-    text-align: center;
-    color: var(--primary);
-}
-
-section.accordionPeople img {
-    width: 100%;
-}
-
-
-.l-container {
-    padding: 0 30px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.title {
-    font-size: 40px;
-    margin-bottom: 50px;
-    color: #fff;
-    text-align: center;
-}
-
-.accordion {
-    width: 100%;
-    font-family: "Montserrat";
-    color: black;
-}
-
-.accordion-header {
-    background-color: white;
-    border-bottom: 1px solid gray;
-
-    padding: 30px 50px;
-    /* border-bottom: 1p solid black; */
-    transform: scale(1);
-    transition: background-color 0.3s ease-in-out, transform 0.5s cubic-bezier(0.99, 0.01, 0, 1.01) 0.3s;
-    position: relative;
-    cursor: pointer;
-}
-
-.accordion-header:after {
-    content: "►";
-    position: absolute;
-    right: 20px;
+    position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 100;
+}
+
+section .videos .videoModel .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
 }
 
-.accordion-header.is-active:after {
-    content: "▼";
+section .videos .videoModel .closebtn svg {
+    height: 50px;
+    stroke: white;
+    width: 50px;
+
 }
 
-.accordion-item {
-    border-bottom: 1px solid gray;
-}
+section.videoSection {
+    position: static !important;
 
-.accordion-header span {
-    position: relative;
-    z-index: 2;
-}
-
-.accordion-header.is-active {
-    background-color: var(--primary);
-    box-shadow: 0px 5px 9px 1px var(--primary);
-}
-
-.accordion-header.is-active:hover {
-    transform: scale(1);
-}
-
-.accordion-title {
-    font-size: 28px;
-    letter-spacing: 0.08em;
-}
-
-.accordion-contents {
-    background-color: var(--primary);
-    padding: 30px 50px;
-    box-shadow: inset 0 0 20px 0px var(--primary);
-}
-
-.accordion-text {
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    line-height: 2;
 }
