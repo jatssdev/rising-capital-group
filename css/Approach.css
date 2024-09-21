@@ -5,20 +5,32 @@ body {
     padding: 0;
 }
 
-section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
+section:not(.navbar__left):not(.navbar__center):not(.navbar__right):not(.videoSection) {
     padding: 40px 150px;
     margin: 0;
 }
 
+#particles-js-Approach {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+
+    width: 100%;
+}
+
 /* Header Section */
 .header2 {
-    background-color: white;
+    position: relative;
+    background-color: rgb(253, 253, 253);
     color: var(--primary);
     font-size: 40px;
     font-weight: bold;
-    height: 200px;
+    height: 60vh;
     text-align: left;
     display: flex;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -26,6 +38,8 @@ section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
 .infographic {
     font-size: 28px;
     text-align: left;
+    background-color: var(--primary);
+    /* background-image: url('../assets/images/approach-glob-image.png'); */
     position: relative;
     background-color: var(--primary);
     color: white;
@@ -37,7 +51,7 @@ section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
 /* Wrapper for each statistic */
 .infographic .stat {
     position: relative;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     /* Adjusted padding for spacing */
     margin: 40px 0;
 }
@@ -45,11 +59,12 @@ section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
 .infographic .number {
     margin: 0;
     position: relative;
+    font-size: 30px;
 }
 
 .infographic .label {
     font-size: 18px;
-    color: lightgreen;
+    color: white;
     margin: 5px 0 0 0;
 }
 
@@ -60,7 +75,7 @@ section:not(.navbar__left):not(.navbar__center):not(.navbar__right) {
     /* Adjusted position for the line */
     top: 0;
     width: 2px;
-    background-color: lightgreen;
+    background-color: white;
     transform-origin: bottom;
     height: 0%;
 }
@@ -129,6 +144,7 @@ section.entrepreneurial-investing {
 section.entrepreneurial-investing h2 {
     color: var(--primary);
     margin-bottom: 20px;
+    font-size: 30px
 }
 
 section.entrepreneurial-investing p {
@@ -138,26 +154,30 @@ section.entrepreneurial-investing p {
 }
 
 .blocks {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
     gap: 30px;
 }
 
 .block {
-    width: 250px;
-    height: 250px;
+
+    /* height: 250px; */
     background-color: var(--primary);
     /* Theme color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 5px;
     position: relative;
     font-size: 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 20px;
+}
+
+.block h2 {
+
+
+    color: white !important;
 }
 
 .block .plus {
@@ -172,11 +192,19 @@ section.entrepreneurial-investing p {
 .testimonial-section {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
     padding: 40px 150px;
     background-color: var(--primary);
     /* Dark blue background */
     color: white;
+}
+
+.testimonial-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .testimonial-image {
@@ -240,10 +268,11 @@ section.entrepreneurial-investing p {
         align-items: center;
     }
 
+    /* 
     .block {
         width: 100%;
         max-width: 300px;
-    }
+    } */
 }
 
 
@@ -317,6 +346,18 @@ section.entrepreneurial-investing p {
         /* Each strategy takes full width on small screens */
         margin-bottom: 20px;
         /* Space between stacked strategies */
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .blocks {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blocks {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -441,20 +482,29 @@ section.entrepreneurial-investing p {
 }
 
 .explore-network button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    background-color: var(--primary);
-    /* Theme blue background */
-    border: none;
+    background-color: transparent !important;
+    border-color: white;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .explore-network button:hover {
-    background-color: var(--primary);
-    /* Darker blue on hover */
+
+    border-color: var(--primary);
+
 }
+
+.explore-network button .slash {
+    background-color: white;
+}
+
+.explore-network button svg {
+    fill: white !important;
+}
+
+h2 {
+    font-size: 30px;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
