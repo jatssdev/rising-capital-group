@@ -211,12 +211,9 @@ $(document).ready(function () {
         $contentSection.html(`
     <h1>${job.title}</h1>
     <p><b>Location</b>: ${job.location.join(', ')}</p>
-   
-   
-    
     <hr>
    
-    <h2>Job Description</h2>
+    <h2 class='job-heading'>Job Description</h2>
     <p>${job.description}</p>
       <p><b>Experience Required</b>: ${job.experience}</p>
     <p><b>Education Required</b>: ${job.education}</p>
