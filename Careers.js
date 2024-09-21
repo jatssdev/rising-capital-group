@@ -165,64 +165,70 @@ tsParticles
     });
 // scripts.js
 $(document).ready(function () {
-    function getAllJobs() {
-        $.ajax({
-            url: 'https://rising-capital-backend.onrender.com/api/jobs', // URL of your API
-            type: 'GET',
-            dataType: 'json',
-            success: function (jobs) {
-                // Clear existing jobs
-                $('#jobs-container').empty();
+    const apiUrl = 'https://rising-capital-backend.onrender.com/api/jobs'; // Make sure to replace this with your actual API URL
 
-                // Append new jobs to the container
-                jobs.forEach(job => {
-                    const $job = $(`<div class="job">
-                <div class="col1">
-                    <h2 class='heading'>${job.title}</h2>
-                    <p><span>${job.experience}</span></p>
-                </div>
-                <div class="col2">
-                    <div class="skills">${job.skills.map(skill => `<p>${skill}</p>`).join('')}</div>
-                </div>
-            </div>`);
-                    $job.click(() => openModal(job));
-                    $('#jobs-container').append($job);
-                });
+    // Fetch jobs from the API
+    function fetchJobs() {
+        $.ajax({
+            url: apiUrl,
+            method: 'GET',
+            success: function (jobs) {
+                renderJobs(jobs);
             },
-            error: function (xhr, status, error) {
-                console.error("Failed to fetch jobs: ", status, error);
+            error: function (err) {
+                console.error('Error fetching jobs:', err);
+                alert('Failed to fetch jobs. Please try again later.');
             }
         });
     }
 
-    const $modal = $('#job-modal');
-    const $close = $('.close');
+    // Render jobs in the left-scroll cards
+    function renderJobs(jobs) {
+        const $jobsContainer = $('.left-scroll');
+        $jobsContainer.empty(); // Clear existing job cards
 
-    function openModal(job) {
-        $('#modal-title').text(job.title);
-        $('#modal-description').text(job.description);
-        $('#modal-experience').text(`Experience Required: ${job.experience}`);
-        $('#modal-education').text(`Education Required: ${job.education}`);
-        $('#modal-location').text(`Location: ${job.location.join(', ')}`);
-        $('#modal-skills').text(`Skills: ${job.skills.join(', ')}`);
-        $modal.show();
+        jobs.forEach(job => {
+            const $jobCard = $(`
+        <div class="card" data-id="${job.id}">
+            <h4>${job.title}</h4>
+            <span style="color:black;font-size: small;">${job.location}</span><br>
+            <span style="color:black;font-size: small;">${job.experience}</span>
+        </div>
+    `);
+
+            $jobCard.click(function () {
+                showJobDetails(job);
+            });
+
+            $jobsContainer.append($jobCard);
+        });
+        showJobDetails(jobs[0])
     }
 
-    function closeModal() {
-        $modal.hide();
+    // Show job details in the right content section
+    function showJobDetails(job) {
+        const $contentSection = $('#content-1'); // Assuming you want to load details into this div
+        $contentSection.html(`
+    <h1>${job.title}</h1>
+    <p><b>Location</b>: ${job.location.join(', ')}</p>
+   
+   
+    
+    <hr>
+   
+    <h2>Job Description</h2>
+    <p>${job.description}</p>
+      <p><b>Experience Required</b>: ${job.experience}</p>
+    <p><b>Education Required</b>: ${job.education}</p>
+    <div><b>Skills</b>: ${job.skills.map((x) => {
+            return `<span>${x}</span>`
+        })}</div>
+         <button class="blue-button">Apply Now</button>
+`);
     }
 
-    $close.click(function () {
-        closeModal();
-    });
-
-    $(window).click(function (e) {
-        if ($(e.target).is($modal)) {
-            closeModal();
-        }
-    });
-
-    // Call the function to load jobs when the page is ready
-    getAllJobs();
+    // Initial call to fetch jobs when the page is ready
+    fetchJobs();
 });
+
 
