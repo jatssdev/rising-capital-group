@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/GlobalPresence.css">
+
 </head>
 
 <body>
@@ -220,71 +222,7 @@
             </section>
         </nav>
     </header>
-    <style>
-        .gp {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
 
-        .map-canvas {
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary);
-
-            z-index: -1;
-            width: 100%;
-            /* background-color: blue; */
-            height: 100%;
-        }
-
-        .map-canvas img {
-            display: none;
-        }
-
-        .no-canvas .map-canvas img {
-            display: inline-block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        #canvas-map {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .gp h1 {
-            font-size: 60px;
-        }
-
-        .gp p {
-            font-size: 20px;
-        }
-
-        .gp button {
-            padding: 15px 20px;
-            border: 1px solid white;
-            font-size: 20px;
-            border-radius: 5px;
-            background-color: white;
-            color: var(--primary);
-            min-width: 300px;
-        }
-
-        .gp .gpbtns {
-            margin: 20px 0;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-    </style>
 
     <section class="gp">
         <div id="js-map-canvas" class="map-canvas">
@@ -306,49 +244,6 @@
     </section>
 
 
-    <style>
-        .gpCards {
-            padding: 100px;
-        }
-
-        .gpCards .cards .wrapper {
-            display: grid;
-            color: var(--primary);
-            gap: 50px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-
-        .gpCards .cards>h1 {
-            color: var(--primary);
-            font-size: 40px;
-            margin: 30px 0;
-        }
-
-        .gpCards .cards .img {
-            background-color: #9610434b;
-            padding: 50px 0;
-            border-radius: 10px;
-        }
-
-
-        .gpCards .cards .img img {
-            margin: auto;
-            width: 50%;
-            display: block;
-        }
-
-        .gpCards .cards .img:hover {
-            background-color: var(--primary);
-        }
-
-        .gpCards .cards .content * {
-            margin: 10px 0;
-        }
-
-        .gpCards .cards .content * {
-            margin: 10px 0;
-        }
-    </style>
 
     <section class="gpCards">
 
@@ -732,69 +627,6 @@
             </div>
         </div>
     </section>
-    <style>
-        /* Explore Our Network Section Styles */
-        .explore-network {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            /* Adjust height as needed */
-            color: #fff;
-            /* White text color */
-            text-align: center;
-            /* Center the content */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .explore-network .background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Cover the entire section area */
-            z-index: -1;
-            /* Ensure the video stays in the background */
-        }
-
-        .explore-network .content {
-            z-index: 2;
-            /* Higher index to keep content above the video */
-        }
-
-        .explore-network h2 {
-            margin: 0;
-            font-size: 3em;
-            /* Large text size */
-        }
-
-        .explore-network button {
-            background-color: transparent !important;
-            border-color: white;
-            color: white;
-        }
-
-        .explore-network button:hover {
-
-            border-color: var(--primary);
-
-        }
-
-        .explore-network button .slash {
-            background-color: white;
-        }
-
-        .explore-network button svg {
-            fill: white !important;
-        }
-
-        h2 {
-            font-size: 30px;
-        }
-    </style>
 
     <section class="explore-network">
         <video autoplay loop muted playsinline class="background-video">
