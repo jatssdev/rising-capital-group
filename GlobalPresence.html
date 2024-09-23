@@ -4,37 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Reach, Local Presence</title>
-    <link rel="stylesheet" href="./css/GlobalPresence.css">
+    <title>Particles Over Video Background</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
-
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hiddenD;
-        }
-
-        section {
-            padding: 40px 150px;
-            margin: 0;
-        }
-
-        /* Header2 Section */
-        .header2 {
-            background-color: white;
-            color: #0032ff;
-            font-size: 40px;
-            font-weight: bold;
-            height: 200px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-        }
-    </style>
-
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -101,249 +79,607 @@
             </section>
         </nav>
     </header>
-    <section class="header2">
+    <style>
+        .gp {
+            height: 100vh;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            padding: 100px;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .map-canvas {
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* background-color: blue; */
+            height: 100%;
+        }
+
+        .map-canvas img {
+            display: none;
+        }
+
+        .no-canvas .map-canvas img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #canvas-map {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .gp h1 {
+            font-size: 60px;
+        }
+
+        .gp p {
+            font-size: 20px;
+        }
+
+        .gp button {
+            padding: 15px 20px;
+            border: 1px solid white;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: white;
+            color: var(--primary);
+            min-width: 300px;
+        }
+
+        .gp .gpbtns {
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+
+    <section class="gp">
+        <div id="js-map-canvas" class="map-canvas">
+            <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16721/map-canvas-fallback.png"> -->
+        </div>
         <div>
-            Independent decisions, <br>
-            collaborative culture, <br>
-            united mission
+            <h1>Global reach,<br>
+                local presence</h1>
+            <p>We seek to combine our local expertise and presence with the backing of our global organization.</p>
+            <div class="gpbtns">
+                <button class="gpbtn">
+                    18 primary offices
+                </button>
+                <button class="gpbtn">
+                    140+ employee locations
+                </button>
+            </div>
         </div>
     </section>
 
 
+    <style>
+        .gpCards {
+            padding: 100px;
+        }
+
+        .gpCards .cards .wrapper {
+            display: grid;
+            color: var(--primary);
+            gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .gpCards .cards>h1 {
+            color: var(--primary);
+            font-size: 40px;
+            margin: 30px 0;
+        }
+
+        .gpCards .cards .img {
+            background-color: #9610434b;
+            padding: 50px 0;
+            border-radius: 10px;
+        }
 
 
+        .gpCards .cards .img img {
+            margin: auto;
+            width: 50%;
+            display: block;
+        }
 
-    <div class="locations-section">
-        <h2>Americas</h2>
-        <div class="locations-grid">
-            <!-- Repeat for each location -->
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
+        .gpCards .cards .img:hover {
+            background-color: var(--primary);
+        }
 
+        .gpCards .cards .content * {
+            margin: 10px 0;
+        }
+
+        .gpCards .cards .content * {
+            margin: 10px 0;
+        }
+    </style>
+
+    <section class="gpCards">
+
+        <div class="cards">
+            <h1>Americas</h1>
+            <div class="wrapper">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="cards">
+            <h1>EMEA</h1>
+            <div class="wrapper">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
 
 
-    <div class="locations-section">
-        <h2>Americas</h2>
-        <div class="locations-grid">
-            <!-- Repeat for each location -->
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
                 </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
             </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-
         </div>
-    </div>
+        <div class="cards">
+            <h1>APAC</h1>
+            <div class="wrapper">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
+                </div>
 
-    <div class="locations-section">
-        <h2>Americas</h2>
-        <div class="locations-grid">
-            <!-- Repeat for each location -->
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
                 </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
+                <div class="card">
+                    <div class="img"> <img src="./assets/images/New-York-City-Graphic.png" alt=""></div>
+                    <div class="content">
+                        <h2>New York</h2>
+                        <p class="address">
+                            399 Park Avenue
+                            New York, NY 10022
+                            United States
+                        </p>
+                        <p class="mobile">
+                            +1 (212) 841 4100
+                        </p>
+                        <p class="office">
+                            Principal Office
+                        </p>
+                        <p class="cName">
+                            Millennium Management LLC, MPG Operations LLC
+                        </p>
+                    </div>
                 </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
             </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-            <div class="location">
-                <div class="icon-container">
-                    <img src="./assets/images/new-york.bmp" alt="New York">
-                </div>
-                <h3>New York</h3>
-                <address>
-                    399 Park Avenue<br>
-                    New York, NY 10022<br>
-                    United States
-                </address>
-                <p>+1 (212) 841 4100</p>
-                <p class="office-info">Principal Office<br>Millennium Management LLC, MPG Operations LLC</p>
-            </div>
-
         </div>
-    </div>
+    </section>
+    <style>
+        /* Explore Our Network Section Styles */
+        .explore-network {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust height as needed */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Center the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .explore-network .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the entire section area */
+            z-index: -1;
+            /* Ensure the video stays in the background */
+        }
 
+        .explore-network .content {
+            z-index: 2;
+            /* Higher index to keep content above the video */
+        }
+
+        .explore-network h2 {
+            margin: 0;
+            font-size: 3em;
+            /* Large text size */
+        }
+
+        .explore-network button {
+            background-color: transparent !important;
+            border-color: white;
+            color: white;
+        }
+
+        .explore-network button:hover {
+
+            border-color: var(--primary);
+
+        }
+
+        .explore-network button .slash {
+            background-color: white;
+        }
+
+        .explore-network button svg {
+            fill: white !important;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+    </style>
 
     <section class="explore-network">
         <video autoplay loop muted playsinline class="background-video">
-            <source src="./assets/videos/MLP.mp4" type="video/mp4">
+            <source src="./assets/heroVideo1.mp4" type="video/mp4">
             <!-- Add other video formats or a fallback message here if necessary -->
             Your browser does not support the video tag.
         </video>
         <div class="content">
-            <h2>Explore our network</h2>
-            <button>Global Presence</button>
+            <h2 data-aos="fade-down">Discover our approach</h2>
+
+            <button data-aos="fade-down" class="btn">
+                <div>
+                    <span>Approach</span>
+                    <div class="arrow-container">
+                        <div class="slash"></div>
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 330 330" xml:space="preserve">
+                            <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+    c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+    C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+    C255,161.018,253.42,157.202,250.606,154.389z" />
+                        </svg>
+                    </div>
+                </div>
+            </button>
         </div>
     </section>
 
@@ -408,10 +744,133 @@
         </div>
 
     </footer>
+    <!-- <div class="dummy" style="height: 100vh; background-color: white; position: relative;z-index: 10"></div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
     <script src="./js/script.js"></script>
+    <script>
+        var jsonMap = [{ "cx": 102, "cy": 252 }, { "cx": 335, "cy": 243 }, { "cx": 595, "cy": 209 }, { "cx": 452, "cy": 617 }, { "cx": 487, "cy": 593 }, { "cx": 440, "cy": 564 }, { "cx": 516, "cy": 544 }, { "cx": 428, "cy": 524 }, { "cx": 388, "cy": 341 }, { "cx": 344, "cy": 329 }, { "cx": 419, "cy": 296 }, { "cx": 335, "cy": 371 }, { "cx": 274, "cy": 360 }, { "cx": 261, "cy": 320 }, { "cx": 329, "cy": 296 }, { "cx": 271, "cy": 284 }, { "cx": 302, "cy": 224 }, { "cx": 399, "cy": 273 }, { "cx": 385, "cy": 305 }, { "cx": 368, "cy": 281 }, { "cx": 344, "cy": 270 }, { "cx": 362, "cy": 206 }, { "cx": 319, "cy": 187 }, { "cx": 274, "cy": 184 }, { "cx": 223, "cy": 249 }, { "cx": 258, "cy": 229 }, { "cx": 223, "cy": 204 }, { "cx": 170, "cy": 215 }, { "cx": 135, "cy": 192 }, { "cx": 71, "cy": 175 }, { "cx": 89, "cy": 195 }, { "cx": 71, "cy": 209 }, { "cx": 89, "cy": 221 }, { "cx": 80, "cy": 243 }, { "cx": 77, "cy": 284 }, { "cx": 114, "cy": 264 }, { "cx": 149, "cy": 246 }, { "cx": 181, "cy": 261 }, { "cx": 206, "cy": 293 }, { "cx": 226, "cy": 329 }, { "cx": 229, "cy": 374 }, { "cx": 261, "cy": 400 }, { "cx": 293, "cy": 442 }, { "cx": 382, "cy": 538 }, { "cx": 392, "cy": 567 }, { "cx": 422, "cy": 596 }, { "cx": 416, "cy": 648 }, { "cx": 405, "cy": 699 }, { "cx": 401, "cy": 738 }, { "cx": 446, "cy": 769 }, { "cx": 428, "cy": 755 }, { "cx": 428, "cy": 735 }, { "cx": 431, "cy": 710 }, { "cx": 452, "cy": 676 }, { "cx": 464, "cy": 654 }, { "cx": 481, "cy": 657 }, { "cx": 500, "cy": 635 }, { "cx": 500, "cy": 617 }, { "cx": 524, "cy": 607 }, { "cx": 538, "cy": 570 }, { "cx": 561, "cy": 538 }, { "cx": 494, "cy": 518 }, { "cx": 458, "cy": 494 }, { "cx": 419, "cy": 479 }, { "cx": 398, "cy": 497 }, { "cx": 376, "cy": 485 }, { "cx": 356, "cy": 464 }, { "cx": 362, "cy": 442 }, { "cx": 335, "cy": 451 }, { "cx": 319, "cy": 430 }, { "cx": 332, "cy": 409 }, { "cx": 362, "cy": 403 }, { "cx": 385, "cy": 427 }, { "cx": 379, "cy": 400 }, { "cx": 402, "cy": 383 }, { "cx": 419, "cy": 357 }, { "cx": 452, "cy": 335 }, { "cx": 431, "cy": 320 }, { "cx": 475, "cy": 299 }, { "cx": 455, "cy": 254 }, { "cx": 428, "cy": 261 }, { "cx": 395, "cy": 235 }, { "cx": 408, "cy": 200 }, { "cx": 440, "cy": 201 }, { "cx": 379, "cy": 164 }, { "cx": 425, "cy": 161 }, { "cx": 353, "cy": 178 }, { "cx": 299, "cy": 128 }, { "cx": 277, "cy": 148 }, { "cx": 322, "cy": 148 }, { "cx": 232, "cy": 164 }, { "cx": 164, "cy": 164 }, { "cx": 108, "cy": 148 }, { "cx": 720, "cy": 264 }, { "cx": 802, "cy": 593 }, { "cx": 769, "cy": 448 }, { "cx": 1319, "cy": 243 }, { "cx": 1316, "cy": 212 }, { "cx": 1330, "cy": 198 }, { "cx": 1359, "cy": 215 }, { "cx": 1368, "cy": 198 }, { "cx": 1327, "cy": 164 }, { "cx": 1297, "cy": 173 }, { "cx": 1262, "cy": 161 }, { "cx": 1233, "cy": 151 }, { "cx": 1197, "cy": 131 }, { "cx": 1191, "cy": 145 }, { "cx": 1155, "cy": 151 }, { "cx": 1146, "cy": 125 }, { "cx": 1104, "cy": 128 }, { "cx": 1057, "cy": 131 }, { "cx": 1093, "cy": 96 }, { "cx": 1071, "cy": 75 }, { "cx": 1022, "cy": 85 }, { "cx": 998, "cy": 115 }, { "cx": 973, "cy": 118 }, { "cx": 979, "cy": 158 }, { "cx": 949, "cy": 178 }, { "cx": 933, "cy": 128 }, { "cx": 902, "cy": 164 }, { "cx": 796, "cy": 558 }, { "cx": 756, "cy": 617 }, { "cx": 756, "cy": 548 }, { "cx": 785, "cy": 512 }, { "cx": 762, "cy": 485 }, { "cx": 723, "cy": 470 }, { "cx": 735, "cy": 436 }, { "cx": 692, "cy": 454 }, { "cx": 664, "cy": 433 }, { "cx": 660, "cy": 397 }, { "cx": 685, "cy": 392 }, { "cx": 708, "cy": 383 }, { "cx": 720, "cy": 400 }, { "cx": 756, "cy": 397 }, { "cx": 785, "cy": 405 }, { "cx": 802, "cy": 424 }, { "cx": 815, "cy": 457 }, { "cx": 833, "cy": 485 }, { "cx": 865, "cy": 482 }, { "cx": 849, "cy": 512 }, { "cx": 822, "cy": 541 }, { "cx": 874, "cy": 604 }, { "cx": 855, "cy": 617 }, { "cx": 871, "cy": 582 }, { "cx": 822, "cy": 576 }, { "cx": 805, "cy": 610 }, { "cx": 796, "cy": 632 }, { "cx": 772, "cy": 657 }, { "cx": 746, "cy": 657 }, { "cx": 732, "cy": 625 }, { "cx": 720, "cy": 590 }, { "cx": 729, "cy": 561 }, { "cx": 711, "cy": 530 }, { "cx": 711, "cy": 506 }, { "cx": 692, "cy": 500 }, { "cx": 651, "cy": 506 }, { "cx": 623, "cy": 497 }, { "cx": 617, "cy": 464 }, { "cx": 617, "cy": 442 }, { "cx": 632, "cy": 415 }, { "cx": 743, "cy": 290 }, { "cx": 772, "cy": 261 }, { "cx": 788, "cy": 240 }, { "cx": 737, "cy": 227 }, { "cx": 762, "cy": 201 }, { "cx": 865, "cy": 178 }, { "cx": 812, "cy": 218 }, { "cx": 796, "cy": 189 }, { "cx": 830, "cy": 187 }, { "cx": 799, "cy": 167 }, { "cx": 772, "cy": 148 }, { "cx": 740, "cy": 170 }, { "cx": 720, "cy": 209 }, { "cx": 695, "cy": 232 }, { "cx": 836, "cy": 273 }, { "cx": 723, "cy": 338 }, { "cx": 737, "cy": 371 }, { "cx": 711, "cy": 344 }, { "cx": 692, "cy": 350 }, { "cx": 676, "cy": 374 }, { "cx": 660, "cy": 377 }, { "cx": 645, "cy": 374 }, { "cx": 645, "cy": 347 }, { "cx": 673, "cy": 347 }, { "cx": 676, "cy": 332 }, { "cx": 667, "cy": 323 }, { "cx": 705, "cy": 296 }, { "cx": 657, "cy": 305 }, { "cx": 676, "cy": 288 }, { "cx": 667, "cy": 260 }, { "cx": 629, "cy": 290 }, { "cx": 635, "cy": 276 }, { "cx": 521, "cy": 137 }, { "cx": 521, "cy": 167 }, { "cx": 580, "cy": 134 }, { "cx": 583, "cy": 158 }, { "cx": 546, "cy": 184 }, { "cx": 521, "cy": 212 }, { "cx": 513, "cy": 246 }, { "cx": 490, "cy": 215 }, { "cx": 487, "cy": 178 }, { "cx": 478, "cy": 145 }, { "cx": 614, "cy": 215 }, { "cx": 620, "cy": 195 }, { "cx": 917, "cy": 427 }, { "cx": 943, "cy": 439 }, { "cx": 937, "cy": 476 }, { "cx": 958, "cy": 506 }, { "cx": 979, "cy": 473 }, { "cx": 995, "cy": 442 }, { "cx": 1016, "cy": 442 }, { "cx": 1046, "cy": 473 }, { "cx": 1063, "cy": 488 }, { "cx": 1078, "cy": 476 }, { "cx": 1060, "cy": 454 }, { "cx": 1081, "cy": 442 }, { "cx": 1113, "cy": 424 }, { "cx": 1110, "cy": 394 }, { "cx": 1107, "cy": 371 }, { "cx": 1121, "cy": 360 }, { "cx": 1140, "cy": 383 }, { "cx": 1143, "cy": 363 }, { "cx": 1179, "cy": 400 }, { "cx": 1206, "cy": 389 }, { "cx": 1221, "cy": 357 }, { "cx": 1161, "cy": 347 }, { "cx": 1188, "cy": 317 }, { "cx": 1170, "cy": 281 }, { "cx": 1203, "cy": 252 }, { "cx": 1250, "cy": 237 }, { "cx": 1244, "cy": 289 }, { "cx": 1262, "cy": 293 }, { "cx": 1280, "cy": 249 }, { "cx": 1224, "cy": 670 }, { "cx": 1200, "cy": 676 }, { "cx": 1173, "cy": 660 }, { "cx": 1158, "cy": 641 }, { "cx": 1130, "cy": 651 }, { "cx": 1096, "cy": 654 }, { "cx": 1093, "cy": 632 }, { "cx": 1093, "cy": 604 }, { "cx": 1124, "cy": 587 }, { "cx": 1149, "cy": 579 }, { "cx": 1155, "cy": 564 }, { "cx": 1176, "cy": 567 }, { "cx": 1170, "cy": 579 }, { "cx": 1191, "cy": 590 }, { "cx": 1197, "cy": 564 }, { "cx": 1075, "cy": 535 }, { "cx": 1113, "cy": 554 }, { "cx": 1063, "cy": 544 }, { "cx": 1030, "cy": 506 }, { "cx": 815, "cy": 415 }, { "cx": 836, "cy": 451 }, { "cx": 868, "cy": 461 }, { "cx": 892, "cy": 448 }, { "cx": 865, "cy": 433 }, { "cx": 855, "cy": 406 }, { "cx": 1253, "cy": 186 }, { "cx": 1179, "cy": 181 }, { "cx": 1099, "cy": 175 }, { "cx": 1019, "cy": 170 }, { "cx": 976, "cy": 218 }, { "cx": 880, "cy": 224 }, { "cx": 836, "cy": 235 }, { "cx": 830, "cy": 348 }, { "cx": 1033, "cy": 347 }, { "cx": 1054, "cy": 402 }, { "cx": 961, "cy": 412 }, { "cx": 899, "cy": 380 }, { "cx": 794, "cy": 299 }, { "cx": 812, "cy": 389 }, { "cx": 791, "cy": 374 }, { "cx": 775, "cy": 354 }, { "cx": 759, "cy": 377 }, { "cx": 750, "cy": 350 }, { "cx": 756, "cy": 320 }, { "cx": 717, "cy": 314 }, { "cx": 1309, "cy": 702 }, { "cx": 1306, "cy": 688 }, { "cx": 1283, "cy": 710 }, { "cx": 1333, "cy": 676 }, { "cx": 1218, "cy": 599 }, { "cx": 1241, "cy": 620 }, { "cx": 1233, "cy": 648 }, { "cx": 1203, "cy": 635 }, { "cx": 1167, "cy": 610 }, { "cx": 1127, "cy": 622 }, { "cx": 992, "cy": 371 }, { "cx": 839, "cy": 320 }, { "cx": 1143, "cy": 311 }, { "cx": 943, "cy": 366 }, { "cx": 1004, "cy": 287 }, { "cx": 874, "cy": 299 }, { "cx": 880, "cy": 335 }, { "cx": 905, "cy": 299 }, { "cx": 1093, "cy": 302 }, { "cx": 940, "cy": 284 }, { "cx": 1063, "cy": 224 }, { "cx": 1133, "cy": 246 }, { "cx": 1188, "cy": 227 }, { "cx": 1218, "cy": 206 }, { "cx": 665, "cy": 476 }, { "cx": 749, "cy": 521 }, { "cx": 908, "cy": 254 }, { "cx": 930, "cy": 224 }, { "cx": 1133, "cy": 203 }, { "cx": 1027, "cy": 257 }, { "cx": 1043, "cy": 302 }, { "cx": 1084, "cy": 264 }, { "cx": 1057, "cy": 183 }, { "cx": 947, "cy": 338 }, { "cx": 970, "cy": 308 }, { "cx": 984, "cy": 258 }, { "cx": 1007, "cy": 228 }, { "cx": 1043, "cy": 375 }, { "cx": 1066, "cy": 345 }];
 
 
+        /* ---- PARAMS ---- */
+        var numberParticlesStart = jsonMap.length,
+            distanceLinkMax = 70,
+            linkMax = 8,
+            particleSize = 1,
+            particleZone = 11,
+            particleSpeed = 0.04,
+            velocity = 2.5,
+            particleFillColor = '#fff',
+            particleStrokeColor = '#fff',
+            particleLinkColor = '#fff',
+            showZone = false;
+
+        /* ---- INIT ---- */
+        var particles = [];
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext("2d");
+
+        canvas.id = "canvas-map";
+        canvas.width = window.innerWidth;  // Make it responsive
+        canvas.height = window.innerHeight;  // Make it responsive
+
+        var container = document.getElementById('js-map-canvas');
+        if (container !== null)
+            container.appendChild(canvas);
+
+        /* ---- CLASS ---- */
+        function Particle(x, y) {
+            this.x = this.centerX = x;
+            this.y = this.centerY = y;
+            this.velX = _.random(-velocity, velocity);
+            this.velY = _.random(-velocity, velocity);
+            this.nbrOfLinks = 0;
+        }
+
+        Particle.prototype.render = function () {
+            context.beginPath();
+            context.fillStyle = particleFillColor;
+            context.strokeStyle = particleStrokeColor;
+            context.lineWidth = 0.25;
+            context.arc(this.x, this.y, particleSize * 2, 0, Math.PI * 2);
+            context.fill();
+            context.stroke();
+        };
+
+        Particle.prototype.update = function () {
+            var posRelativeToCenter = {
+                x: this.x - this.centerX,
+                y: this.y - this.centerY
+            };
+            var distance = Math.sqrt(Math.pow(posRelativeToCenter.x, 2) + Math.pow(posRelativeToCenter.y, 2));
+            if (distance > particleZone) {
+                var force = (particleZone - distance) / particleZone;
+                var forceDirection = {
+                    x: (posRelativeToCenter.x / distance) * force,
+                    y: (posRelativeToCenter.y / distance) * force
+                };
+                this.velX += forceDirection.x;
+                this.velY += forceDirection.y;
+            }
+            this.x += this.velX * particleSpeed;
+            this.y += this.velY * particleSpeed;
+            this.nbrOfLinks = 0;
+        };
+
+        Particle.prototype.renderLinks = function (particles) {
+            var that = this;
+            _.each(particles, function (p) {
+                var distance = Math.sqrt(Math.pow(that.x - p.x, 2) + Math.pow(that.y - p.y, 2));
+                if (that.nbrOfLinks > linkMax)
+                    return;
+                if (distance < distanceLinkMax && that.nbrOfLinks < linkMax && p.nbrOfLinks < linkMax) {
+                    context.beginPath();
+                    context.moveTo(p.x, p.y);
+                    context.lineTo(that.x, that.y);
+                    context.strokeStyle = particleLinkColor;
+                    context.stroke();
+                    that.nbrOfLinks++;
+                    p.addLink();
+                }
+            });
+        }
+
+        Particle.prototype.addLink = function () {
+            this.nbrOfLinks++;
+        }
+
+        /* ---- Functions ----*/
+        function loop() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            _.each(particles, function (p) {
+                p.update();
+            });
+            _.each(particles, function (p) {
+                p.renderLinks(_.without(particles, p));
+            });
+            _.each(particles, function (p) {
+                p.render();
+            });
+            requestAnimationFrame(loop);
+        }
+
+        /* ---- START ---- */
+        for (var i = 0; i < numberParticlesStart; i++) {
+            var x = jsonMap[i].cx,
+                y = jsonMap[i].cy;
+            particles.push(new Particle(x, y));
+        }
+        loop();
+    </script>
 </body>
 
 </html>
