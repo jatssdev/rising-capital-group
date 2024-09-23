@@ -10,13 +10,13 @@
 
 a.link {
     position: relative;
-    color: var(--primary) !important;
+    /* color: var(--primary) !important; */
     padding-right: 50px !important;
 }
 
 a.link2 {
     position: relative;
-    color: var(--primary) !important;
+    /* color: var(--primary) !important; */
 
 
     padding-right: 30px !important;
@@ -25,7 +25,8 @@ a.link2 {
 a.link::before {
     content: "";
     height: .0625rem;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background-color: black;
     position: absolute;
     top: 50%;
     right: 0;
@@ -39,7 +40,8 @@ a.link::before {
 a.link2::before {
     content: "";
     height: .0625rem;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    background-color: black;
     position: absolute;
     top: 50%;
     right: 0;
@@ -50,8 +52,10 @@ a.link2::before {
     pointer-events: none;
 }
 
+
 a.link:hover::before {
     animation-name: arrowAnim;
+    background-color: var(--primary);
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -60,6 +64,8 @@ a.link2:hover::before {
     animation-name: arrowAnim;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    background-color: var(--primary);
+
 }
 
 a.link svg {
