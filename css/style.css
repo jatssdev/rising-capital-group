@@ -8,6 +8,110 @@
     --primary: #961043;
 }
 
+a.link {
+    position: relative;
+    color: var(--primary) !important;
+    padding-right: 50px !important;
+}
+
+a.link2 {
+    position: relative;
+    color: var(--primary) !important;
+
+
+    padding-right: 30px !important;
+}
+
+a.link::before {
+    content: "";
+    height: .0625rem;
+    background-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform-origin: center;
+    transition: transform .2s ease-out;
+    width: 30px;
+    transform: rotate(-55deg) translateY(-50%) translateX(0);
+    pointer-events: none;
+}
+
+a.link2::before {
+    content: "";
+    height: .0625rem;
+    background-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform-origin: center;
+    transition: transform .2s ease-out;
+    width: 20px;
+    transform: rotate(-55deg) translateY(-50%) translateX(0);
+    pointer-events: none;
+}
+
+a.link:hover::before {
+    animation-name: arrowAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+a.link2:hover::before {
+    animation-name: arrowAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+a.link svg {
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    fill: var(--primary);
+    transition: .5s;
+
+    transform: translate(8px, -50%);
+    width: 15px;
+}
+
+a.link2 svg {
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    fill: var(--primary);
+    transition: .5s;
+
+    transform: translate(8px, -50%);
+    width: 12px;
+}
+
+a.link:hover svg {
+
+    opacity: 1;
+
+}
+
+a.link2:hover svg {
+
+    opacity: 1;
+
+}
+
+@keyframes arrowAnim {
+    50% {
+        transform: rotate(0) translateY(-50%) translatex(0);
+
+    }
+
+    100% {
+        transform: rotate(0) translateY(-50%) translatex(-20%);
+
+    }
+}
+
 
 #field {
     position: absolute;
