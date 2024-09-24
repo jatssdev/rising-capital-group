@@ -66,6 +66,9 @@
     padding: 100px;
 }
 
+
+
+
 .gpCards .cards .wrapper {
     display: grid;
     color: var(--primary);
@@ -92,8 +95,13 @@
     display: block;
 }
 
+
 .gpCards .cards .img:hover {
     background-color: var(--primary);
+}
+
+.gpCards .cards .img:hover img {
+    filter: brightness(0) invert(2);
 }
 
 .gpCards .cards .content * {

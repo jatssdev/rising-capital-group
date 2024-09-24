@@ -14,16 +14,6 @@ body {
   position: absolute;
 }
 
-.section {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  min-height: 80vh;
-}
-
 hr {
   margin: 50px 100px;
   border: none;
@@ -32,60 +22,33 @@ hr {
   box-shadow: 0 3px 10px var(--primary);
   height: 1px;
 }
-
-
-
-.text-container h1 {
-  font-size: 48px;
-  color: var(--primary);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.text-container p {
-  font-size: 18px;
-  color: #606060;
-  margin-top: 15px;
-}
-
-.pattern-container {
-  max-width: 50%;
-}
-
-.pattern {
-  display: grid;
-  grid-template-columns: repeat(10, 20px);
-  grid-template-rows: repeat(6, 20px);
-  gap: 10px;
-}
-
-.pattern div {
-  width: 20px;
-  /* height: 20px; */
-  border-bottom: 2px solid var(--primary);
-  border-right: 2px solid var(--primary);
-  transform: rotate(45deg);
-}
-
-/* Firm Management Styles */
-.firm-management {
+.section, .firm-management, .CoreInfra, .techManage, .investDev, .BusinessDev, .ViceChairSenior {
   padding: 50px;
   background-color: white;
   color: var(--primary);
 }
 
-.firm-management h2 {
+.section {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.section h2, .firm-management h2, .CoreInfra h2, .techManage h2, .investDev h2, .BusinessDev h2, .ViceChairSenior h2 {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.firm-management-grid {
+.section-grid, .firm-management-grid, .CoreInfra-grid, .techManage-grid, .investDev-grid, .BusinessDev-grid, .ViceChairSenior-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.firm-management-grid div {
+.section-grid div, .firm-management-grid div, .CoreInfra-grid div, .techManage-grid div, .investDev-grid div, .BusinessDev-grid div, .ViceChairSenior-grid div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -100,624 +63,75 @@ hr {
   padding-bottom: 30px;
 }
 
-.firm-management-grid div:hover {
+.section-grid div:hover, .firm-management-grid div:hover, .CoreInfra-grid div:hover, .techManage-grid div:hover, .investDev-grid div:hover, .BusinessDev-grid div:hover, .ViceChairSenior-grid div:hover {
   background-color: var(--primary);
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
 
-.firm-management-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.firm-management-grid h3 {
+/* Shared Styles for Section Content */
+.section-grid h3, .firm-management-grid h3, .CoreInfra-grid h3, .techManage-grid h3, .investDev-grid h3, .BusinessDev-grid h3, .ViceChairSenior-grid h3 {
   font-size: 18px;
-  margin: 0;
+  margin: 2;
   color: var(--primary);
   transition: color 0.3s ease;
 }
 
-.firm-management-grid div:hover h3 {
+.section-grid div:hover h3, .firm-management-grid div:hover h3, .CoreInfra-grid div:hover h3, .techManage-grid div:hover h3, .investDev-grid div:hover h3, .BusinessDev-grid div:hover h3, .ViceChairSenior-grid div:hover h3 {
   color: white;
 }
 
-.firm-management-grid p {
+.section-grid p, .firm-management-grid p, .CoreInfra-grid p, .techManage-grid p, .investDev-grid p, .BusinessDev-grid p, .ViceChairSenior-grid p {
   font-size: 14px;
   margin: 5px 0 0;
   color: var(--primary);
   transition: color 0.3s ease;
 }
 
-.firm-management-grid div:hover p {
+.section-grid div:hover p, .firm-management-grid div:hover p, .CoreInfra-grid div:hover p, .techManage-grid div:hover p, .investDev-grid div:hover p, .BusinessDev-grid div:hover p, .ViceChairSenior-grid div:hover p {
   color: white;
 }
 
-.firm-management-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.firm-management-grid img {
+/* Shared Styles for Images */
+.section-grid img, .firm-management-grid img, .CoreInfra-grid img, .techManage-grid img, .investDev-grid img, .BusinessDev-grid img, .ViceChairSenior-grid img {
   width: 150px;
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
   margin-left: 20px;
-  /* opacity: 0; */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.firm-management-grid div:hover img {
+.section-grid div:hover img, .firm-management-grid div:hover img, .CoreInfra-grid div:hover img, .techManage-grid div:hover img, .investDev-grid div:hover img, .BusinessDev-grid div:hover img, .ViceChairSenior-grid div:hover img {
   opacity: 1;
   transform: scale(1.05);
 }
 
-.firm-management-grid .arrow {
+/* Shared Styles for Arrows */
+.section-grid .arrow, .firm-management-grid .arrow, .CoreInfra-grid .arrow, .techManage-grid .arrow, .investDev-grid .arrow, .BusinessDev-grid .arrow, .ViceChairSenior-grid .arrow {
   position: absolute;
   bottom: 20px;
   left: 50px;
   font-size: 24px;
   color: white;
-  /* opacity: 0; */
   transition: opacity 0.3s ease;
-}
-
-.firm-management-grid div:hover .arrow {
-  opacity: 1;
-}
-
-/* Core Infrastructure Styles */
-.CoreInfra {
-  padding: 50px;
-  background-color: white;
-  color: var(--primary);
-}
-
-.CoreInfra h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.CoreInfra-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.CoreInfra-grid div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: #EBF2F8;
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-
-.CoreInfra-grid div:hover {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.CoreInfra-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.CoreInfra-grid h3 {
-  font-size: 18px;
-  margin: 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.CoreInfra-grid div:hover h3 {
-  color: white;
-}
-
-.CoreInfra-grid p {
-  font-size: 14px;
-  margin: 5px 0 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.CoreInfra-grid div:hover p {
-  color: white;
-}
-
-.CoreInfra-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.CoreInfra-grid img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-left: 20px;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.CoreInfra-grid div:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.CoreInfra-grid .arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  font-size: 24px;
-  color: white;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease;
-}
-
-.CoreInfra-grid div:hover .arrow {
-  opacity: 1;
-}
-
-/* Technology Management Styles */
-.techManage {
-  padding: 50px;
-  background-color: var(--primary);
-  color: var(--primary);
-}
-
-.techManage h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.techManage-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.techManage-grid div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: var(--primary);
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-
-.techManage-grid div:hover {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.techManage-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.techManage-grid h3 {
-  font-size: 18px;
-  margin: 0;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.techManage-grid div:hover h3 {
-  color: white;
-}
-
-.techManage-grid p {
-  font-size: 14px;
-  margin: 5px 0 0;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.techManage-grid div:hover p {
-  color: white;
-}
-
-.techManage-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.techManage-grid img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-left: 20px;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.techManage-grid div:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.techManage-grid .arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  font-size: 24px;
-  color: white;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease;
-}
-
-.techManage-grid div:hover .arrow {
-  opacity: 1;
-}
-
-/* Investor Relations and Capital Development Styles */
-.investDev {
-  padding: 50px;
-  background-color: white;
-  color: var(--primary);
-}
-
-.investDev h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.investDev-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.investDev-grid div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: white;
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-
-.investDev-grid div:hover {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.investDev-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.investDev-grid h3 {
-  font-size: 18px;
-  margin: 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.investDev-grid div:hover h3 {
-  color: white;
-}
-
-.investDev-grid p {
-  font-size: 14px;
-  margin: 5px 0 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.investDev-grid div:hover p {
-  color: white;
-}
-
-.investDev-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.investDev-grid img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-left: 20px;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.investDev-grid div:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.investDev-grid .arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  font-size: 24px;
-  color: white;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease;
-}
-
-.investDev-grid div:hover .arrow {
-  opacity: 1;
-}
-
-/* Business Development Styles */
-.BusinessDev {
-  padding: 50px;
-  background-color: white;
-  color: var(--primary);
-}
-
-.BusinessDev h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.BusinessDev-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.BusinessDev-grid div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: #EBF2F8;
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-
-.BusinessDev-grid div:hover {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.BusinessDev-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.BusinessDev-grid h3 {
-  font-size: 18px;
-  margin: 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.BusinessDev-grid div:hover h3 {
-  color: white;
-}
-
-.BusinessDev-grid p {
-  font-size: 14px;
-  margin: 5px 0 0;
-  color: var(--primary);
-  transition: color 0.3s ease;
-}
-
-.BusinessDev-grid div:hover p {
-  color: white;
-}
-
-.BusinessDev-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.BusinessDev-grid img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-left: 20px;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.BusinessDev-grid div:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.BusinessDev-grid .arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  font-size: 24px;
-  color: white;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease;
-}
-
-.BusinessDev-grid div:hover .arrow {
-  opacity: 1;
-}
-
-/* ViceChairSenior Styles */
-.ViceChairSenior {
-  padding: 50px;
-  background-color: var(--primary);
-  color: var(--primary);
-}
-
-.ViceChairSenior h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.ViceChairSenior-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.ViceChairSenior-grid div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: var(--primary);
-  text-align: left;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-
-.ViceChairSenior-grid div:hover {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.ViceChairSenior-grid .info {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(-50px);
-  transform: translateY(-40px);
-}
-
-.ViceChairSenior-grid h3 {
-  font-size: 18px;
-  margin: 0;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.ViceChairSenior-grid div:hover h3 {
-  color: white;
-}
-
-.ViceChairSenior-grid p {
-  font-size: 14px;
-  margin: 5px 0 0;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.ViceChairSenior-grid div:hover p {
-  color: white;
-}
-
-.ViceChairSenior-grid div::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.ViceChairSenior-grid img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-left: 20px;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.ViceChairSenior-grid div:hover img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.ViceChairSenior-grid .arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  font-size: 24px;
-  color: white;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
-.ViceChairSenior-grid div:hover .arrow {
-  opacity: 1;
+.section-grid div:hover .arrow, .firm-management-grid div:hover .arrow, .CoreInfra-grid div:hover .arrow, .techManage-grid div:hover .arrow, .investDev-grid div:hover .arrow, .BusinessDev-grid div:hover .arrow, .ViceChairSenior-grid div:hover .arrow {
+  opacity: 0;
+  
+}
+
+/* Section-specific Background Colors */
+.techManage, .ViceChairSenior {
+  background-color: var(--primary);
+  color: white;
+}
+
+.CoreInfra, .BusinessDev {
+  background-color: #EBF2F8;
 }
 
 /* Hero Section Styles */
@@ -744,7 +158,6 @@ hr {
   background-position: center;
 }
 
-/* White transparent overlay */
 .overlay {
   position: absolute;
   top: 0;
@@ -784,63 +197,34 @@ hr {
   color: var(--primary);
 }
 
-.hero-button span {
-  font-size: 24px;
-  margin-left: 10px;
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+
+  .arrow {
+    display: none;
+  }
+
   .section {
     flex-direction: column;
     text-align: center;
   }
 
-  .text-container,
-  .pattern-container {
-    max-width: 100%;
-  }
-
-  .text-container h1 {
-    font-size: 36px;
-  }
-
-  .firm-management-grid,
-  .CoreInfra-grid,
-  .techManage-grid,
-  .investDev-grid,
-  .BusinessDev-grid,
-  .ViceChairSenior-grid {
+  .section-grid, .firm-management-grid, .CoreInfra-grid, .techManage-grid, .investDev-grid, .BusinessDev-grid, .ViceChairSenior-grid {
     grid-template-columns: 1fr;
   }
 
-  .firm-management-grid div,
-  .CoreInfra-grid div,
-  .techManage-grid div,
-  .investDev-grid div,
-  .BusinessDev-grid div,
-  .ViceChairSenior-grid div {
+  .section-grid div, .firm-management-grid div, .CoreInfra-grid div, .techManage-grid div, .investDev-grid div, .BusinessDev-grid div, .ViceChairSenior-grid div {
     flex-direction: column;
     text-align: center;
     padding: 30px;
   }
 
-  .firm-management-grid img,
-  .CoreInfra-grid img,
-  .techManage-grid img,
-  .investDev-grid img,
-  .BusinessDev-grid img,
-  .ViceChairSenior-grid img {
+  .section-grid img, .firm-management-grid img, .CoreInfra-grid img, .techManage-grid img, .investDev-grid img, .BusinessDev-grid img, .ViceChairSenior-grid img {
     margin: 0;
     margin-top: 20px;
   }
 
-  .firm-management-grid .arrow,
-  .CoreInfra-grid .arrow,
-  .techManage-grid .arrow,
-  .investDev-grid .arrow,
-  .BusinessDev-grid .arrow,
-  .ViceChairSenior-grid .arrow {
+  .section-grid .arrow, .firm-management-grid .arrow, .CoreInfra-grid .arrow, .techManage-grid .arrow, .investDev-grid .arrow, .BusinessDev-grid .arrow, .ViceChairSenior-grid .arrow {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
