@@ -231,7 +231,7 @@
         }
 
         section.caree {
-            min-height: 100vh;
+            min-height: 80vh;
             position: relative;
             align-items: center;
             justify-content: center;
@@ -258,9 +258,9 @@
         <div id="particles-js-career"></div>
 
         <div>
-            <h1 class="heading">Bring your ambition, find your path </h1>
+            <h1 class="heading" data-aos="fade-down" data-aos-delay="500">Bring your ambition, find your path </h1>
             <div class="btns">
-                <button data-aos="fade-down" class="btn">
+                <button onclick="document.location.href= './Approach.html'" data-aos="fade-down" class="btn">
                     <div>
                         <span>Discover our approach</span>
                         <div class="arrow-container">
@@ -278,9 +278,10 @@
                         </div>
                     </div>
                 </button>
-                <button data-aos="fade-down" class="btn">
+                <button onclick="document.location.href= './life-at-risingcapital.html'" data-aos="fade-down"
+                    class="btn">
                     <div>
-                        <span>Discover our approach</span>
+                        <span>Life at rising capital</span>
                         <div class="arrow-container">
                             <div class="slash"></div>
                             <?xml version="1.0" encoding="iso-8859-1"?>
@@ -299,7 +300,7 @@
             </div>
         </div>
     </section>
-    <hr>
+    <hr data-aos="zoom-in">
 
     <style>
         section.caree-photos {
@@ -492,14 +493,15 @@
     </style>
     <section class="careers-community">
         <div class="col1">
-            <h1 class="heading">Our community</h1>
-            <p>Join our growing team! Rising Capital Group is looking for motivated professionals across a variety of
+            <h1 class="heading" data-aos="fade-down">Our community</h1>
+            <p data-aos="fade-down">Join our growing team! Rising Capital Group is looking for motivated professionals
+                across a variety of
                 roles. Whether you’re interested in finance, operations, or technology, you’ll find exciting
                 opportunities to contribute, innovate, and grow with us. We offer competitive salaries, comprehensive
                 benefits, and a work culture that promotes creativity and collaboration.</p>
         </div>
         <div class="col2">
-            <img src="./assets/images/Finance.jpg" alt="">
+            <img data-aos="zoom-in" src="./assets/images/Finance.jpg" alt="">
         </div>
     </section>
     <style>
@@ -542,15 +544,14 @@
 
     <section class="quoteCareer">
         <div>
-            <p class="q">"</p>
-            <h1 class="heading">
+            <p data-aos="fade-down" class="q">"</p>
+            <h1 data-aos="zoom-in" class="heading">
                 The success of Rising Capital Group stems from our core values: integrity, strong work ethics,
                 entrepreneurial drive, and emotional intelligence. These are the elements that define who we are.
             </h1>
-            <p class="q l">"</p>
+            <p data-aos="fade-up" class="q l">"</p>
 
-            <h3>John Novogratz</h3>
-            <p>Global Head of Capital Development and Investor Relations</p>
+
         </div>
     </section>
 
@@ -685,7 +686,7 @@
                 min-height: calc(var(--img-height) + var(--img-height) / 2);
             }
 
-            .custom-accordion-item div span {
+            .custom-accordion-item data-aos="zoom-in" div span {
                 display: block;
                 width: 90%;
             }
@@ -715,13 +716,13 @@
     </style>
 
     <section class="accordionCareers">
-        <h1>Employee networks</h1>
+        <h1 data-aos="fade-down">Employee networks</h1>
         <div>
             <div class="col1">
                 <section id="accordion" class="custom-container custom-accordion">
 
                     <ul>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading1" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content1">
                                 <span>Women of Rising Capital Network</span>
@@ -734,7 +735,7 @@
 
                             </div>
                         </li>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content2">
                                 <span>Rising Capital Pride</span>
@@ -746,7 +747,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content2">
                                 <span>Families at Rising Capital Network</span>
@@ -765,7 +766,7 @@
                 <section id="accordion" class="custom-container custom-accordion">
 
                     <ul>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading1" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content1">
                                 <span>Rising Capital Multicultural Network</span>
@@ -776,7 +777,7 @@
                                     awareness and understanding of race, culture, and ethnicity among employees.</p>
                             </div>
                         </li>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content2">
                                 <span>Rising Capital Volunteer Network</span>
@@ -788,7 +789,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="custom-accordion-item">
+                        <li class="custom-accordion-item" data-aos="zoom-in">
                             <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
                                 aria-expanded="false" aria-controls="content2">
                                 <span>Inclusion Network</span>
@@ -974,7 +975,7 @@
     <script src="./js/script.js"></script>
     <script>
         function openAccordion(container, index) {
-            const accordionItems = $(container).find(".custom-accordion-item");
+            const accordionItems = $(container).find(".custom-accordion-item" data - aos="zoom-in");
 
             accordionItems.each(function (i) {
                 const content = $(this).find(".custom-accordion-content");

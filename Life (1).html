@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .RisingCapital {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      align-items: center;
+      background-color: #eaf3f8;
+      height: 100vh;
+      width: 100%;
+    }
+    .RisingCapital .one h1 {
+      padding-bottom: 20px;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      color: blue;
+    }
+    .RisingCapital .one p {
+      letter-spacing: 1px;
+      font-size: 17px;
+    }
+    .RisingCapital .two .searchandFilter {
+      display: flex;
+border: 1px solid blue;
+      align-items: center;
+height: 5vh;
+padding: 10px 0;
+  gap: 10px;
+   
+  
+    }
+    .two .searchandFilter .search {
+
+      padding: 10px;
+      font-size: 12px;
+    }
+    .two .searchandFilter .filterBy {
+
+border-left: 1px solid blue;
+      padding: 0 10px;
+      display: flex;
+      gap: 50px;
+      font-size: 12px;
+    }
+    .two .links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding-top: 20px;
+      font-size: 20px;
+    }
+
+    /* latest section*/
+
+    .latest {
+      padding: 50px 200px 50px 200px;
+      font-size: 3rem;
+      font-weight: 500;
+      color: blue;
+    }
+    .ourLatest {
+      display: flex;
+      padding: 0 200px;
+      gap: 10px;
+    }
+    .ourLatest .line1 {
+      background-color: blue;
+      width: 0.5%;
+      height: 270px;
+    }
+    .ourLatest .boxes {
+      height: 280px;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+    .ourLatest .boxes .img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .ourLatest .boxes .titleCont h5 {
+      
+      letter-spacing: 1px;
+    }
+    .ourLatest .boxes .titleCont p {
+      padding: 0px 10px 30px 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .lines {
+      display: flex;
+      gap: 20px;
+      padding: 0 200px;
+
+      justify-content: center;
+    }
+    .lines .line {
+      background-color: blue;
+      height: 1px;
+      width: 50%;
+    }
+    /* swiper */
+
+    main {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 50px 0;
+        height: 100vh;
+      
+      }
+      
+      
+      .swiper {
+        width: 100%;
+        height: 80%;
+        padding-bottom: 10px;
+      }
+      
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .swiper-slide {
+        width: 70%;
+      }
+      
+
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .swiper-horizontal > .swiper-pagination-progressbar,
+      .swiper-pagination-progressbar.swiper-pagination-horizontal {
+        top: inherit;
+        bottom: 0;
+      }
+     .boxSlide{
+        background-color: blue;
+        height: 200px;
+        width: 500px;
+        position: absolute;
+        right: -1000px;
+        bottom: 0;
+        transition: 0.6s;
+      }
+      .swiper:hover .boxSlide{
+        right: 0;
+      }
+    /*videobg */
+
+
+    .videoBg{
+        background-color: blue;
+        height: 50vh;
+        width: 100%;
+        margin: 50px 0;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+@media screen and (max-width:1018px){
+  .latest{
+    padding: 20px 50px;
+  }
+  .ourLatest{
+    padding: 0 50px;
+  }
+  .lines{
+    padding: 0 50px;
+  }
+
+}
+@media screen and (max-width:1244px){
+  .latest{
+    padding: 20px 50px;
+  }
+  .ourLatest{
+    padding: 0 50px;
+  }
+  .lines{
+    padding: 0 50px;
+  }
+}
+
+
+    @media screen and (max-width:910px){
+      .RisingCapital {
+        display: flex;
+        justify-content: flex-start;
+       
+        flex-direction: column;
+ 
+        background-color: #eaf3f8;
+        height: 100vh;
+        width: 100%;
+     
+      }
+      .RisingCapital .one{
+        padding: 0 10px;
+      }
+      .RisingCapital .two{
+        width: 100%;
+       
+        
+      }
+      .RisingCapital .two .searchandFilter {
+        display: flex;
+        align-items: center;
+justify-content: space-between;
+ 
+    
+        margin: 0 5px;
+        border: 1px solid blue;
+      }
+      .ourLatest .line1{
+        display: none;
+      }
+      .two .links{
+        justify-content: left;
+        padding: 10px;
+      }
+           
+      .ourLatest {
+        display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0;
+      }
+      .latest{
+        padding: 10px;
+        font-size: 25px;
+      }
+      .lines{
+        display: none;
+      }
+      .ourLatest .boxes{
+        height: 350px;
+      box-shadow: 0 3px 10px rgb(202, 202, 202);
+      }
+      .boxSlide{
+        background-color: blue;
+        height: 150px;
+        width: 180px;
+        position: absolute;
+        right: -1000px;
+        bottom: 0;
+        transition: 0.6s;
+      }
+  .videoBg{
+    margin: 20px 0;
+  }
+    }
+
+    @media screen and (max-width:630px){
+    .ourLatest .boxes{
+        height: 250px;
+      }
+      .ourLatest .boxes .titleCont p {
+padding: 10px 0;
+    }
+    .boxSlide{
+      background-color: blue;
+      height: 150px;
+      width: 180px;
+      position: absolute;
+      right: -1000px;
+      bottom: 0;
+      transition: 0.6s;
+    }
+  }
+    @media screen and (max-width:480px){
+.main{
+  padding: 100px 0;
+}
+.RisingCapital{
+  height:80vh;
+
+
+}
+.RisingCapital .one{
+  padding: 0 10px;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+}
+.RisingCapital .one h1{
+  font-size: 1.2rem;
+}
+.RisingCapital .one p{
+  font-size: 15px;
+}
+
+.ourLatest .boxes{
+height: 200px;
+}
+      .ourLatest .boxes .titleCont p {
+        padding: 5px 0;
+            }
+                  
+
+           .boxSlide{
+              background-color: blue;
+              height: 150px;
+              width: 180px;
+              position: absolute;
+              right: -1000px;
+              bottom: 0;
+              transition: 0.6s;
+            }
+
+    }
+
+  </style>
+
+  <body>
+    <div class="RisingCapital">
+      <div class="one">
+        <h1>RisingCapital Group</h1>
+        <p>
+          Learn more about our people, culture and insights here and stay
+          connected <br />on our social channels.
+        </p>
+      </div>
+      <div class="two">
+        <div class="searchandFilter">
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="filterBy">
+            <p>FilterBy</p>
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+
+        <div class="links">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <main>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://img.freepik.com/premium-photo/man-woman-are-sitting-front-laptop_1235330-3989.jpg?w=360" alt="">
+                <div class="boxSlide">
+
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="behen.png" alt="">
+                <div class="boxSlide">
+
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="behen.png" alt="">
+                <div class="boxSlide">
+
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="behen.png" alt="">
+            
+                <div class="boxSlide">
+
+                </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </main>
+
+
+    <h1 class="latest">Our Latest</h1>
+    <div class="ourLatest">
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+    </div>
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+    <h1 class="latest">Our Latest</h1>
+    <div class="ourLatest">
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+      <div class="line1"></div>
+      <div class="boxes">
+        <div class="img">
+          <img src="behen.png" alt="" />
+        </div>
+        <div class="titleCont">
+          <p>career development</p>
+          <h5>Level Up Your Internship Application with Padmaja</h5>
+        </div>
+      </div>
+    </div>
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+
+    </div>
+
+    <div class="videoBg">
+        <h1>video</h1>
+      <video src=""></video>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+      
+  </script>
+</html>
