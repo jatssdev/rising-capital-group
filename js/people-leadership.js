@@ -76,38 +76,30 @@ document.addEventListener('DOMContentLoaded', function () {
 // Popup functionality
 function openPopup(popupId) {
     const popup = document.getElementById(popupId);
-    const overlay = document.getElementById('popup-overlay');
+    const overlay = document.querySelector('.overlay');
     if (popup) {
-        overlay.style.display = "flex"; // Show the overlay
-        popup.style.display = "block"; // Show the popup
+        popup.style.display = "block";
+        overlay.style.display = "block"; // Show overlay
+        document.body.classList.add('popup-open');
     }
 }
 
 function closePopup(popupId) {
     const popup = document.getElementById(popupId);
-    const overlay = document.getElementById('popup-overlay');
+    const overlay = document.querySelector('.overlay');
     if (popup) {
-        popup.style.display = "none"; // Hide the popup
-        overlay.style.display = "none"; // Hide the overlay
+        popup.style.display = "none";
+        overlay.style.display = "none"; // Hide overlay
+        document.body.classList.remove('popup-open');
     }
 }
-
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('popup-overlay')) {
-        closePopup('popup-1'); // Assume you want to close this popup when overlay is clicked
-    }
-});
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('popup-overlay')) {
-        closePopup('popup-2'); // Assume you want to close this popup when overlay is clicked
-    }
-});
 
 
 
 // Add event listeners to member cards
 document.getElementById("member-1").addEventListener("click", function () {
     openPopup("popup-1");
+    
     
 });
 document.getElementById("member-2").addEventListener("click", function () {
