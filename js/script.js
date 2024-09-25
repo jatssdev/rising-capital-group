@@ -778,11 +778,11 @@ $(document).ready(function () {
         $this.toggleClass(ACTIVE_CLASS);
         $this.siblings('.accordion-contents').stop().slideToggle();
 
-        // if ($this.hasClass(ACTIVE_CLASS)) {
-        //     $target.removeClass(ACTIVE_CLASS);
-        //     $this.addClass(ACTIVE_CLASS);
-        //     visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
-        // }
+        if ($this.hasClass(ACTIVE_CLASS)) {
+            $target.removeClass(ACTIVE_CLASS);
+            $this.addClass(ACTIVE_CLASS);
+            visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
+        }
     })
     function checkScreenSize() {
         if ($(window).width() <= 768) {

@@ -1,11 +1,12 @@
-/* Common container for all sections */
+body{
+    overflow-x: hidden;
+}
+
+
 .container {
     max-width: 1200px;
-    /* Same width as the hero section */
     margin: 0 auto;
-    /* Centers the section */
     padding: 0 20px;
-    /* Adds some padding for smaller screens */
 }
 
 #tsparticles {
@@ -473,11 +474,16 @@ section .videos .videoModel .closebtn svg {
 /* Hero Section Styles */
 .hero-section-end {
     position: relative;
-    min-height: 40vh;
+    min-height: 40vh; /* Adjust the height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 20px; /* Add padding to ensure content does not touch the edges */
+    margin-top: 20px; /* Ensure there is a margin gap between preceding sections */
+    z-index: 1; /* Adjust z-index if needed */
+    width: 100%; /* Ensure full width to avoid horizontal scroll */
+    overflow: hidden; /* Ensures no overflow of internal elements */
+    background: #f8f9fa; /* Optional: set a background color to highlight the section */
 }
 
 #hero-video {
@@ -507,8 +513,9 @@ section .videos .videoModel .closebtn svg {
 
 .hero-text {
     text-align: center;
-    color: white;
-    z-index: 1;
+    color: white; /* Adjust text color for readability */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Use full width of the section */
 }
 
 .hero-text h1 {
@@ -518,20 +525,17 @@ section .videos .videoModel .closebtn svg {
 }
 
 .hero-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
+    font-size: 18px; 
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white; 
+    padding: 10px 20px; 
     cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
 .hero-button:hover {
-    background-color: white;
-    color: #0066ff;
+    background-color: #ffffff;
+    color: #000000; 
 }
 
 .hero-button span {
