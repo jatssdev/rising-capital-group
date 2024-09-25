@@ -231,7 +231,7 @@
     <section class="firm-management">
         <h2>Corporate Leadership</h2>
         <div class="firm-management-grid">
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" id="member-1">
                 <span class="info">
                     <h3>Ankur Patel</h3>
                     <p>Founder/ Managing Director</p>
@@ -240,7 +240,7 @@
                     alt="Ankur Patel">
                 <span class="arrow">→</span>
             </div>
-            <div data-aos="fade-down">
+            <div data-aos="fade-down" id="member-2">
                 <span class="info">
                     <h3>Vishal Sabhar</h3>
                     <p>Chief Executive Officer</p>
@@ -249,7 +249,7 @@
                     alt="Vishal Sabhar">
                 <span class="arrow">→</span>
             </div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" id="member-3">
                 <span class="info">
                     <h3>Bhavik Joshi</h3>
                     <p>Chief Information Officer</p>
@@ -258,7 +258,7 @@
                     alt="JBhavik Joshi">
                 <span class="arrow">→</span>
             </div>
-            <div>
+            <div id="member-4">
                 <span class="info">
                     <h3>Rajshri Patel</h3>
                     <p>Chief Human Resource Officer</p>
@@ -352,7 +352,7 @@
                 <span class="info">
                     <h3>Arti Balas</h3>
                     <p>HR Executive</p>
-                </span> 
+                </span>
                 <img src="https://risingcapitalgroup.com/wp-content/uploads/2017/09/pavan-1-1-64a900c755f94-384x512.webp"
                     alt="Pavan Balani">
                 <span class="arrow">→</span>
@@ -432,6 +432,66 @@
         </div>
     </section>
 
+<div id="popup-overlay" class="popup-overlay" style="display:none;">
+    <!-- Popup for Ankur Patel -->
+    <div id="popup-1" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup-1')">&times;</span>
+            <img src="https://risingcapitalgroup.com/wp-content/uploads/2017/09/ankur-patel-64a900aa3fe39-384x512.webp" alt="Ankur Patel">
+            <div class="popup-text">
+                <h3>Ankur Patel</h3>
+                <p>Founder/ Managing Director</p>
+                <p>Ankur Patel is the driving force behind Rising Capital Group, serving as the Founder and Managing Director. With over 15 years of diverse experience in building and managing successful consulting firms, Ankur is a visionary leader known for his strategic foresight and entrepreneurial spirit. His extensive background in management consulting has equipped him with a deep understanding of the complexities of the global business landscape, enabling him to offer valuable insights and innovative solutions to clients across various industries.
+                    Ankur’s leadership is characterized by his commitment to excellence, integrity, and client-centricity. He has a proven track record of transforming business challenges into growth opportunities through his adeptness in strategic planning, business development, and operational efficiency. His approach is rooted in a blend of analytical rigor and creative problem-solving, which has helped Rising Capital Group establish itself as a trusted partner for businesses looking to navigate complex regulatory environments and achieve sustainable growth.
+                    Beyond his role at Rising Capital Group, Ankur is also an active participant in various industry forums and advisory boards, where he shares his expertise and contributes to shaping the future of management consulting. His ability to inspire and lead diverse teams has been pivotal in fostering a culture of innovation and collaboration within the organization.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- Popup for Vishal Sabhar -->
+    <div id="popup-overlay-2" class="popup-overlay" style="display:none;">
+        <div id="popup-2" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup-2', 'popup-overlay-2')">&times;</span>
+                <!-- Content for Vishal Sabhar -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Bhavik Joshi -->
+    <div id="popup-overlay" class="popup-overlay" style="display:none;">
+        <!-- Popup for Ankur Patel -->
+        <div id="popup-3" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup-1')">&times;</span>
+                <img src="https://risingcapitalgroup.com/wp-content/uploads/2017/09/ankur-patel-64a900aa3fe39-384x512.webp" alt="Ankur Patel">
+                <div class="popup-text">
+                    <h3>Bhavik Joshi</h3>
+                    <p>Chief Information Officerr</p>
+                    <p>Detailed information about Ankur Patel goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Rajshri Patel -->
+    <div id="popup-overlay" class="popup-overlay" style="display:none;">
+        <!-- Popup for Rajshri Patel -->
+        <div id="popup-4" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup-1')">&times;</span>
+                <img src="https://risingcapitalgroup.com/wp-content/uploads/2017/09/ankur-patel-64a900aa3fe39-384x512.webp" alt="Ankur Patel">
+                <div class="popup-text">
+                    <h3>Rajshri Patel</h3>
+                    <p>Chief Human Resource Officer</p>
+                    <p>Detailed information about Ankur Patel goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -690,7 +750,8 @@
         <div class="overlay"></div> <!-- Transparent overlay -->
         <div class="hero-text">
             <h1>Get to know the Rising Capital Group</h1>
-            <a href="./people.html" style="text-decoration: none; color: aliceblue;  "><button class="hero-button">People <span>→</span></button></a>
+            <a href="./people.html" style="text-decoration: none; color: aliceblue;  "><button
+                    class="hero-button">People <span>→</span></button></a>
         </div>
     </section>
     <footer class="fotterWrapper">
@@ -762,7 +823,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="./js/people-leadership.js"></script>
     <script src="./js/script.js"></script>
 
 
