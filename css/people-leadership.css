@@ -14,9 +14,18 @@ body {
   font-weight: bold;
   height: 60vh;
   text-align: left;
+  padding: 100px;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+}
+
+.header2 .leadershippara {
+  font-size: 16px;
+}
+
+.header2 .leadershippara2 {
+  color: black;
 }
 
 #particles-js-leadership {
@@ -35,7 +44,14 @@ hr {
   box-shadow: 0 3px 10px var(--primary);
   height: 1px;
 }
-.section, .firm-management, .CoreInfra, .techManage, .investDev, .BusinessDev, .ViceChairSenior {
+
+.section,
+.firm-management,
+.CoreInfra,
+.techManage,
+.investDev,
+.BusinessDev,
+.ViceChairSenior {
   padding: 50px;
   background-color: white;
   color: var(--primary);
@@ -50,18 +66,36 @@ hr {
   min-height: 80vh;
 }
 
-.section h2, .firm-management h2, .CoreInfra h2, .techManage h2, .investDev h2, .BusinessDev h2, .ViceChairSenior h2 {
+.section h2,
+.firm-management h2,
+.CoreInfra h2,
+.techManage h2,
+.investDev h2,
+.BusinessDev h2,
+.ViceChairSenior h2 {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.section-grid, .firm-management-grid, .CoreInfra-grid, .techManage-grid, .investDev-grid, .BusinessDev-grid, .ViceChairSenior-grid {
+.section-grid,
+.firm-management-grid,
+.CoreInfra-grid,
+.techManage-grid,
+.investDev-grid,
+.BusinessDev-grid,
+.ViceChairSenior-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.section-grid div, .firm-management-grid div, .CoreInfra-grid div, .techManage-grid div, .investDev-grid div, .BusinessDev-grid div, .ViceChairSenior-grid div {
+.section-grid div,
+.firm-management-grid div,
+.CoreInfra-grid div,
+.techManage-grid div,
+.investDev-grid div,
+.BusinessDev-grid div,
+.ViceChairSenior-grid div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,7 +110,13 @@ hr {
   padding-bottom: 30px;
 }
 
-.section-grid div:hover, .firm-management-grid div:hover, .CoreInfra-grid div:hover, .techManage-grid div:hover, .investDev-grid div:hover, .BusinessDev-grid div:hover, .ViceChairSenior-grid div:hover {
+.section-grid div:hover,
+.firm-management-grid div:hover,
+.CoreInfra-grid div:hover,
+.techManage-grid div:hover,
+.investDev-grid div:hover,
+.BusinessDev-grid div:hover,
+.ViceChairSenior-grid div:hover {
   background-color: var(--primary);
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -84,30 +124,60 @@ hr {
 }
 
 /* Shared Styles for Section Content */
-.section-grid h3, .firm-management-grid h3, .CoreInfra-grid h3, .techManage-grid h3, .investDev-grid h3, .BusinessDev-grid h3, .ViceChairSenior-grid h3 {
+.section-grid h3,
+.firm-management-grid h3,
+.CoreInfra-grid h3,
+.techManage-grid h3,
+.investDev-grid h3,
+.BusinessDev-grid h3,
+.ViceChairSenior-grid h3 {
   font-size: 18px;
   margin: 2;
   color: var(--primary);
   transition: color 0.3s ease;
 }
 
-.section-grid div:hover h3, .firm-management-grid div:hover h3, .CoreInfra-grid div:hover h3, .techManage-grid div:hover h3, .investDev-grid div:hover h3, .BusinessDev-grid div:hover h3, .ViceChairSenior-grid div:hover h3 {
+.section-grid div:hover h3,
+.firm-management-grid div:hover h3,
+.CoreInfra-grid div:hover h3,
+.techManage-grid div:hover h3,
+.investDev-grid div:hover h3,
+.BusinessDev-grid div:hover h3,
+.ViceChairSenior-grid div:hover h3 {
   color: white;
 }
 
-.section-grid p, .firm-management-grid p, .CoreInfra-grid p, .techManage-grid p, .investDev-grid p, .BusinessDev-grid p, .ViceChairSenior-grid p {
+.section-grid p,
+.firm-management-grid p,
+.CoreInfra-grid p,
+.techManage-grid p,
+.investDev-grid p,
+.BusinessDev-grid p,
+.ViceChairSenior-grid p {
   font-size: 14px;
   margin: 5px 0 0;
   color: var(--primary);
   transition: color 0.3s ease;
 }
 
-.section-grid div:hover p, .firm-management-grid div:hover p, .CoreInfra-grid div:hover p, .techManage-grid div:hover p, .investDev-grid div:hover p, .BusinessDev-grid div:hover p, .ViceChairSenior-grid div:hover p {
+.section-grid div:hover p,
+.firm-management-grid div:hover p,
+.CoreInfra-grid div:hover p,
+.techManage-grid div:hover p,
+.investDev-grid div:hover p,
+.BusinessDev-grid div:hover p,
+.ViceChairSenior-grid div:hover p {
   color: white;
 }
 
 /* Shared Styles for Images */
-.section-grid img, .firm-management-grid img, .CoreInfra-grid img, .techManage-grid img, .investDev-grid img, .BusinessDev-grid img, .ViceChairSenior-grid img {
+.section-grid img,
+.firm-management-grid img,
+.CoreInfra-grid img,
+.techManage-grid img,
+.investDev-grid img,
+.BusinessDev-grid img,
+.ViceChairSenior-grid img {
   width: 150px;
   height: 150px;
   border-radius: 10px;
@@ -116,13 +186,25 @@ hr {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.section-grid div:hover img, .firm-management-grid div:hover img, .CoreInfra-grid div:hover img, .techManage-grid div:hover img, .investDev-grid div:hover img, .BusinessDev-grid div:hover img, .ViceChairSenior-grid div:hover img {
+.section-grid div:hover img,
+.firm-management-grid div:hover img,
+.CoreInfra-grid div:hover img,
+.techManage-grid div:hover img,
+.investDev-grid div:hover img,
+.BusinessDev-grid div:hover img,
+.ViceChairSenior-grid div:hover img {
   opacity: 1;
   transform: scale(1.05);
 }
 
 /* Shared Styles for Arrows */
-.section-grid .arrow, .firm-management-grid .arrow, .CoreInfra-grid .arrow, .techManage-grid .arrow, .investDev-grid .arrow, .BusinessDev-grid .arrow, .ViceChairSenior-grid .arrow {
+.section-grid .arrow,
+.firm-management-grid .arrow,
+.CoreInfra-grid .arrow,
+.techManage-grid .arrow,
+.investDev-grid .arrow,
+.BusinessDev-grid .arrow,
+.ViceChairSenior-grid .arrow {
   position: absolute;
   bottom: 20px;
   left: 50px;
@@ -132,18 +214,26 @@ hr {
   opacity: 0;
 }
 
-.section-grid div:hover .arrow, .firm-management-grid div:hover .arrow, .CoreInfra-grid div:hover .arrow, .techManage-grid div:hover .arrow, .investDev-grid div:hover .arrow, .BusinessDev-grid div:hover .arrow, .ViceChairSenior-grid div:hover .arrow {
+.section-grid div:hover .arrow,
+.firm-management-grid div:hover .arrow,
+.CoreInfra-grid div:hover .arrow,
+.techManage-grid div:hover .arrow,
+.investDev-grid div:hover .arrow,
+.BusinessDev-grid div:hover .arrow,
+.ViceChairSenior-grid div:hover .arrow {
   opacity: 0;
-  
+
 }
 
 /* Section-specific Background Colors */
-.techManage, .ViceChairSenior {
+.techManage,
+.ViceChairSenior {
   background-color: var(--primary);
   color: white;
 }
 
-.CoreInfra, .BusinessDev {
+.CoreInfra,
+.BusinessDev {
   background-color: #EBF2F8;
 }
 
@@ -222,22 +312,46 @@ hr {
     text-align: center;
   }
 
-  .section-grid, .firm-management-grid, .CoreInfra-grid, .techManage-grid, .investDev-grid, .BusinessDev-grid, .ViceChairSenior-grid {
+  .section-grid,
+  .firm-management-grid,
+  .CoreInfra-grid,
+  .techManage-grid,
+  .investDev-grid,
+  .BusinessDev-grid,
+  .ViceChairSenior-grid {
     grid-template-columns: 1fr;
   }
 
-  .section-grid div, .firm-management-grid div, .CoreInfra-grid div, .techManage-grid div, .investDev-grid div, .BusinessDev-grid div, .ViceChairSenior-grid div {
+  .section-grid div,
+  .firm-management-grid div,
+  .CoreInfra-grid div,
+  .techManage-grid div,
+  .investDev-grid div,
+  .BusinessDev-grid div,
+  .ViceChairSenior-grid div {
     flex-direction: column;
     text-align: center;
     padding: 30px;
   }
 
-  .section-grid img, .firm-management-grid img, .CoreInfra-grid img, .techManage-grid img, .investDev-grid img, .BusinessDev-grid img, .ViceChairSenior-grid img {
+  .section-grid img,
+  .firm-management-grid img,
+  .CoreInfra-grid img,
+  .techManage-grid img,
+  .investDev-grid img,
+  .BusinessDev-grid img,
+  .ViceChairSenior-grid img {
     margin: 0;
     margin-top: 20px;
   }
 
-  .section-grid .arrow, .firm-management-grid .arrow, .CoreInfra-grid .arrow, .techManage-grid .arrow, .investDev-grid .arrow, .BusinessDev-grid .arrow, .ViceChairSenior-grid .arrow {
+  .section-grid .arrow,
+  .firm-management-grid .arrow,
+  .CoreInfra-grid .arrow,
+  .techManage-grid .arrow,
+  .investDev-grid .arrow,
+  .BusinessDev-grid .arrow,
+  .ViceChairSenior-grid .arrow {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -247,33 +361,62 @@ hr {
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   /* Adjustments for tablet devices */
-  
-  .firm-management-grid, .CoreInfra-grid, .techManage-grid, .investDev-grid, .BusinessDev-grid, .ViceChairSenior-grid {
-    grid-template-columns: 1fr 1fr; /* Use two columns instead of three */
+
+  .firm-management-grid,
+  .CoreInfra-grid,
+  .techManage-grid,
+  .investDev-grid,
+  .BusinessDev-grid,
+  .ViceChairSenior-grid {
+    grid-template-columns: 1fr 1fr;
+    /* Use two columns instead of three */
   }
 
-  .firm-management-grid div, .CoreInfra-grid div, .techManage-grid div, .investDev-grid div, .BusinessDev-grid div, .ViceChairSenior-grid div {
-    padding: 30px; /* Adjust padding */
+  .firm-management-grid div,
+  .CoreInfra-grid div,
+  .techManage-grid div,
+  .investDev-grid div,
+  .BusinessDev-grid div,
+  .ViceChairSenior-grid div {
+    padding: 30px;
+    /* Adjust padding */
   }
 
-  .section h1, .firm-management h2, .CoreInfra h2, .techManage h2, .investDev h2, .BusinessDev h2, .ViceChairSenior h2 {
-    font-size: 30px; /* Adjust heading size */
+  .section h1,
+  .firm-management h2,
+  .CoreInfra h2,
+  .techManage h2,
+  .investDev h2,
+  .BusinessDev h2,
+  .ViceChairSenior h2 {
+    font-size: 30px;
+    /* Adjust heading size */
   }
 
-  .section p, .firm-management p, .CoreInfra p, .techManage p, .investDev p, .BusinessDev p, .ViceChairSenior p {
-    font-size: 14px; /* Adjust paragraph font size */
+  .section p,
+  .firm-management p,
+  .CoreInfra p,
+  .techManage p,
+  .investDev p,
+  .BusinessDev p,
+  .ViceChairSenior p {
+    font-size: 14px;
+    /* Adjust paragraph font size */
   }
 
   .hero-section {
-    height: 300px; /* Adjust hero section height */
+    height: 300px;
+    /* Adjust hero section height */
   }
 
   .hero-text h1 {
-    font-size: 36px; /* Adjust font size in hero section */
+    font-size: 36px;
+    /* Adjust font size in hero section */
   }
 
   .hero-button {
-    font-size: 16px; /* Adjust button size */
+    font-size: 16px;
+    /* Adjust button size */
     padding: 8px 16px;
   }
 }
@@ -284,10 +427,14 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  backdrop-filter: blur(10px); /* Apply a 10px blur to the background */
-  display: none; /* Hidden by default */
-  z-index: 999; /* Ensure the overlay is on top */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  /* Apply a 10px blur to the background */
+  display: none;
+  /* Hidden by default */
+  z-index: 999;
+  /* Ensure the overlay is on top */
 }
 
 
@@ -298,28 +445,35 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 40px; /* Increased padding for better spacing */
+  padding: 40px;
+  /* Increased padding for better spacing */
   border-radius: 10px;
   z-index: 1000;
   display: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  max-width: 90%; /* Allows the popup to be responsive */
-  width: 600px; /* Increased width */
+  max-width: 90%;
+  /* Allows the popup to be responsive */
+  width: 600px;
+  /* Increased width */
   max-height: 90vh;
   flex-direction: column;
   overflow: hidden;
 }
 
 .popup-content {
-  max-height: 80vh; /* 80% of the viewport height */
-    overflow-y: auto; /* Enable vertical scrolling inside the popup */
-    padding: 20px;
+  max-height: 80vh;
+  /* 80% of the viewport height */
+  overflow-y: auto;
+  /* Enable vertical scrolling inside the popup */
+  padding: 20px;
 }
 
 .popup-content img {
-  width: 150px; /* Adjust based on your needs */
+  width: 150px;
+  /* Adjust based on your needs */
   height: 150px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%;
+  /* Circular image */
 }
 
 .popup-content .close {
@@ -328,20 +482,27 @@ hr {
   right: 10px;
   cursor: pointer;
   font-size: 30px;
-  color: #666; /* Subtle color for the close button */
+  color: #666;
+  /* Subtle color for the close button */
 }
 
-.popup-content h3, .popup-content p {
-  margin: 0 0 10px; /* Adds bottom margin for spacing */
+.popup-content h3,
+.popup-content p {
+  margin: 0 0 10px;
+  /* Adds bottom margin for spacing */
 }
 
 .popup-content h3 {
-  font-size: 24px; /* Adjust font size if needed */
-  color: #333; /* Dark grey color for text */
+  font-size: 24px;
+  /* Adjust font size if needed */
+  color: #333;
+  /* Dark grey color for text */
 }
 
 .popup-content p {
   font-size: 16px;
-  color: #555; /* Lighter grey for the paragraph */
-  line-height: 1.6; /* Improved line height for readability */
+  color: #555;
+  /* Lighter grey for the paragraph */
+  line-height: 1.6;
+  /* Improved line height for readability */
 }
