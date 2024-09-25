@@ -1802,7 +1802,7 @@ footer a {
 
 
 /* ====================== Responsive Iphone =============================== */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 924px) {
     .swiper-slide .slider-inner .swiper-content .title-area .title {
         font-size: 24px;
     }
@@ -1888,3 +1888,6 @@ footer a {
         flex-direction: column;
     }
 }
+
+
+

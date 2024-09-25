@@ -760,7 +760,7 @@ section .videos .videoModel .closebtn svg {
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     :root {
         --card-height: 60vh;
     }
@@ -768,7 +768,7 @@ section .videos .videoModel .closebtn svg {
     .card__content h2 {
         font-size: 1.5rem;
     }
-}
+} */
 
 
 @media screen and (max-width: 768px) {

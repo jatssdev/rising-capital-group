@@ -51,12 +51,30 @@ function toggleSubMenu(e) {
 
 // Fixed Navbar Menu on Window Resize
 window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
+        // For larger devices (e.g., desktops and large tablets in landscape)
         if (menu.classList.contains("is-active")) {
             toggleMenu();
+            checkScreenSize();
+        }
+    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        // For tablets (e.g., 768px to 1023px)
+        if (menu.classList.contains("is-active")) {
+            toggleMenu(); 
+            checkScreenSize();
+        }
+    } else {
+        // For phones (e.g., below 768px)
+        // You can add additional functionality for phones if needed
+        if (menu.classList.contains("is-active")) {
+            toggleMenu();
+            checkScreenSize();
         }
     }
+
+    checkScreenSize(); // Ensure the screen size checker runs
 });
+
 
 // Dark and Light Mode with localStorage
 (function () {
@@ -768,22 +786,21 @@ $(document).ready(function () {
 
     const $target = $('.js-accordion-header');
     const ACTIVE_CLASS = 'is-active';
-    const visible = $('.accordion-contents:visible');
 
     $target.on('click', function () {
         const $this = $(this);
         let $arrow = $this.find('.accordion-header');
 
+        // Close all other accordion contents and remove 'is-active' class from other headers
+        $target.not($this).removeClass(ACTIVE_CLASS); // Remove 'is-active' from all other headers
+        $('.accordion-contents').not($this.siblings('.accordion-contents')).slideUp(); // Close all other contents
+
+        // Toggle the clicked accordion's content
         $arrow.toggleClass(ACTIVE_CLASS);
         $this.toggleClass(ACTIVE_CLASS);
         $this.siblings('.accordion-contents').stop().slideToggle();
+    });
 
-        if ($this.hasClass(ACTIVE_CLASS)) {
-            $target.removeClass(ACTIVE_CLASS);
-            $this.addClass(ACTIVE_CLASS);
-            visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
-        }
-    })
     function checkScreenSize() {
         if ($(window).width() <= 768) {
             $('header .specialAnchor').addClass('disabled').on('click', function (e) {
