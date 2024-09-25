@@ -321,6 +321,393 @@
             </div>
         </div>
     </section>
+    <style>
+        section.careers-community {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            color: var(--primary);
+            gap: 50px;
+            font-size: 20px;
+            padding: 150px 100px;
+        }
+
+        section.careers-community h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        section.careers-community img {
+            border-radius: 10px;
+        }
+    </style>
+    <section class="careers-community">
+        <div class="col1">
+            <h1 class="heading">Our community</h1>
+            <p>Our global team represents a wide range of backgrounds and experiences. Bringing together diverse
+                perspectives is important to Millennium. We embrace the differences that make our employees unique, and
+                are committed to providing an inclusive environment where everyone is encouraged to contribute their
+                independent views and ideas.</p>
+        </div>
+        <div class="col2">
+            <img src="./assets/images/Finance.jpg" alt="">
+        </div>
+    </section>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            --main-color: var(--primary);
+            --transition: all 250ms cubic-bezier(.4, 0, .2, 1);
+            --header1: 3.052rem;
+            --header2: 2.441rem;
+            --header3: 1.953rem;
+            --header4: 1.563rem;
+            --header5: 1.25rem;
+            --paragraph: 1rem;
+            --primary-font: "Space Grotesk", sans-serif;
+            --secondary-font: "Inter", sans-serif;
+            --img-height: 300px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .custom-accordion {
+            font-family: var(--secondary-font);
+        }
+
+        .custom-accordion ul {
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+            list-style: none;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+
+        .custom-accordion li {
+            cursor: pointer;
+        }
+
+        .custom-accordion h2 {
+            font-size: var(--header3);
+            font-family: var(--primary-font);
+            color: var(--main-color);
+            padding-bottom: 2rem;
+        }
+
+        /* .custom-container {
+            max-width: 1140px;
+            padding: 2rem;
+            margin: 0 auto;
+        } */
+
+        .custom-accordion-title {
+            padding: 2rem 0px;
+            border-bottom: 1px solid var(--main-color);
+            position: relative;
+            font-size: var(--header5);
+            color: var(--main-color);
+            font-family: var(--primary-font);
+            transition: var(--transition);
+            padding: 2rem .5rem;
+        }
+
+        .custom-accordion-title::after {
+            content: "\276F";
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0.5rem;
+            font-size: 1rem;
+            transform-origin: center;
+            transform: rotateZ(90deg);
+            transition: var(--transition);
+            top: 40%;
+            bottom: 50%;
+            color: var(--main-color);
+        }
+
+        .rotate .custom-accordion-title::after {
+            transform: rotateZ(-90deg);
+        }
+
+        .custom-accordion-content {
+            height: 0px;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .custom-accordion-content img {
+            width: auto;
+        }
+
+        .custom-accordion-content p {
+            flex: 0 0 50%;
+        }
+
+        .custom-accordion-content.text p {
+            flex: 0 0 100%;
+        }
+
+        .custom-accordion-content.text {
+            flex-direction: column;
+        }
+
+        .open .custom-accordion-content {
+            min-height: var(--img-height);
+            height: 100%;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .custom-accordion-content {
+                flex-direction: column;
+            }
+
+            .custom-accordion-content p {
+                flex: 0 0 auto;
+            }
+
+            .open .custom-accordion-content {
+                min-height: calc(var(--img-height) + var(--img-height) / 2);
+            }
+
+            .custom-accordion-item div span {
+                display: block;
+                width: 90%;
+            }
+        }
+
+        .accordionCareers {
+            padding: 100px;
+
+        }
+
+        .accordionCareers>h1 {
+            font-size: 40px;
+            color: var(--primary);
+
+        }
+
+        .accordionCareers>div {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .accordionCareers p {
+            color: var(--primary) !important;
+
+        }
+    </style>
+
+    <section class="accordionCareers">
+        <h1>Employee networks</h1>
+        <div>
+            <div class="col1">
+                <section id="accordion" class="custom-container custom-accordion">
+
+                    <ul>
+                        <li class="custom-accordion-item">
+                            <div class="custom-accordion-title" id="heading1" tabindex="0" role="button"
+                                aria-expanded="false" aria-controls="content1">
+                                <span>Item with text & image</span>
+                            </div>
+                            <div class="custom-accordion-content" id="content1" role="region"
+                                aria-labelledby="heading1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <img src="https://picsum.photos/600/400?random=1" alt="Description of image"
+                                    title="Title of image" width="50%" height="300px" loading="lazy" decoding="async">
+                            </div>
+                        </li>
+                        <li class="custom-accordion-item">
+                            <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
+                                aria-expanded="false" aria-controls="content2">
+                                <span>Item with text</span>
+                            </div>
+                            <div class="custom-accordion-content text" id="content2" role="region"
+                                aria-labelledby="heading2">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut
+                                    enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo
+                                    consequat.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col2">
+                <section id="accordion" class="custom-container custom-accordion">
+
+                    <ul>
+                        <li class="custom-accordion-item">
+                            <div class="custom-accordion-title" id="heading1" tabindex="0" role="button"
+                                aria-expanded="false" aria-controls="content1">
+                                <span>Item with text & image</span>
+                            </div>
+                            <div class="custom-accordion-content" id="content1" role="region"
+                                aria-labelledby="heading1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <img src="https://picsum.photos/600/400?random=1" alt="Description of image"
+                                    title="Title of image" width="50%" height="300px" loading="lazy" decoding="async">
+                            </div>
+                        </li>
+                        <li class="custom-accordion-item">
+                            <div class="custom-accordion-title" id="heading2" tabindex="0" role="button"
+                                aria-expanded="false" aria-controls="content2">
+                                <span>Item with text</span>
+                            </div>
+                            <div class="custom-accordion-content text" id="content2" role="region"
+                                aria-labelledby="heading2">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                                    consectetur
+                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut
+                                    enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo
+                                    consequat.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+    <style>
+        /* Explore Our Network Section Styles */
+        .explore-network {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* Adjust height as needed */
+            color: #fff;
+            /* White text color */
+            text-align: center;
+            /* Center the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .explore-network .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the entire section area */
+            z-index: -1;
+            /* Ensure the video stays in the background */
+        }
+
+        .explore-network .content {
+            z-index: 2;
+            /* Higher index to keep content above the video */
+        }
+
+        .explore-network h2 {
+            margin: 0;
+            font-size: 3em;
+            /* Large text size */
+        }
+
+        .explore-network button {
+            background-color: transparent !important;
+            border-color: white;
+            color: white;
+        }
+
+        .explore-network button:hover {
+
+            border-color: var(--primary);
+
+        }
+
+        .explore-network button .slash {
+            background-color: white;
+        }
+
+        .explore-network button svg {
+            fill: white !important;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+    </style>
+    <section class="explore-network">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="./assets/heroVideo1.mp4" type="video/mp4">
+            <!-- Add other video formats or a fallback message here if necessary -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h2 data-aos="fade-down">Explore open roles </h2>
+
+            <button data-aos="fade-down" class="btn">
+                <div>
+                    <span>Jobs</span>
+                    <div class="arrow-container">
+                        <div class="slash"></div>
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 330 330" xml:space="preserve">
+                            <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+    c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+    C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+    C255,161.018,253.42,157.202,250.606,154.389z" />
+                        </svg>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </section>
 
     <footer class="fotterWrapper">
         <div class="fwrap">
@@ -395,6 +782,50 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/script.js"></script>
+    <script>
+        function openAccordion(container, index) {
+            const accordionItems = $(container).find(".custom-accordion-item");
+
+            accordionItems.each(function (i) {
+                const content = $(this).find(".custom-accordion-content");
+                const heading = $(this).find(".custom-accordion-title");
+
+                if (i === index) {
+                    const isOpen = $(this).toggleClass("open rotate").hasClass("open");
+                    heading.attr("aria-expanded", isOpen);
+                    if (isOpen) {
+                        content.css("min-height", content.prop("scrollHeight") + "px");
+                    } else {
+                        content.css("min-height", "0px");
+                    }
+                } else {
+                    $(this).removeClass("open rotate");
+                    heading.attr("aria-expanded", "false");
+                    content.css("min-height", "0px");
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            // Select all accordions and bind events
+            $(".custom-accordion").each(function () {
+                const container = $(this);
+
+                container.find(".custom-accordion-title").on("click", function () {
+                    const index = $(this).parent().index();
+                    openAccordion(container, index);
+                });
+
+                container.find(".custom-accordion-title").on("keydown", function (event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        const index = $(this).parent().index();
+                        openAccordion(container, index);
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
