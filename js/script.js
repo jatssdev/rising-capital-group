@@ -767,7 +767,7 @@ particlesJS("particles-js-life-at", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "repulse"
+               
             },
             "onscroll": {
                 "enable": true,
