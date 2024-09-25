@@ -24,14 +24,31 @@
         padding: 0;
     }
 
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: var(--primary) !important;
+    }
+
+    #particles-js-life-at {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
     .RisingCapital {
         display: flex;
+        position: relative;
         justify-content: center;
-        gap: 100px;
         align-items: center;
-        background-color: #eaf3f8;
-        height: 100vh;
+        text-align: center;
+        height: 80vh;
         width: 100%;
+        color: var(--primary);
+    }
+
+    .RisingCapital>div {
+        width: 60%;
     }
 
     .RisingCapital .one h1 {
@@ -140,7 +157,7 @@
     /* swiper */
 
     main {
-        background: #eee;
+        /* background: ; */
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #000;
@@ -598,30 +615,19 @@
         </nav>
     </header>
     <div class="RisingCapital">
+        <div id="particles-js-life-at"></div>
         <div class="one">
-            <h1>RisingCapital Group</h1>
+            <h1>Rising Capital Group</h1>
             <p>
-                Learn more about our people, culture and insights here and stay
-                connected <br />on our social channels.
+                At Rising Capital Group, life is about more than just work. Our employees are integral to our success,
+                and we foster an environment that encourages growth, collaboration, and innovation. We prioritize the
+                professional and personal development of our team, offering a workplace where diversity, inclusiveness,
+                and creativity flourish.
+                With ample opportunities for career development and a strong focus on teamwork, Rising Capital Group
+                provides the foundation for both personal satisfaction and professional growth.
             </p>
         </div>
-        <div class="two">
-            <div class="searchandFilter">
-                <div class="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="filterBy">
-                    <p>FilterBy</p>
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
 
-            <div class="links">
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
     </div>
 
 
@@ -630,8 +636,7 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="https://img.freepik.com/premium-photo/man-woman-are-sitting-front-laptop_1235330-3989.jpg?w=360"
-                        alt="">
+                    <img src="./assets/images/life-at/slide1.jpg" alt="">
                     <div class="boxSlide">
 
                     </div>
@@ -646,12 +651,7 @@
 
                     </div>
                 </div>
-                <div class="swiper-slide"><img src="behen.png" alt="">
 
-                    <div class="boxSlide">
-
-                    </div>
-                </div>
 
             </div>
             <div class="swiper-button-next"></div>
