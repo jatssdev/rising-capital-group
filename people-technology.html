@@ -232,34 +232,35 @@
         </div>
     </div>
 
-    <!-- Investment Section -->
-    <section class="investment-section">
-        <div class="container">
-            <div class="text-content">
-                <h2>Empowering investment professionals</h2>
-                <p>Investment teams around the world are empowered to build and grow their businesses. We strive for
-                    them to be
-                    more successful here than anywhere else.</p>
+<!-- Investment Section -->
+<section class="investment-section">
+    <div class="container">
+        <div class="boxes-container">
+            <div class="box" onclick="toggleBox(this, 0)">
+                <h3>Capital stability</h3>
+                <div class="box-content">
+                    <p>Take advantage of a capital base that enables focus and provides opportunities to scale...</p>
+                </div>
             </div>
-            <div class="boxes-container">
-                <div class="box" onclick="toggleBox(this)">
-                    <h3>Capital stability</h3>
-                    <div class="box-content">
-                        <p>Take advantage of a capital base that enables focus and provides opportunities to scale...
-                        </p>
-                    </div>
+            <div class="box" onclick="toggleBox(this, 1)">
+                <h3>Autonomy and collaboration</h3>
+                <div class="box-content">
+                    <p>Our platform fosters autonomy, while allowing teams to collaborate globally to share knowledge...</p>
                 </div>
-                <div class="box" onclick="toggleBox(this)">
-                    <h3>Autonomy and collaboration</h3>
-                    <div class="box-content">
-                        <p>Our platform fosters autonomy, while allowing teams to collaborate globally to share
-                            knowledge...</p>
-                    </div>
+            </div>
+            <div class="box" onclick="toggleBox(this, 2)">
+                <h3>Innovation and growth</h3>
+                <div class="box-content">
+                    <p>Empower your projects with cutting-edge technology to innovate and grow at a global scale...</p>
                 </div>
-                <!-- Add more boxes as needed -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+    
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
@@ -616,7 +617,7 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="./js/people-Investment.js"></script>
+  <script type="module" src="./js/people-technology.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

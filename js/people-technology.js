@@ -277,3 +277,22 @@ $(document).ready(function () {
 
 
 });
+
+
+function toggleBox(element, index) {
+    let boxes = document.querySelectorAll('.box');
+    boxes.forEach((box, idx) => {
+        if (idx !== index) {
+            box.classList.remove('open');
+            box.querySelector('.box-content').style.maxHeight = null;
+        }
+    });
+    element.classList.toggle('open');
+    let content = element.querySelector('.box-content');
+    if (element.classList.contains('open')) {
+        content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+        content.style.maxHeight = null;
+    }
+}
+
