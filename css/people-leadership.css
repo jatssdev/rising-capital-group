@@ -178,7 +178,7 @@ hr {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 0;
+  z-index: 100;
 }
 
 .hero-text {
@@ -284,38 +284,64 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px); /* Apply a 10px blur to the background */
+  display: none; /* Hidden by default */
+  z-index: 999; /* Ensure the overlay is on top */
 }
 
+
+
 .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
+  padding: 40px; /* Increased padding for better spacing */
   border-radius: 10px;
-  width: 50%; /* Or your preferred width */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Allows the popup to be responsive */
+  width: 600px; /* Increased width */
+  max-height: 90vh;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .popup-content {
-  display: flex;
-  align-items: center;
+  max-height: 80vh; /* 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling inside the popup */
+    padding: 20px;
 }
 
 .popup-content img {
-  width: 200px; /* Adjust based on your preference */
-  height: auto;
-  margin-right: 20px;
+  width: 150px; /* Adjust based on your needs */
+  height: 150px;
+  border-radius: 50%; /* Circular image */
 }
 
-.popup-text {
-  flex-grow: 1;
-}
-
-.close {
+.popup-content .close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
+  font-size: 30px;
+  color: #666; /* Subtle color for the close button */
+}
+
+.popup-content h3, .popup-content p {
+  margin: 0 0 10px; /* Adds bottom margin for spacing */
+}
+
+.popup-content h3 {
+  font-size: 24px; /* Adjust font size if needed */
+  color: #333; /* Dark grey color for text */
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #555; /* Lighter grey for the paragraph */
+  line-height: 1.6; /* Improved line height for readability */
 }
