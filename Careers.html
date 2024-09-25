@@ -222,8 +222,17 @@
     </header>
 
     <style>
+        #particles-js-career {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
         section.caree {
-            min-height: 60vh;
+            min-height: 100vh;
+            position: relative;
             align-items: center;
             justify-content: center;
             display: flex;
@@ -234,11 +243,22 @@
             font-size: 40px;
             color: var(--primary);
         }
+
+        hr {
+            margin: 50px 100px;
+            border: none;
+            background-color: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 3px 10px var(--primary);
+            height: 1px;
+        }
     </style>
 
     <section class="caree">
+        <div id="particles-js-career"></div>
+
         <div>
-            <h1>Bring your ambition, find your path </h1>
+            <h1 class="heading">Bring your ambition, find your path </h1>
             <div class="btns">
                 <button data-aos="fade-down" class="btn">
                     <div>
@@ -279,22 +299,26 @@
             </div>
         </div>
     </section>
+    <hr>
 
     <style>
         section.caree-photos {
-            background-color: var(--primary);
-            padding: 100px;
+            /* background-color: var(--primary); */
+            padding: 50px 100px;
         }
 
         section.caree-photos>h1 {
             font-size: 40px;
-            color: white;
+            /* color: white; */
+            color: var(--primary);
         }
 
         section.caree-photos>p {
             font-size: 20px;
             margin: 30px 0;
-            color: white;
+            /* color: white; */
+            color: var(--primary);
+
         }
 
         section.caree-photos .ptos {
@@ -302,25 +326,150 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
         }
+
+        /* Modal Styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Dark background with 80% opacity */
+            z-index: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            z-index: 2;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #modalVideo {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            /* Adjust size of the play button */
+            height: 50px;
+            cursor: pointer;
+            z-index: 2;
+            /* Ensure the play button is above the video */
+        }
+
+        .play-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+        }
     </style>
 
-    <section class="caree-photos">
+    <!-- <section class="caree-photos">
         <h1>A culture committed to excellence</h1>
         <p>Millennium is made up of a global network of ambitious people who want to make a difference. Our people are
             in pursuit of what’s next, contributing their individual strengths to make a collective impact for the firm.
         </p>
         <div class="ptos">
-            <div class="img">
-                <img src="./assets/images/people/88uq16az.bmp" alt="">
+            <div class="img video-wrapper">
+                <video poster="./assets/videos/careers/ss1.jpg" onclick="openModal(this)"
+                    src="./assets/videos/careers/1.mp4" alt=""></video>
+                <div class="play-button" onclick="openModal(this.previousElementSibling)">
+                    <img src="./assets/videos/careers/playbtn.svg" alt="Play Button">
+                </div>
             </div>
-            <div class="img">
-                <img src="./assets/images/people/88uq16az.bmp" alt="">
+            <div class="img video-wrapper">
+                <video poster="./assets/videos/careers/ss2.jpg" onclick="openModal(this)"
+                    src="./assets/videos/careers/2.mp4" alt=""></video>
+                <div class="play-button" onclick="openModal(this.previousElementSibling)">
+                    <img src="./assets/videos/careers/playbtn.svg" alt="Play Button">
+                </div>
             </div>
-            <div class="img">
-                <img src="./assets/images/people/88uq16az.bmp" alt="">
+            <div class="img video-wrapper">
+                <video poster="./assets/videos/careers/ss3.jpg" onclick="openModal(this)"
+                    src="./assets/videos/careers/3.mp4" alt=""></video>
+                <div class="play-button" onclick="openModal(this.previousElementSibling)">
+                    <img src="./assets/videos/careers/playbtn.svg" alt="Play Button">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="videoModal" class="modal" style="display: none;">
+            <div class="modal-background" id="modalBackground"></div>
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <video id="modalVideo" controls></video>
             </div>
         </div>
     </section>
+    <hr> -->
+    <script>
+        function openModal(videoElement) {
+            const modal = document.getElementById("videoModal");
+            const modalVideo = document.getElementById("modalVideo");
+            // Set the video source
+            modalVideo.src = videoElement.src;
+
+            // Display the modal
+            modal.style.display = "flex";
+            modalVideo.play();  // Autoplay the video
+
+            // Add an event listener to close modal when clicking outside the video content
+            document.getElementById("modalBackground").addEventListener("click", closeModal);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("videoModal");
+            const modalVideo = document.getElementById("modalVideo");
+
+            // Stop the video and hide the modal
+            modalVideo.pause();
+            modalVideo.src = "";
+            modal.style.display = "none";
+        }
+
+
+    </script>
     <style>
         section.careers-community {
             display: grid;
@@ -353,11 +502,57 @@
             <img src="./assets/images/Finance.jpg" alt="">
         </div>
     </section>
+    <style>
+        section.quoteCareer {
+            min-height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            background-image: url("./assets/BackgroundLogin.png");
+            padding: 100px;
+            color: white;
+
+        }
+
+        section.quoteCareer>div {
+            width: 50%;
+        }
+
+        section.quoteCareer h1 {
+            font-size: 30px;
+        }
+
+        section.quoteCareer h3 {
+            margin: 30px 0 10px;
+        }
+
+
+        section.quoteCareer p.q {
+            font-size: 50px;
+        }
+
+        section.quoteCareer p.q.l {
+            text-align: right;
+        }
+    </style>
+
+    <section class="quoteCareer">
+        <div>
+            <p class="q">"</p>
+            <h1 class="heading">Integrity, work ethic, entrepreneurial energy and emotional intelligence are incredibly
+                important to us
+                at
+                Millennium. That's the DNA that makes it work.</h1>
+            <p class="q l">"</p>
+
+            <h3>John Novogratz</h3>
+            <p>Global Head of Capital Development and Investor Relations</p>
+        </div>
+    </section>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
         :root {
             --main-color: var(--primary);
             --transition: all 250ms cubic-bezier(.4, 0, .2, 1);
@@ -826,6 +1021,45 @@
         });
 
     </script>
+
+    <style>
+        @media screen and (max-width:1000px) {
+            section.caree-photos .ptos {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            section.careers-community {
+                grid-template-columns: 1fr;
+            }
+
+            .open .custom-accordion-content {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            section.caree-photos .ptos {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            section.quoteCareer {
+                justify-content: center;
+            }
+
+            section.quoteCareer>div {
+                width: 80%;
+            }
+
+            .accordionCareers>div {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
 </body>
 
 </html>
