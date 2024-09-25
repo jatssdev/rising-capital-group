@@ -51,12 +51,30 @@ function toggleSubMenu(e) {
 
 // Fixed Navbar Menu on Window Resize
 window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
+        // For larger devices (e.g., desktops and large tablets in landscape)
         if (menu.classList.contains("is-active")) {
             toggleMenu();
+            checkScreenSize();
+        }
+    } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        // For tablets (e.g., 768px to 1023px)
+        if (menu.classList.contains("is-active")) {
+            toggleMenu();
+            checkScreenSize();
+        }
+    } else {
+        // For phones (e.g., below 768px)
+        // You can add additional functionality for phones if needed
+        if (menu.classList.contains("is-active")) {
+            toggleMenu();
+            checkScreenSize();
         }
     }
+
+    checkScreenSize(); // Ensure the screen size checker runs
 });
+
 
 // Dark and Light Mode with localStorage
 (function () {
@@ -561,6 +579,120 @@ particlesJS("particles-js-leadership", {
     },
     "retina_detect": true
 });
+particlesJS("particles-js-career", {
+    "particles": {
+        "number": {
+            "value": 100,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#961043" // Changed to blue
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#961043", // Changed to blue
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onscroll": {
+                "enable": true,
+                "mode": "push"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 140,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
 
 $(document).ready(function () {
     var swiper = new Swiper(".swiper-container-h", {
@@ -768,22 +900,21 @@ $(document).ready(function () {
 
     const $target = $('.js-accordion-header');
     const ACTIVE_CLASS = 'is-active';
-    const visible = $('.accordion-contents:visible');
 
     $target.on('click', function () {
         const $this = $(this);
         let $arrow = $this.find('.accordion-header');
 
+        // Close all other accordion contents and remove 'is-active' class from other headers
+        $target.not($this).removeClass(ACTIVE_CLASS); // Remove 'is-active' from all other headers
+        $('.accordion-contents').not($this.siblings('.accordion-contents')).slideUp(); // Close all other contents
+
+        // Toggle the clicked accordion's content
         $arrow.toggleClass(ACTIVE_CLASS);
         $this.toggleClass(ACTIVE_CLASS);
         $this.siblings('.accordion-contents').stop().slideToggle();
+    });
 
-        if ($this.hasClass(ACTIVE_CLASS)) {
-            $target.removeClass(ACTIVE_CLASS);
-            $this.addClass(ACTIVE_CLASS);
-            visible.stop().slideUp(); //comment this out if you want to close an accordion item if you open other items
-        }
-    })
     function checkScreenSize() {
         if ($(window).width() <= 768) {
             $('header .specialAnchor').addClass('disabled').on('click', function (e) {
