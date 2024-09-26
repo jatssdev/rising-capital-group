@@ -232,34 +232,35 @@
         </div>
     </div>
 
-    <!-- Investment Section -->
-    <section class="investment-section">
-        <div class="container">
-            <div class="text-content">
-                <h2>Empowering investment professionals</h2>
-                <p>Investment teams around the world are empowered to build and grow their businesses. We strive for
-                    them to be
-                    more successful here than anywhere else.</p>
+<!-- Investment Section -->
+<section class="investment-section">
+    <div class="container">
+        <div class="boxes-container">
+            <div class="box" onclick="toggleBox(this, 0)">
+                <h3>Capital stability</h3>
+                <div class="box-content">
+                    <p>Bhavik Joshi serves as the Chief Information Officer at Rising Capital Group, where he leverages his extensive experience in technology and engineering to drive the firm’s digital transformation initiatives. An Industrial Engineer by training, Bhavik has a robust background in developing and implementing technology-driven strategies that enhance operational efficiency and support the firm’s growth objectives.</p>
+                </div>
             </div>
-            <div class="boxes-container">
-                <div class="box" onclick="toggleBox(this)">
-                    <h3>Capital stability</h3>
-                    <div class="box-content">
-                        <p>Take advantage of a capital base that enables focus and provides opportunities to scale...
-                        </p>
-                    </div>
+            <div class="box" onclick="toggleBox(this, 1)">
+                <h3>Autonomy and collaboration</h3>
+                <div class="box-content">
+                    <p>Our platform fosters autonomy, while allowing teams to collaborate globally to share knowledge...</p>
                 </div>
-                <div class="box" onclick="toggleBox(this)">
-                    <h3>Autonomy and collaboration</h3>
-                    <div class="box-content">
-                        <p>Our platform fosters autonomy, while allowing teams to collaborate globally to share
-                            knowledge...</p>
-                    </div>
+            </div>
+            <div class="box" onclick="toggleBox(this, 2)">
+                <h3>Innovation and growth</h3>
+                <div class="box-content">
+                    <p>Empower your projects with cutting-edge technology to innovate and grow at a global scale...</p>
                 </div>
-                <!-- Add more boxes as needed -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+    
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
@@ -281,43 +282,31 @@
 
 
     <!-- Stacking Cards Section -->
-    <main>
-        <ul id="cards">
-            <li class="card" id="card_1" style="--index: 1;">
-                <div class="card__content">
-                    <h2>Card One</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg"
-                            alt="Image description">
-                    </figure>
-                </div>
-            </li>
-            <li class="card" id="card_2" style="--index: 2;">
-                <div class="card__content">
-                    <h2>Card Two</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-                            alt="Image description">
-                    </figure>
-                </div>
-            </li>
-            <li class="card" id="card_3" style="--index: 3;">
-                <div class="card__content">
-                    <h2>Card Three</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg"
-                            alt="Image description">
-                    </figure>
-                </div>
-            </li>
-        </ul>
-    </main>
+    <div class="card-stack">
+        <div class="card" id="card1">
+            <h1>Partnership and expertise</h1>
+            <div class="content">
+                As an integral part of our business, technologists at Millennium work directly with teams and leaders around the firm and learn from experts across a range of technical fields.
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <h1>Cutting-edge technology</h1>
+            <div class="content">
+                CTo help technologists solve challenges, Millennium provides the flexibility to choose from a wide range of advanced tools and technologies that best suit their needs, including advanced data analytics, AI and machine learning, cloud-based tools and information security technology.
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <h1>A global network</h1>
+            <div class="content">
+                With technology hubs in key markets—including Bengaluru, Dublin, Hong Kong, London, Miami, New York, Singapore, Tel Aviv and Tokyo—technologists partner across continents to share expertise and enable our global scale.
+            </div>
+        </div>
+        <!-- More cards can be added similarly -->
+    </div>
+    
+    
+    
+    
 
     <section class="videoSection">
         <div class="videos">
@@ -616,8 +605,9 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="./js/people-Investment.js"></script>
+  <script type="module" src="./js/people-technology.js"></script>
   <script src="./js/script.js"></script>
+  
 </body>
 
 </html>
