@@ -5,45 +5,89 @@
     box-sizing: border-box;
 }
 
-hr {
-    margin: 50px 100px;
-    border: none;
-    background-color: var(--primary);
-    border-radius: 50%;
-    box-shadow: 0 3px 10px var(--primary);
-    height: 1px;
+body,
+html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
 }
 
 .header2 {
     position: relative;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+    height: 55vh;
     overflow: hidden;
     /* Ensures the video does not overflow */
 }
 
-
-#particles-js-core {
+#background-video {
     position: absolute;
-    z-index: 2;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    /* Make sure the content is above the video and overlay */
+}
+
+.header-content h1 {
+    position: relative;
+    left: -40%;
+    width: 80%;
+    text-align: justify;
+    font-size: 4.5rem;
+    font-family: "sans-serif";
+
+}
+
+/* Common container for all sections */
+.container {
+    max-width: 1200px;
+    /* Same width as the hero section */
+    margin: 0 auto;
+    /* Centers the section */
+    padding: 0 20px;
+    /* Adds some padding for smaller screens */
 }
 
 
-
-
-
+.text-content {
+    max-width: 600px;
+}
 
 
 .header2 h1,
 .header2 h2 {
-    font-size: 40px;
-    ;
-
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 500;
     color: var(--primary);
-
+    margin-bottom: 1rem;
+    font-family: "sans-serif";
 }
 
 .header2 p {
@@ -66,10 +110,8 @@ hr {
 
 .boxes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Creates a responsive grid layout */
-    gap: 20px;
-    /* Space between boxes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid layout */
+    gap: 20px; /* Space between boxes */
 }
 
 .box {
@@ -84,7 +126,6 @@ hr {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 @media (max-width: 768px) {
     .boxes-container {
         grid-template-columns: 1fr;
@@ -106,10 +147,8 @@ hr {
 }
 
 .box.open .box-content {
-    padding: 5px;
-    height: 500px;
-    max-height: 1000px;
-    transition: max-height 0.5s ease, padding 0.3s ease;
+    max-height: 1000px; /* Adjust based on maximum content height */
+    transition: max-height 0.5s ease;
 }
 
 
@@ -200,13 +239,10 @@ hr {
 }
 
 :root {
-    --card-height: 50vh;
-    /* Adjust height as needed */
+    --card-height: 50vh;  /* Adjust height as needed */
     --card-margin: 20px;
-    --card-offset: 5vh;
-    /* Controls the vertical spacing between cards when stacked */
-    --numcards: 3;
-    /* Adjust based on the number of cards */
+    --card-offset: 5vh;  /* Controls the vertical spacing between cards when stacked */
+    --numcards: 3;  /* Adjust based on the number of cards */
 }
 
 #cards {
@@ -219,7 +255,7 @@ hr {
 
 .card {
     position: sticky;
-    top: var(--card-offset);
+    top: var(--card-offset); 
     margin: var(--card-margin) 0;
     height: var(--card-height);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -247,7 +283,7 @@ hr {
 
 .card.in-view {
     transform: scale(1);
-    z-index: 10;
+    z-index: 10; 
 }
 
 .card.past {
@@ -357,11 +393,6 @@ section .videos .videoModel .closebtn svg {
     top: 22%;
     left: 50px;
     z-index: 1;
-}
-
-.container {
-    width: 100%;
-    text-align: center;
 }
 
 .creative-fullpage--slider .swiper-slide .slider-inner::after {
@@ -770,67 +801,6 @@ section .videos .videoModel .closebtn svg {
     .header-content h1 {
         font-size: 2rem;
     }
-}
-
-.explore-network {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    /* Adjust height as needed */
-    color: #fff;
-    /* White text color */
-    text-align: center;
-    /* Center the content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.explore-network .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Cover the entire section area */
-    z-index: -1;
-    /* Ensure the video stays in the background */
-}
-
-.explore-network .content {
-    z-index: 2;
-    /* Higher index to keep content above the video */
-}
-
-.explore-network h2 {
-    margin: 0;
-    font-size: 3em;
-    /* Large text size */
-}
-
-.explore-network button {
-    background-color: transparent !important;
-    border-color: white;
-    color: white;
-}
-
-.explore-network button:hover {
-
-    border-color: var(--primary);
-
-}
-
-.explore-network button .slash {
-    background-color: white;
-}
-
-.explore-network button svg {
-    fill: white !important;
-}
-
-h2 {
-    font-size: 30px;
 }
 
 section.accordionPeople .cardd {
