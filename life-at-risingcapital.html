@@ -355,6 +355,19 @@
         .lines {
             padding: 0 50px;
         }
+
+        .ourLatest {
+            flex-wrap: wrap;
+        }
+
+        .ourLatest>div {
+            width: calc(50% - 12px);
+
+        }
+
+        .linetwo {
+            display: none !important;
+        }
     }
 
 
@@ -400,11 +413,7 @@
             padding: 10px;
         }
 
-        .ourLatest {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            padding: 0;
-        }
+
 
         .latest {
             padding: 10px;
@@ -416,7 +425,7 @@
         }
 
         .ourLatest .boxes {
-            height: 350px;
+            /* height: 350px; */
             box-shadow: 0 3px 10px rgb(202, 202, 202);
         }
 
@@ -435,14 +444,19 @@
         }
     }
 
-    @media screen and (max-width:630px) {
-        .ourLatest .boxes {
-            height: 250px;
+    @media screen and (max-width:800px) {
+        .ourLatest>div {
+            width: 100%;
+
+        }
+        .ourLatest{
+            padding: 0 20px;
         }
 
-        .ourLatest .boxes .titleCont p {
-            /* padding: 10px 0; */
-        }
+
+    }
+
+    @media screen and (max-width:630px) {
 
         .boxSlide {
             background-color: var(--primary);
@@ -483,7 +497,7 @@
         }
 
         .ourLatest .boxes {
-            height: 200px;
+            /* height: 200px; */
         }
 
         .ourLatest .boxes .titleCont p {
@@ -810,7 +824,7 @@
                         and craft personalized strategies to help you succeed.</h5>
                 </div>
             </div>
-            <div class="line1" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300"></div>
+            <div class="line1 linetwo" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300"></div>
             <div class="boxes">
                 <div class="img">
                     <img data-aos="zoom-in" data-aos-duration="1500" src="./assets/images/life-at/3.jpg" alt="" />

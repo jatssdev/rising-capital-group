@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: 'Arial', sans-serif;
 }
@@ -13,7 +14,8 @@ body, html {
 header {
     position: relative;
     height: 55vh;
-    overflow: hidden; /* Ensures the video does not overflow */
+    overflow: hidden;
+    /* Ensures the video does not overflow */
 }
 
 #background-video {
@@ -36,7 +38,8 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay */
     z-index: 1;
 }
 
@@ -47,7 +50,8 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 2; /* Make sure the content is above the video and overlay */
+    z-index: 2;
+    /* Make sure the content is above the video and overlay */
 }
 
 .header-content h1 {
@@ -57,14 +61,17 @@ header {
     text-align: justify;
     font-size: 4.5rem;
     font-family: "sans-serif";
-    
+
 }
 
 /* Common container for all sections */
 .container {
-    max-width: 1200px; /* Same width as the hero section */
-    margin: 0 auto; /* Centers the section */
-    padding: 0 20px; /* Adds some padding for smaller screens */
+    max-width: 1200px;
+    /* Same width as the hero section */
+    margin: 0 auto;
+    /* Centers the section */
+    padding: 0 20px;
+    /* Adds some padding for smaller screens */
 }
 
 
@@ -73,7 +80,8 @@ header {
 }
 
 
-h1, h2 {
+h1,
+h2 {
     font-size: 3rem;
     line-height: 1.2;
     font-weight: 500;
@@ -159,13 +167,16 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%); /* Gradient from black to transparent */
-    z-index: 1; /* Place this on top of the background */
+    background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+    /* Gradient from black to transparent */
+    z-index: 1;
+    /* Place this on top of the background */
 }
 
 .testimonial-content {
     position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
+    z-index: 2;
+    /* Ensure content is above the overlay */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -214,10 +225,14 @@ p {
 }
 
 :root {
-    --card-height: 70vh;  /* Optimized height to ensure visibility of next card */
-    --card-margin: 0;     /* Remove margin for smooth stacking */
-    --card-top-offset: 15vh;  /* Adjust top offset for better stack overlap */
-    --numcards: 3;        /* Number of cards */
+    --card-height: 70vh;
+    /* Optimized height to ensure visibility of next card */
+    --card-margin: 0;
+    /* Remove margin for smooth stacking */
+    --card-top-offset: 15vh;
+    /* Adjust top offset for better stack overlap */
+    --numcards: 3;
+    /* Number of cards */
 }
 
 #cards {
@@ -235,8 +250,10 @@ p {
     margin: var(--card-margin) 0;
     height: var(--card-height);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, z-index 0.3s ease;  /* Smooth transition */
-    z-index: calc(var(--numcards) - var(--index));       /* Dynamically adjust stacking order */
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    /* Smooth transition */
+    z-index: calc(var(--numcards) - var(--index));
+    /* Dynamically adjust stacking order */
     background-color: white;
     border-radius: 10px;
     transform: scale(1);
@@ -265,7 +282,8 @@ p {
 }
 
 .card:hover {
-    transform: scale(1.03);  /* Subtle scaling on hover */
+    transform: scale(1.03);
+    /* Subtle scaling on hover */
 }
 
 @keyframes scale {
@@ -568,11 +586,13 @@ section .videos .videoModel .closebtn svg {
     align-items: center;
     justify-content: space-between;
     padding: 60px 0;
-    gap: 40px; /* Adds space between the text and the image */
+    gap: 40px;
+    /* Adds space between the text and the image */
 }
 
 .lead-content {
-    flex: 1; /* Ensure the text content takes up equal space */
+    flex: 1;
+    /* Ensure the text content takes up equal space */
     max-width: 50%;
 }
 
@@ -616,22 +636,28 @@ section .videos .videoModel .closebtn svg {
 }
 
 .lead-image {
-    flex: 1; /* Ensure the image takes up equal space */
+    flex: 1;
+    /* Ensure the image takes up equal space */
     display: flex;
-    justify-content: flex-end; /* Align the image to the right */
+    justify-content: flex-end;
+    /* Align the image to the right */
 }
 
 .lead-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    object-fit: cover; /* Ensures image retains aspect ratio */
+    object-fit: cover;
+    /* Ensures image retains aspect ratio */
 }
 
 .container-Millennium {
-    max-width: 1200px; /* Same width as the hero section */
-    margin: 0 auto; /* Centers the section */
-    padding: 0 20px; /* Adds some padding for smaller screens */
+    max-width: 1200px;
+    /* Same width as the hero section */
+    margin: 0 auto;
+    /* Centers the section */
+    padding: 0 20px;
+    /* Adds some padding for smaller screens */
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -646,9 +672,9 @@ section .videos .videoModel .closebtn svg {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
-  
-  #hero-video {
+}
+
+#hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -660,10 +686,10 @@ section .videos .videoModel .closebtn svg {
     z-index: -1;
     background-size: cover;
     background-position: center;
-  }
-  
-  /* White transparent overlay */
-  .overlay {
+}
+
+/* White transparent overlay */
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -671,21 +697,21 @@ section .videos .videoModel .closebtn svg {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 0;
-  }
-  
-  .hero-text {
+}
+
+.hero-text {
     text-align: center;
     color: white;
     z-index: 1;
-  }
-  
-  .hero-text h1 {
+}
+
+.hero-text h1 {
     font-size: 48px;
     font-weight: 300;
     margin-bottom: 20px;
-  }
-  
-  .hero-button {
+}
+
+.hero-button {
     padding: 10px 20px;
     font-size: 18px;
     color: white;
@@ -695,37 +721,41 @@ section .videos .videoModel .closebtn svg {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .hero-button:hover {
+}
+
+.hero-button:hover {
     background-color: white;
     color: #0066ff;
-  }
-  
-  .hero-button span {
+}
+
+.hero-button span {
     font-size: 24px;
     margin-left: 10px;
-  }
+}
 
 
-  
+
 @media (max-width: 1024px) {
     .lead-program {
         flex-direction: column;
         text-align: center;
     }
 
-    .lead-content, .lead-image {
+    .lead-content,
+    .lead-image {
         max-width: 100%;
     }
 
     .lead-image {
-        justify-content: center; /* Center the image on smaller screens */
-        margin-top: 20px; /* Add spacing between text and image on smaller screens */
+        justify-content: center;
+        /* Center the image on smaller screens */
+        margin-top: 20px;
+        /* Add spacing between text and image on smaller screens */
     }
 
     .lead-content {
-        margin-bottom: 20px; /* Adjust the margin for text on smaller screens */
+        margin-bottom: 20px;
+        /* Adjust the margin for text on smaller screens */
     }
 }
 
@@ -747,7 +777,8 @@ section .videos .videoModel .closebtn svg {
         text-align: center;
     }
 
-    .quote-text, .quote-image {
+    .quote-text,
+    .quote-image {
         max-width: 100%;
     }
 
@@ -762,5 +793,3 @@ section .videos .videoModel .closebtn svg {
         font-size: 2rem;
     }
 }
-
-
