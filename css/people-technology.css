@@ -66,12 +66,15 @@ hr {
 
 .boxes-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid layout */
+    gap: 20px; /* Space between boxes */
 }
 
 .box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--primary);
     color: white;
     padding: 20px;
@@ -79,10 +82,16 @@ hr {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+@media (max-width: 768px) {
+    .boxes-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .box h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 0 25px 10px 0;
     font-weight: bold;
     text-align: center;
 }
@@ -91,14 +100,18 @@ hr {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    padding: 0 5px;
 }
 
 .box.open .box-content {
+<<<<<<< HEAD
     padding: 5px;
     height: 500px;
     max-height: 1000px;
     transition: max-height 0.5s ease, padding 0.3s ease;
+=======
+    max-height: 1000px; /* Adjust based on maximum content height */
+    transition: max-height 0.5s ease;
+>>>>>>> b7b3ae162450070d0849647586950347b0548118
 }
 
 
@@ -761,6 +774,7 @@ section .videos .videoModel .closebtn svg {
     }
 }
 
+<<<<<<< HEAD
 .explore-network {
     position: relative;
     width: 100%;
@@ -820,4 +834,155 @@ section .videos .videoModel .closebtn svg {
 
 h2 {
     font-size: 30px;
+=======
+section.accordionPeople .cardd {
+    display: grid;
+    padding: 50px;
+    background-color: var(--primary);
+    grid-template-columns: 30% 70%;
+    gap: 50px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    margin: 50px 0;
+    color: white;
+
+}
+
+section.accordionPeople .cardd2 {
+    top: 90px;
+}
+
+section.accordionPeople .cardd3 {
+    top: 180px;
+
+}
+
+section.accordionPeople .cards {
+    /* background-color: red; */
+    min-height: 190vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+section.accordionPeople hr {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+    border: 100%;
+    box-shadow: 0 3px 10px white;
+}
+
+section.accordionPeople .cardd h1 {
+    font-size: 30px;
+}
+
+section.accordionPeople .cardd p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+section.accordionPeople .cardd button {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+
+}
+
+section.accordionPeople .cardd .slash {
+
+    background-color: white;
+
+}
+
+section.accordionPeople .cardd svg {
+
+    fill: white;
+
+}
+
+section.accordionPeople>h1 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary);
+}
+
+section.accordionPeople>p {
+
+    text-align: center;
+    color: var(--primary);
+}
+
+section.accordionPeople img {
+    width: 100%;
+}
+
+
+.l-container {
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+    font-family: "Montserrat";
+    color: black;
+}
+
+.accordion-header {
+    background-color: white;
+    border-bottom: 1px solid gray;
+
+    padding: 30px 50px;
+    /* border-bottom: 1p solid black; */
+    transform: scale(1);
+    transition: background-color 0.3s ease-in-out, transform 0.5s cubic-bezier(0.99, 0.01, 0, 1.01) 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.accordion-item {
+    border-bottom: 1px solid gray;
+}
+
+.accordion-header span {
+    position: relative;
+    z-index: 2;
+}
+
+.accordion-header.is-active {
+    background-color: var(--primary);
+    box-shadow: 0px 5px 9px 1px rgb(216, 216, 216);
+}
+
+.accordion-header.is-active:hover {
+    transform: scale(1);
+}
+
+.accordion-title {
+    font-size: 25px !important;
+    letter-spacing: 0.08em;
+}
+
+.accordion-contents {
+    background-color: white;
+    padding: 30px 50px;
+    box-shadow: inset 0 0 20px 0px rgb(213, 213, 213);
+}
+
+.accordion-text {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 2;
+>>>>>>> b7b3ae162450070d0849647586950347b0548118
 }

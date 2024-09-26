@@ -10,13 +10,18 @@ body {
   position: relative;
   background-color: rgb(253, 253, 253);
   color: var(--primary);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   height: 60vh;
   text-align: left;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  padding: 40px 150px;
+}
+
+.header2 .leadershpire{
+  color: black;
 }
 
 #particles-js-leadership {
