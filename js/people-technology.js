@@ -1,8 +1,3 @@
-import { showDialog } from 'https://codepen.io/bramus/pen/ZEqMOLz/cccfe67c2b9cdfbeb5fb59083dbd0a64.js';
-showDialog('https://scroll-driven-animations.style/demos/stacking-cards/css/');
-
-
-
 /* ---- particles.js config ---- */
 
 
@@ -281,18 +276,83 @@ $(document).ready(function () {
 
 function toggleBox(element, index) {
     let boxes = document.querySelectorAll('.box');
+    let content = element.querySelector('.box-content');
+    let isCurrentlyOpen = element.classList.contains('open');
+
+    // Close all other boxes
     boxes.forEach((box, idx) => {
         if (idx !== index) {
             box.classList.remove('open');
             box.querySelector('.box-content').style.maxHeight = null;
         }
     });
-    element.classList.toggle('open');
-    let content = element.querySelector('.box-content');
-    if (element.classList.contains('open')) {
+
+    // Toggle the clicked box
+    if (!isCurrentlyOpen) {
+        element.classList.add('open');
         content.style.maxHeight = content.scrollHeight + "px";
     } else {
+        element.classList.remove('open');
         content.style.maxHeight = null;
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    // Intersection Observer to detect when cards enter and leave the viewport
+    const observerOptions = {
+        root: null, // Use the viewport
+        threshold: 0.5 // Trigger when 50% of the card is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                entry.target.classList.remove("past");
+            } else if (entry.boundingClientRect.top < 0) {
+                entry.target.classList.add("past");
+                entry.target.classList.remove("in-view");
+            } else {
+                entry.target.classList.remove("in-view");
+                entry.target.classList.remove("past");
+            }
+        });
+    }, observerOptions);
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach((box, index) => {
+        box.addEventListener('click', function() {
+            const content = box.querySelector('.box-content');
+            const isOpen = box.classList.contains('open');
+
+            // Close all other boxes
+            boxes.forEach((otherBox, otherIndex) => {
+                if (otherIndex !== index) {
+                    otherBox.classList.remove('open');
+                    otherBox.querySelector('.box-content').style.maxHeight = null;
+                }
+            });
+
+            // Toggle the clicked box
+            if (!isOpen) {
+                box.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + "px"; // Adjusts dynamically
+            } else {
+                box.classList.remove('open');
+                content.style.maxHeight = null;
+            }
+        });
+    });
+});
 
