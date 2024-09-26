@@ -1,0 +1,243 @@
+.peopleMain {
+    /* padding: 100px; */
+    /* background-color: red; */
+    position: relative;
+    min-height: 100vh;
+
+}
+
+#particles-js-People {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+
+.peopleMain .cotent {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 100px;
+
+}
+
+.peopleMain .cotent h1 {
+    font-size: 50px;
+    text-align: center;
+    color: var(--primary);
+    margin: 100px 0;
+}
+
+.peopleMain .cotent p {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary);
+    margin: 100px 0;
+}
+
+.peopleMain .cotent .images {
+    display: grid;
+    position: relative;
+    z-index: 5;
+
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.peopleMain .cotent .images .img {
+    height: 500px;
+}
+
+.peopleMain .cotent .images img {
+    width: 100%;
+    height: 100%;
+}
+
+section.team {
+    display: grid;
+    padding: 100px;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.team img {
+    width: 100%;
+}
+
+hr {
+    margin: 50px 100px;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px var(--primary);
+    height: 1px;
+}
+
+section.team .col1 {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+section.team .col1 h1 {
+    font-size: 40px;
+    color: var(--primary);
+}
+
+/* section.accordionPeople {
+    padding: 100px;
+
+} */
+
+section.accordionPeople .cardd {
+    display: grid;
+    padding: 50px;
+    background-color: var(--primary);
+    grid-template-columns: 30% 70%;
+    gap: 50px;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    margin: 50px 0;
+    color: white;
+
+}
+
+section.accordionPeople .cardd2 {
+    top: 90px;
+}
+
+section.accordionPeople .cardd3 {
+    top: 180px;
+
+}
+
+section.accordionPeople .cards {
+    /* background-color: red; */
+    min-height: 190vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+section.accordionPeople hr {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+    border: 100%;
+    box-shadow: 0 3px 10px white;
+}
+
+section.accordionPeople .cardd h1 {
+    font-size: 30px;
+}
+
+section.accordionPeople .cardd p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+section.accordionPeople .cardd button {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+
+}
+
+section.accordionPeople .cardd .slash {
+
+    background-color: white;
+
+}
+
+section.accordionPeople .cardd svg {
+
+    fill: white;
+
+}
+
+section.accordionPeople>h1 {
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary);
+}
+
+section.accordionPeople>p {
+
+    text-align: center;
+    color: var(--primary);
+}
+
+section.accordionPeople img {
+    width: 100%;
+}
+
+
+.l-container {
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+    font-family: "Montserrat";
+    color: black;
+}
+
+.accordion-header {
+    background-color: white;
+    border-bottom: 1px solid gray;
+
+    padding: 30px 50px;
+    /* border-bottom: 1p solid black; */
+    transform: scale(1);
+    transition: background-color 0.3s ease-in-out, transform 0.5s cubic-bezier(0.99, 0.01, 0, 1.01) 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.accordion-item {
+    border-bottom: 1px solid gray;
+}
+
+.accordion-header span {
+    position: relative;
+    z-index: 2;
+}
+
+.accordion-header.is-active {
+    background-color: var(--primary);
+    box-shadow: 0px 5px 9px 1px rgb(216, 216, 216);
+}
+
+.accordion-header.is-active:hover {
+    transform: scale(1);
+}
+
+.accordion-title {
+    font-size: 25px !important;
+    letter-spacing: 0.08em;
+}
+
+.accordion-contents {
+    background-color: white;
+    padding: 30px 50px;
+    box-shadow: inset 0 0 20px 0px rgb(213, 213, 213);
+}
+
+.accordion-text {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 2;
+}
