@@ -309,7 +309,7 @@ particlesJS("particles-js-People", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "bubble"
+                "mode": "grab"
             },
             "onscroll": {
                 "enable": true,
@@ -424,7 +424,7 @@ particlesJS("particles-js-Approach", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "bubble"
+                "mode": "grab"
             },
             "onscroll": {
                 "enable": true,
@@ -539,7 +539,7 @@ particlesJS("particles-js-leadership", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "repulse"
+                "mode": "grab"
             },
             "onscroll": {
                 "enable": true,
@@ -767,7 +767,7 @@ particlesJS("particles-js-life-at", {
         "events": {
             "onhover": {
                 "enable": true,
-
+                "mode": "grab"
             },
             "onscroll": {
                 "enable": true,
@@ -881,7 +881,7 @@ particlesJS("particles-js-core", {
         "events": {
             "onhover": {
                 "enable": true,
-
+                "mode": "grab"
             },
             "onscroll": {
                 "enable": true,
