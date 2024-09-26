@@ -7,6 +7,8 @@
     <title>Header Section</title>
     <link rel="stylesheet" href="./css/people-technology.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -219,85 +221,328 @@
         </nav>
     </header>
     <div class="header2">
+        <div id="particles-js-core"></div>
+
         <div class="container">
-            <video autoplay muted loop id="background-video">
-                <source src="./assets/videos/Charlotte-5s-Preview-for-Core.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay"></div>
             <div class="header-content">
-                <h1 style="color: white;">Unlocking impact at scale</h1>
+                <h1>Unlocking impact at scale</h1>
             </div>
         </div>
     </div>
+    <hr>
+
+    <style>
+        section.accordionPeople .cardd {
+            display: grid;
+            padding: 50px;
+            background-color: var(--primary);
+            grid-template-columns: 30% 70%;
+            gap: 50px;
+            border-radius: 10px;
+            position: sticky;
+            top: 0;
+            margin: 50px 0;
+            color: white;
+
+        }
+
+        section.accordionPeople .cardd2 {
+            top: 90px;
+        }
+
+        section.accordionPeople .cardd3 {
+            top: 180px;
+
+        }
+
+        section.accordionPeople .cards {
+            /* background-color: red; */
+            min-height: 190vh;
+            padding: 0 0 50px;
+            overflow: hidden;
+        }
+
+        section.accordionPeople hr {
+            background-color: white;
+            width: 100%;
+            margin: 0;
+            margin-bottom: 40px;
+            border: 100%;
+            box-shadow: 0 3px 10px white;
+        }
+
+        section.accordionPeople .cardd h1 {
+            font-size: 30px;
+        }
+
+        section.accordionPeople .cardd p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        section.accordionPeople .cardd button {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+
+        }
+
+        section.accordionPeople .cardd .slash {
+
+            background-color: white;
+
+        }
+
+        /* .accordionPeople>h1 {
+            margin-top: 50px;
+        } */
+
+        .accordionPeople>p {
+            color: black !important;
+            font-size: 20px;
+        }
+
+        section.accordionPeople .cardd svg {
+
+            fill: white;
+
+        }
+
+        section.accordionPeople>h1 {
+            font-size: 40px;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        section.accordionPeople>p {
+
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .accordionPeople {
+            padding: 100px;
+        }
+
+        section.accordionPeople img {
+            width: 100%;
+        }
 
 
+        .l-container {
+            padding: 0 30px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-    <!-- Stacking Cards Section -->
-    <main>
-        <ul id="cards">
-            <li class="card" id="card_1" style="--index: 1;">
-                <div class="card__content">
-                    <h2>Card One</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg"
-                            alt="Image description">
-                    </figure>
+        .title {
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .accordion {
+            width: 100%;
+            font-family: "Montserrat";
+            color: black;
+        }
+
+        .accordion-header {
+            background-color: white;
+            border-bottom: 1px solid gray;
+
+            padding: 30px 50px;
+            /* border-bottom: 1p solid black; */
+            transform: scale(1);
+            transition: background-color 0.3s ease-in-out, transform 0.5s cubic-bezier(0.99, 0.01, 0, 1.01) 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+
+
+        .accordion-item {
+            border-bottom: 1px solid gray;
+        }
+
+        .accordion-header span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .accordion-header.is-active {
+            background-color: var(--primary);
+            box-shadow: 0px 5px 9px 1px rgb(216, 216, 216);
+        }
+
+        .accordion-header.is-active:hover {
+            transform: scale(1);
+        }
+
+        .accordion-title {
+            font-size: 25px !important;
+            letter-spacing: 0.08em;
+        }
+
+        .accordion-contents {
+            background-color: white;
+            padding: 30px 50px;
+            box-shadow: inset 0 0 20px 0px rgb(213, 213, 213);
+        }
+
+        .accordion-text {
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            line-height: 2;
+        }
+
+        @media screen and (max-width:1000px) {
+
+
+            section.accordionPeople .cardd {
+                grid-template-columns: 100%;
+                position: static !important;
+            }
+
+
+        }
+
+        @media screen and (max-width: 924px) {
+            section.accordionPeople .cardd {
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <section class="accordionPeople">
+        <h1 data-aos="zoom-in" class="heading">We Trust that Knowledge Drives Success, and Talent Executes.</h1>
+        <p data-aos="zoom-in" style="text-align: center;">Our team is equipped to transform insights into strategic
+            opportunities worldwide. We work seamlessly across Investment, Technology, and Core Services to innovate and
+            elevate industry standards.</p>
+        <div class="cards">
+            <div class="cardd" data-aos="fade-right">
+                <div class="col1">
+                    <hr>
+                    <div class="img">
+                        <img src="./assets/images/people/v097che6.bmp" alt="">
+                    </div>
                 </div>
-            </li>
-            <li class="card" id="card_2" style="--index: 2;">
-                <div class="card__content">
-                    <h2>Card Two</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg"
-                            alt="Image description">
-                    </figure>
+                <div class="col2">
+                    <h1 class="heading">Capital Management Experts</h1>
+                    <p>We aim to empower Portfolio Managers to operate with full autonomy, supported by the resources,
+                        expertise, and capital needed to bring their ideas to life and achieve peak performance.</p>
+                    <button class="btn">
+                        <div>
+                            <span>Learn More</span>
+                            <div class="arrow-container">
+                                <div class="slash"></div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 330 330" xml:space="preserve">
+                                    <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+        C255,161.018,253.42,157.202,250.606,154.389z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-            </li>
-            <li class="card" id="card_3" style="--index: 3;">
-                <div class="card__content">
-                    <h2>Card Three</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p><a href="#top" class="btn btn--accent">Read more</a></p>
-                    <figure>
-                        <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg"
-                            alt="Image description">
-                    </figure>
+            </div>
+            <div class="cardd cardd2" data-aos="fade-right">
+                <div class="col1">
+                    <hr>
+                    <div class="img">
+                        <img src="./assets/images/people/maugfvcd.bmp" alt="">
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </main>
+                <div class="col2">
+                    <h1 class="heading">Fintech Consultant</h1>
+                    <p>we specialize in Fintech consulting, helping businesses leverage technology to optimize their
+                        financial strategies. Our experts provide tailored solutions to drive growth and navigate the
+                        evolving landscape of financial innovation.</p>
+                    <button class="btn">
+                        <div>
+                            <span>Learn More</span>
+                            <div class="arrow-container">
+                                <div class="slash"></div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 330 330" xml:space="preserve">
+                                    <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+        C255,161.018,253.42,157.202,250.606,154.389z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="cardd cardd3 " data-aos="fade-left">
+                <div class="col1">
+                    <hr>
+                    <div class="img">
+                        <img src="./assets/images/people/hlmetgqw.bmp" alt="">
+                    </div>
+                </div>
+                <div class="col2">
+                    <h1 class="heading">Core Infrastructure</h1>
+                    <p>With dedicated experts across the globe, we integrate skills and knowledge into every aspect of
+                        our operations, laying the groundwork for the firm’s success.</p>
+                    <button class="btn">
+                        <div>
+                            <span>Learn More</span>
+                            <div class="arrow-container">
+                                <div class="slash"></div>
+                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 330 330" xml:space="preserve">
+                                    <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+        C255,161.018,253.42,157.202,250.606,154.389z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
 
-    <section class="videoSection">
+        </div>
+    </section>
+
+    <section style="position: static;" class="videoSection">
         <div class="videos">
             <div class="creative-fullpage--slider">
                 <div class="banner-horizental">
                     <div class="swiper swiper-container-h">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-aos="fade">
                                 <div class="slider-inner" data-swiper-parallax="100">
                                     <video autoplay loop muted>
-                                        <source src="./assets/videos/MLP.mp4" type="video/mp4">
+                                        <source src="./assets/heroVideo1.mp4" type="video/mp4">
                                     </video>
                                     <div class="swiper-content" data-swiper-parallax="2000">
                                         <div class="title-area">
                                             <!-- title-area -->
-                                            <p class="tag">OUR VISION</p>
-                                            <a href="#" class="title"> DESIGN </a>
+
+                                            <a href="#" class="title"> Driven by Innovation,<br> Shaped by Experience
+                                            </a>
                                             <!-- title area -->
                                         </div>
                                         <p class="disc">
-                                            Credibly leverage existing business experiences through
-                                            <br>
-                                            magnetic mindshare. Synergistically exploit
-                                            <br>
-                                            efficient partnerships world-class applications.
+                                            Rising Capital Group is a global, diversified financial services firm
+                                            <br>dedicated to achieving exceptional returns for our clients through
+                                            <br>innovative investment strategies and comprehensive advisory solutions.
                                         </p>
-                                        <div class="creative-btn--wrap">
+                                        <!-- <div class="creative-btn--wrap">
                                             <a class="creative-slide--btn openVideoModel"
                                                 data-video="./assets/heroVideo1.mp4" role="button" href="#0">
                                                 <div class="creative-btn--circle">
@@ -323,31 +568,30 @@
                                                     <div class="creative-btn__border"></div>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-aos="fade">
                                 <div class="slider-inner" data-swiper-parallax="100">
                                     <video autoplay loop muted>
-                                        <source src="./assets/videos/MLP.mp4" type="video/mp4">
+                                        <source src="./assets/heroVideo2.mp4" type="video/mp4">
                                     </video>
                                     <div class="swiper-content" data-swiper-parallax="2000">
                                         <div class="title-area">
                                             <!-- title-area -->
-                                            <p class="tag">INSPIRATION</p>
-                                            <a href="#" class="title"> MOTION </a>
+
+                                            <a href="#" class="title"> Discover New <br>Horizons </a>
                                             <!-- title area -->
                                         </div>
                                         <p class="disc">
-                                            Conveniently formulate progressive users for error-free
-                                            <br>
-                                            interfaces. Monotonectally deploy superior
-                                            <br>
-                                            relationships without seamless infomediaries.
+                                            At Rising Capital Group, we combine deep financial expertise <br> with a
+                                            forward-thinking approach to deliver high-performance <br> investment
+                                            solutions
+                                            and business consultancy services.
                                         </p>
-                                        <div class="creative-btn--wrap">
+                                        <!-- <div class="creative-btn--wrap">
                                             <a class="creative-slide--btn openVideoModel"
                                                 data-video="./assets/heroVideo2.mp4" role="button" href="#0">
 
@@ -375,59 +619,12 @@
                                                     <div class="creative-btn__border"></div>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
-                                <div class="slider-inner" data-swiper-parallax="100">
-                                    <video autoplay loop muted>
-                                        <source src="./assets/videos/MLP.mp4" type="video/mp4">
-                                    </video>
-                                    <div class="swiper-content" data-swiper-parallax="2000">
-                                        <div class="title-area">
-                                            <!-- title-area -->
-                                            <a href="#" class="title"> ENGINE </a>
-                                            <!-- title area -->
-                                        </div>
-                                        <p class="disc">
-                                            Conveniently formulate progressive users for error-free
-                                            <br>
-                                            interfaces. Monotonectally deploy superior
-                                            <br>
-                                            relationships without seamless infomediaries.
-                                        </p>
-                                        <div class="creative-btn--wrap">
-                                            <a class="creative-slide--btn openVideoModel"
-                                                data-video="./assets/heroVideo1.mp4" role="button" href="#0">
-                                                <div class="creative-btn--circle">
-                                                    <div class="circle">
-                                                        <div class="circle-fill"></div>
-                                                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-                                                            class="circle-outline">
-                                                            <circle cx="25" cy="25" r="23"></circle>
-                                                        </svg>
-                                                        <div class="circle-icon">
-                                                            <svg viewBox="0 0 12 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
-                                                                <path
-                                                                    d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z">
-                                                                </path>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="creative-btn--label">
-                                                    <div class="creative-btn__text">Take A Look</div>
-                                                    <div class="creative-btn__border"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="swiper-button-wrapper creative-button--wrapper">
                             <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
@@ -451,7 +648,7 @@
                                 <span class="swiper-pagination-progressbar-fill"
                                     style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 1500ms;"></span>
                             </div>
-                            <h5 class="slide-range three">03</h5>
+                            <h5 class="slide-range three">02</h5>
                         </div>
                     </div>
                 </div>
@@ -473,19 +670,37 @@
 
 
 
-
-
-    <section class="hero-section-end">
-        <video autoplay muted loop id="hero-video">
-            <source src="./assets/videos/MLP.mp4" type="video/mp4">
+    <section class="explore-network">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="./assets/heroVideo2.mp4" type="video/mp4">
+            <!-- Add other video formats or a fallback message here if necessary -->
             Your browser does not support the video tag.
         </video>
-        <div class="overlay"></div> <!-- Transparent overlay -->
-        <div class="hero-text">
-            <h1>Get to know the Millennium team</h1>
-            <button class="hero-button">People <span>→</span></button>
+        <div class="content">
+            <h2 class="heading" data-aos="fade-down">Explore open roles </h2>
+
+            <button data-aos="fade-down" class="btn">
+                <div>
+                    <span>Jobs</span>
+                    <div class="arrow-container">
+                        <div class="slash"></div>
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 330 330" xml:space="preserve">
+                            <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+    c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+    C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+    C255,161.018,253.42,157.202,250.606,154.389z" />
+                        </svg>
+                    </div>
+                </div>
+            </button>
         </div>
     </section>
+
+
     <footer class="fotterWrapper">
         <div class="fwrap">
             <div class="fImg">
@@ -554,6 +769,8 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="./js/people-technology.js"></script>
     <script src="./js/script.js"></script>
 </body>
