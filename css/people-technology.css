@@ -66,8 +66,10 @@ hr {
 
 .boxes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid layout */
-    gap: 20px; /* Space between boxes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Creates a responsive grid layout */
+    gap: 20px;
+    /* Space between boxes */
 }
 
 .box {
@@ -82,6 +84,7 @@ hr {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 @media (max-width: 768px) {
     .boxes-container {
         grid-template-columns: 1fr;
@@ -103,15 +106,10 @@ hr {
 }
 
 .box.open .box-content {
-<<<<<<< HEAD
     padding: 5px;
     height: 500px;
     max-height: 1000px;
     transition: max-height 0.5s ease, padding 0.3s ease;
-=======
-    max-height: 1000px; /* Adjust based on maximum content height */
-    transition: max-height 0.5s ease;
->>>>>>> b7b3ae162450070d0849647586950347b0548118
 }
 
 
@@ -774,7 +772,6 @@ section .videos .videoModel .closebtn svg {
     }
 }
 
-<<<<<<< HEAD
 .explore-network {
     position: relative;
     width: 100%;
@@ -834,7 +831,8 @@ section .videos .videoModel .closebtn svg {
 
 h2 {
     font-size: 30px;
-=======
+}
+
 section.accordionPeople .cardd {
     display: grid;
     padding: 50px;
@@ -984,5 +982,4 @@ section.accordionPeople img {
     font-size: 16px;
     letter-spacing: 0.05em;
     line-height: 2;
->>>>>>> b7b3ae162450070d0849647586950347b0548118
 }
