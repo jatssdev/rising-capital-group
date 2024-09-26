@@ -274,28 +274,31 @@ $(document).ready(function () {
 });
 
 
-function toggleBox(element, index) {
-    let boxes = document.querySelectorAll('.box');
-    let content = element.querySelector('.box-content');
-    let isCurrentlyOpen = element.classList.contains('open');
+function toggleBox(element) {
+    const content = element.querySelector('.box-content');
+    const isOpen = element.classList.contains('open');
+    const allBoxes = document.querySelectorAll('.box');
 
-    // Close all other boxes
-    boxes.forEach((box, idx) => {
-        if (idx !== index) {
+    // Close all other boxes first
+    allBoxes.forEach(box => {
+        if (box !== element) {
             box.classList.remove('open');
             box.querySelector('.box-content').style.maxHeight = null;
         }
     });
 
     // Toggle the clicked box
-    if (!isCurrentlyOpen) {
+    if (!isOpen) {
         element.classList.add('open');
-        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = content.scrollHeight + "px"; // Expand to fit content
     } else {
         element.classList.remove('open');
-        content.style.maxHeight = null;
+        content.style.maxHeight = null; // Collapse
     }
 }
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
