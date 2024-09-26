@@ -66,7 +66,7 @@ html {
 
 /* Common container for all sections */
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     /* Same width as the hero section */
     margin: 0 auto;
     /* Centers the section */
