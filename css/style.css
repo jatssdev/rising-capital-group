@@ -1582,10 +1582,35 @@ section .videos .arrows svg {
 .creative-testimonial--slider .numberDetails2 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 5%;
-    color: white;
-    min-height: 40vh;
+    /* color: white; */
+    /* min-height: 20vh; */
+    padding: 40px 0;
+    background-color: white;
+}
+
+hr {
+    margin: 80px 100px 0 !important;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px var(--primary);
+    height: 1px;
+}
+
+.btn.disco {
+    background-color: transparent !important;
+    color: var(--primary) !important;
+    margin-top: 0 !important;
+    border-color: var(--primary) !important;
+}
+
+.btn.disco svg {
+    fill: var(--primary) !important;
+}
+
+.btn.disco .slash {
     background-color: var(--primary);
 }
 
@@ -1623,7 +1648,7 @@ section .videos .arrows svg {
 
 .creative-testimonial--slider .numberDetails2>div {
     /* padding: 30px; */
-    width: 50%;
+    /* width: 50%; */
 }
 
 .creative-testimonial--slider .numberDetails2>div button {
