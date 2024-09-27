@@ -725,6 +725,10 @@ hr {
         padding: 20px;
     }
 
+    .tip-header{
+        font-size: 15px;
+    }
+
     section.learn-section {
         padding: 20px;
     }
