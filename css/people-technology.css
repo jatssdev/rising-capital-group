@@ -51,6 +51,8 @@ html {
     text-align: center;
     color: white;
     z-index: 2;
+    word-break: keep-all;
+    clear: both;
     /* Make sure the content is above the video and overlay */
 }
 
@@ -1131,7 +1133,8 @@ section.accordionPeople img {
     /* Deep red for the heading */
     margin-bottom: 20px;
     font-size: 28px;
-    text-align: left;
+    text-align: center;
+    /* Center align for better small-screen appearance */
     padding: 0 18px;
 }
 
@@ -1173,7 +1176,7 @@ section.accordionPeople img {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .strategy-item {
         width: auto;
         /* Adjust width to ensure they stay in one line */
@@ -1204,4 +1207,5 @@ section.accordionPeople img {
 .strategy-container canvas {
     width: 100% !important;
     height: auto !important;
+    /* Ensures the canvas is responsive */
 }

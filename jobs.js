@@ -1,3 +1,81 @@
+let jobz = [{
+    "_id": {
+        "$oid": "66f6797beb65b789112b134e"
+    },
+    "title": "Sales Executive",
+    "description": "We are looking for a dynamic Sales Executive to join our team in Rajkot. If you have a passion for sales and a knack for building strong client relationships, we want to hear from you.",
+    "experience": "0-1 year",
+    "education": "12",
+    "location": [
+        "Rajkot"
+    ],
+    "skills": [
+        "PHP"
+    ],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66f679cdeb65b789112b1351"
+    },
+    "title": "Financial Analyst",
+    "description": "We are seeking a detail-oriented Financial Analyst to join our headquarters in Gandhinagar. The ideal candidate will have a strong analytical background and experience in financial modelling.",
+    "experience": "1-3 years",
+    "education": "12",
+    "location": [
+        "Gandhinagar"
+    ],
+    "skills": [],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66f679e7eb65b789112b1353"
+    },
+    "title": "Accountant",
+    "description": "Our Gandhinagar headquarters is in need of a skilled Accountant to manage financial records, ensure compliance with regulations, and support our financial operations.",
+    "experience": "3-5 years",
+    "education": "12",
+    "location": [],
+    "skills": [],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66f679fdeb65b789112b1355"
+    },
+    "title": "Talent Acquisition Executive",
+    "description": "We are looking for a knowledgeable Consulting Executive to join our team in Gandhinagar. The ideal candidate will have a strong background in consulting and advisory services",
+    "experience": "1-3 years",
+    "education": "12",
+    "location": [],
+    "skills": [],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66f67a18eb65b789112b1357"
+    },
+    "title": "International Traders",
+    "description": "We are seeking experienced International Traders to join our Gandhinagar branch. If you have a deep understanding of global markets and a proven track record in international trade, we want you on our team.",
+    "experience": "1-3 years",
+    "education": "12",
+    "location": [],
+    "skills": [],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66f67a2beb65b789112b1359"
+    },
+    "title": "Investment Banker",
+    "description": "Our Gandhinagar headquarters is in need of a skilled Investment Banker to support our clients in achieving their financial goals through comprehensive investment banking services.",
+    "experience": "1-3 years",
+    "education": "12",
+    "location": [],
+    "skills": [],
+    "__v": 0
+}]
 let noiseZ;
 let size;
 let columns;
@@ -165,22 +243,23 @@ tsParticles
     });
 // scripts.js
 $(document).ready(function () {
-    const apiUrl = 'https://rising-capital-backend.onrender.com/api/jobs'; // Make sure to replace this with your actual API URL
+    // const apiUrl = 'https://rising-capital-backend.onrender.com/api/jobs'; // Make sure to replace this with your actual API URL
 
-    // Fetch jobs from the API
-    function fetchJobs() {
-        $.ajax({
-            url: apiUrl,
-            method: 'GET',
-            success: function (jobs) {
-                renderJobs(jobs);
-            },
-            error: function (err) {
-                console.error('Error fetching jobs:', err);
-                alert('Failed to fetch jobs. Please try again later.');
-            }
-        });
-    }
+    // // Fetch jobs from the API
+    // function fetchJobs() {
+    //     $.ajax({
+    //         url: apiUrl,
+    //         method: 'GET',
+    //         success: function (jobs) {
+    //             renderJobs(jobs);
+    //         },
+    //         error: function (err) {
+    //             console.error('Error fetching jobs:', err);
+    //             alert('Failed to fetch jobs. Please try again later.');
+    //         }
+    //     });
+    renderJobs(jobz)
+    // }
 
     // Render jobs in the left-scroll cards
     function renderJobs(jobs) {
@@ -210,16 +289,14 @@ $(document).ready(function () {
         const $contentSection = $('#content-1'); // Assuming you want to load details into this div
         $contentSection.html(`
     <h1>${job.title}</h1>
-    <p><b>Location</b>: ${job.location.join(', ')}</p>
+    <p><b>Location</b>: ${job.location.length ? job.location.join(', ') : 'gandhinagar'}</p>
     <hr>
    
     <h2 class='job-heading'>Job Description</h2>
     <p>${job.description}</p>
       <p><b>Experience Required</b>: ${job.experience}</p>
     <p><b>Education Required</b>: ${job.education}</p>
-    <div><b>Skills</b>: ${job.skills.map((x) => {
-            return `<span>${x}</span>`
-        })}</div>
+   
          <button class="blue-button">Apply Now</button>
 `);
     }
@@ -230,3 +307,6 @@ $(document).ready(function () {
 
 
 
+{/* <div><b>Skills</b>: ${job.skills.map((x) => {
+    return `<span>${x}</span>`
+})}</div> */}

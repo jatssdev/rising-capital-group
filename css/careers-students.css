@@ -22,7 +22,7 @@ hr {
     border-radius: 50%;
     box-shadow: 0 3px 10px var(--primary);
     height: 1px;
-  }
+}
 
 /* Adjust headings and paragraphs */
 h1 {
@@ -53,7 +53,8 @@ hr {
     align-items: center;
     padding: 100px;
     margin: 100px 0;
-    background-color: #fff; /* Match body background-color */
+    background-color: #fff;
+    /* Match body background-color */
 }
 
 .text-container {
@@ -113,7 +114,8 @@ hr {
 }
 
 .tab:hover {
-    color: #820e3a; /* Slightly darker shade of primary color */
+    color: #820e3a;
+    /* Slightly darker shade of primary color */
 }
 
 .tab.active {
@@ -402,15 +404,17 @@ hr {
 .box-content {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    max-height: 0; /* Initially hides the content */
+    max-height: 0;
+    /* Initially hides the content */
     background-color: #fafafa;
     color: #333;
     padding: 0 25px;
-    
+
 }
 
 .box-content.open {
-    max-height: 1000px; /* Adjust according to content size */
+    max-height: 1000px;
+    /* Adjust according to content size */
     padding: 15px 25px;
 }
 
@@ -535,6 +539,7 @@ hr {
 .peopleMain .cotent .images img {
     width: 100%;
     height: 100%;
+    object-position: top;
     object-fit: cover;
 }
 
@@ -643,7 +648,8 @@ hr {
         flex: 1 1 100%;
         text-align: center;
     }
-    .image-section{
+
+    .image-section {
         margin-bottom: 50px;
     }
 }
@@ -708,7 +714,7 @@ hr {
         font-size: 1.2em;
     }
 
-    .image-section{
+    .image-section {
         margin-bottom: 50px;
     }
 }
@@ -725,7 +731,7 @@ hr {
         padding: 20px;
     }
 
-    .tip-header{
+    .tip-header {
         font-size: 15px;
     }
 
@@ -783,12 +789,13 @@ hr {
         height: 25px;
         font-size: 1.2em;
     }
-    .text-container{
+
+    .text-container {
         text-align: justify;
-        
+
     }
 
-    .image-section{
+    .image-section {
         margin-bottom: 50px;
     }
 }
