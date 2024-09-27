@@ -15,6 +15,15 @@ body {
     /* Use styles from style.css */
 }
 
+hr {
+    margin: 50px 100px;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px var(--primary);
+    height: 1px;
+  }
+
 /* Adjust headings and paragraphs */
 h1 {
     font-size: 48px;
@@ -28,12 +37,22 @@ p {
     line-height: 1.6;
 }
 
+hr {
+    margin: 50px 100px;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px var(--primary);
+    height: 1px;
+}
+
 /* Adjust .learn-section */
 .learn-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px;
+    margin: 100px 0;
     background-color: #fff; /* Match body background-color */
 }
 
@@ -327,7 +346,6 @@ p {
 
 .journey-text {
     flex: 1;
-    
 }
 
 .journey-text h1 {
@@ -345,7 +363,8 @@ p {
 .journey-boxes {
     display: flex;
     justify-content: space-between;
-    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 /* Journey Boxes */
@@ -356,19 +375,24 @@ p {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.journey-box:last-child {
+    margin-right: 0;
 }
 
 .journey-box:hover {
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
 
 .box-header {
     padding: 15px 20px;
-    width: 75vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -378,12 +402,16 @@ p {
 .box-content {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
-    max-height: 0;  /* Initially hides the content */
-    background-color: #fafafa; /* Ensure this is visible against the parent background */
+    max-height: 0; /* Initially hides the content */
+    background-color: #fafafa;
+    color: #333;
+    padding: 0 25px;
+    
 }
 
 .box-content.open {
     max-height: 1000px; /* Adjust according to content size */
+    padding: 15px 25px;
 }
 
 .toggle-button {
@@ -404,13 +432,12 @@ p {
 .journey-box.open .box-content {
     max-height: 1000px;
     display: block;
-    
+    transition: all 1s ease-in-out;
 }
 
 .journey-box.open .toggle-button {
     transform: rotate(45deg);
 }
-
 
 /* Tips for Applying Section */
 .tips-section {
@@ -466,24 +493,17 @@ p {
     transition: transform 0.3s ease;
 }
 
-
+/* People Main Section */
 .peopleMain {
-    /* padding: 100px; */
-    /* background-color: red; */
     position: relative;
     min-height: 100vh;
-
 }
 
-
-
 .peopleMain .cotent {
-    /* position: relative; */
     top: 0;
     left: 0;
     z-index: 1;
     padding: 100px;
-
 }
 
 .peopleMain .cotent h1 {
@@ -504,9 +524,8 @@ p {
     display: grid;
     position: relative;
     z-index: 5;
-
     gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .peopleMain .cotent .images .img {
@@ -516,4 +535,226 @@ p {
 .peopleMain .cotent .images img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+
+/* Medium Devices (Desktops, 992px and up) */
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    .learn-section,
+    .carousel-section,
+    .peopleMain .cotent {
+        padding: 80px;
+    }
+
+    .peopleMain .cotent h1 {
+        font-size: 42px;
+        margin: 80px 0;
+    }
+
+    .peopleMain .cotent p {
+        font-size: 18px;
+        margin: 80px 0;
+    }
+
+    .ambitious-text h1,
+    .journey-text h1 {
+        font-size: 36px;
+    }
+
+    .peopleMain .cotent .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px and up) */
+@media (max-width: 991px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .learn-section,
+    .carousel-section,
+    .peopleMain .cotent {
+        padding: 60px;
+    }
+
+    .peopleMain .cotent h1 {
+        font-size: 36px;
+        margin: 60px 0;
+    }
+
+    .peopleMain .cotent p {
+        font-size: 16px;
+        margin: 60px 0;
+    }
+
+    .ambitious-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ambitious-text {
+        padding-right: 0;
+    }
+
+    .ambitious-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .ambitious-image img {
+        max-width: 80%;
+    }
+
+    .text-and-image {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-and-image img {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 80%;
+    }
+
+    .journey-boxes {
+        flex-direction: column;
+    }
+
+    .journey-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .carousel-tabs {
+        flex-wrap: wrap;
+    }
+
+    .carousel-tabs .tab {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px and up) */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .learn-section,
+    .carousel-section,
+    .peopleMain .cotent {
+        padding: 40px;
+    }
+
+    .peopleMain .cotent h1 {
+        font-size: 32px;
+        margin: 40px 0;
+    }
+
+    .peopleMain .cotent p {
+        font-size: 16px;
+        margin: 40px 0;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-button {
+        font-size: 16px;
+    }
+
+    .text-and-image img {
+        max-width: 100%;
+    }
+
+    .ambitious-image img {
+        max-width: 100%;
+    }
+
+    .box-header {
+        padding: 15px;
+    }
+
+    .box-header h2 {
+        font-size: 18px;
+    }
+
+    .box-content {
+        padding: 0 15px;
+    }
+
+    .toggle-button {
+        width: 25px;
+        height: 25px;
+        font-size: 1.2em;
+    }
+}
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 575px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .learn-section,
+    .carousel-section,
+    .peopleMain .cotent {
+        padding: 20px;
+    }
+
+    .peopleMain .cotent h1 {
+        font-size: 28px;
+        margin: 30px 0;
+    }
+
+    .peopleMain .cotent p {
+        font-size: 14px;
+        margin: 30px 0;
+    }
+
+    .hero-section {
+        height: 250px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-button {
+        font-size: 14px;
+    }
+
+    .ambitious-text h1,
+    .journey-text h1 {
+        font-size: 24px;
+    }
+
+    .ambitious-text p,
+    .journey-text p {
+        font-size: 14px;
+    }
+
+    .box-header h2 {
+        font-size: 16px;
+    }
+
+    .box-content p {
+        font-size: 14px;
+    }
 }
