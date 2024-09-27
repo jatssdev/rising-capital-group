@@ -46,6 +46,8 @@
 .peopleMain .cotent .images img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 section.team {
@@ -165,7 +167,12 @@ section.accordionPeople>p {
 
 section.accordionPeople img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+
 }
+
+
 
 
 .l-container {
