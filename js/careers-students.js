@@ -1,52 +1,73 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Handle tab switching
     const tabs = document.querySelectorAll('.tab');
     const contents = document.querySelectorAll('.content-item');
 
     tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', function () {
+            // Remove active class from all tabs and content
             tabs.forEach(t => t.classList.remove('active'));
             contents.forEach(c => c.classList.remove('active'));
 
+            // Add active class to the clicked tab and corresponding content
             tab.classList.add('active');
             document.getElementById(tab.getAttribute('data-content')).classList.add('active');
         });
     });
+});
 
-    // Handle journey box toggling
+
+document.addEventListener('DOMContentLoaded', function () {
     const allBoxes = document.querySelectorAll('.journey-box');
+
     allBoxes.forEach(box => {
         const header = box.querySelector('.box-header');
         header.addEventListener('click', () => {
-            const isOpen = box.classList.contains('open');
             const boxContent = box.querySelector('.box-content');
+            const isOpen = box.classList.contains('open');
 
-            // Close all boxes
+            // Close all other boxes
             allBoxes.forEach(b => {
-                b.classList.remove('open');
-                b.querySelector('.box-content').style.maxHeight = null;
-                b.querySelector('.toggle-button').textContent = '+';
+                if (b !== box) {
+                    b.classList.remove('open');
+                    b.querySelector('.box-content').style.maxHeight = null;
+                    b.querySelector('.toggle-button').textContent = '+';
+                }
             });
 
-            // Open the clicked box if it was not open
-            if (!isOpen) {
+            // Toggle the current box based on its previous state
+            if (isOpen) {
+                box.classList.remove('open');
+                boxContent.style.maxHeight = null;
+                header.querySelector('.toggle-button').textContent = '+';
+            } else {
                 box.classList.add('open');
                 boxContent.style.maxHeight = boxContent.scrollHeight + "px";
                 header.querySelector('.toggle-button').textContent = '−';
             }
         });
     });
+});
 
-    // Handle accordion functionality
+
+
+
+
+
+// JavaScript for accordion functionality
+document.addEventListener('DOMContentLoaded', function () {
     const tips = document.querySelectorAll('.tip-item');
+
     tips.forEach(tip => {
-        const header = tip.querySelector('.tip-header');
-        header.addEventListener('click', () => {
-            const wasActive = tip.classList.contains('active');
-            tips.forEach(t => t.classList.remove('active')); // close all
-            if (!wasActive) {
-                tip.classList.add('active'); // activate the clicked one if it was not active
-            }
+        tip.querySelector('.tip-header').addEventListener('click', function () {
+            // Toggle active class for accordion
+            tip.classList.toggle('active');
+
+            // Close other open accordions
+            tips.forEach(item => {
+                if (item !== tip) {
+                    item.classList.remove('active');
+                }
+            });
         });
     });
 });
