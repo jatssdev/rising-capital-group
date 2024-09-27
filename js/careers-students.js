@@ -16,30 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const allBoxes = document.querySelectorAll('.journey-box');
 
     allBoxes.forEach(box => {
         const header = box.querySelector('.box-header');
-        header.addEventListener('click', () => {
+        header.addEventListener('click', function() {
             const boxContent = box.querySelector('.box-content');
             const isOpen = box.classList.contains('open');
 
-            // Close all other boxes
-            allBoxes.forEach(b => {
-                if (b !== box) {
-                    b.classList.remove('open');
-                    b.querySelector('.box-content').style.maxHeight = null;
-                    b.querySelector('.toggle-button').textContent = '+';
-                }
-            });
+            // // Close all boxes first
+            // allBoxes.forEach(b => {
+            //     b.classList.remove('open');
+            //     b.querySelector('.box-content').style.maxHeight = null;
+            //     b.querySelector('.toggle-button').textContent = '+';
+            // });
 
-            // Toggle the current box based on its previous state
-            if (isOpen) {
-                box.classList.remove('open');
-                boxContent.style.maxHeight = null;
-                header.querySelector('.toggle-button').textContent = '+';
-            } else {
+            // If the clicked box was not open before, open it
+            if (!isOpen) {
                 box.classList.add('open');
                 boxContent.style.maxHeight = boxContent.scrollHeight + "px";
                 header.querySelector('.toggle-button').textContent = '−';
@@ -47,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 
 
 
