@@ -48,7 +48,7 @@ hr {
 .investDev,
 .BusinessDev,
 .ViceChairSenior {
-  padding: 50px 100px;
+  padding: 50px 150px;
   background-color: white;
   color: var(--primary);
 }
@@ -208,6 +208,7 @@ hr {
   object-fit: cover;
   margin-left: 20px;
   opacity: 0;
+  object-position: top;
   /* Hide the image initially */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -528,4 +529,8 @@ hr {
   /* Lighter grey for the paragraph */
   line-height: 1.6;
   /* Improved line height for readability */
+}
+
+.heroParaLeadership {
+  font-size: 16px;
 }
