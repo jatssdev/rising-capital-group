@@ -311,7 +311,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
-margin: 0 auto;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
     width: 90%;
@@ -1719,6 +1719,10 @@ section .videos .arrows svg {
 }
 
 @media screen and (max-width:800px) {
+    .creative-testimonial--slider .numberDetails2>div button {
+
+        margin: 20px auto;
+    }
 
     .heroCareer .careers h1 {
         font-size: 2rem;
