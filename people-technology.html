@@ -42,14 +42,16 @@
                             <div class="submenu megamenu__normal people">
                                 <ul class="submenu__list">
                                     <li><a href="./people-leadership.html" class="link2">Leadership</a></li>
-                                    <li><a href="./people-Investment.html" class="link2">Investment Professionals</a></li>
+                                    <li><a href="./people-Investment.html" class="link2">Investment Professionals</a>
+                                    </li>
                                     <li><a href="./people-technology.html" class="link2">Fintech</a></li>
                                     <li><a href="./people-core.html" class="link2">Core Infrastructure</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="menu__item"><a href="./Careers.html" class="menu__link link">Careers</a></li>
-                        <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link link">Global Presence</a></li>
+                        <li class="menu__item"><a href="./GlobalPresence.html" class="menu__link link">Global
+                                Presence</a></li>
                     </ul>
                 </div>
             </section>
@@ -113,7 +115,9 @@
 
     <section class="strategy-container">
         <h2 style="color: #961043;">Strategy Performance</h2>
-        <canvas id="strategyPerformanceChart"></canvas>
+        <div class="container">
+            <canvas id="strategyPerformanceChart"></canvas>
+        </div>
         <script>
             const ctx = document.getElementById('strategyPerformanceChart').getContext('2d');
             const chart = new Chart(ctx, {
