@@ -295,7 +295,7 @@ img {
 }
 
 .header .specialLink {
-    display: none;
+    display: none !important;
 }
 
 .header.is-active {
@@ -400,6 +400,10 @@ img {
         background-color: #fff;
         transform: translate(-100%);
         transition: all 0.4s ease-in-out;
+    }
+
+    .header .specialLink {
+        display: inline-block !important;
     }
 
     .menu.is-active {
@@ -629,11 +633,16 @@ img {
 
 @media (min-width: 767px) {
     .submenu.megamenu__normal {
-        left: 50%;
+        left: 40%;
         max-width: 250px;
         width: 100%;
         height: auto;
         margin: 0 auto;
+    }
+
+    .submenu.megamenu__normal.people {
+        left: 20% !important;
+
     }
 }
 
@@ -741,7 +750,7 @@ img {
 
 @media (max-width: 766px) {
     .submenu .submenu__list li a {
-        display: block;
+        display: inline-block;
     }
 }
 
