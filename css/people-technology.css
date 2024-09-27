@@ -1142,6 +1142,9 @@ section.accordionPeople img {
     margin-bottom: 10px;
 }
 
+.strategy-title {
+    margin-bottom: 50px;
+}
 
 /* Responsive adjustments for tablets */
 @media (max-width: 992px) {
