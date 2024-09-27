@@ -69,14 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleBox1(boxId) {
     var box = document.getElementById(boxId);
-    var content = box.querySelector('.box-content');
-    var button = box.querySelector('.toggle-button');
 
-    if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block';  // Make the content visible
-        button.textContent = '−';  // Change button text to minus
-    } else {
-        content.style.display = 'none';  // Hide the content
-        button.textContent = '+';  // Change button text back to plus
+    // Close all boxes
+    var allBoxes = document.querySelectorAll('.journey-box');
+    allBoxes.forEach(function (b) {
+        b.classList.remove('open');
+        b.querySelector('.box-content').style.display = 'none';
+        b.querySelector('.toggle-button').textContent = '+';
+    });
+
+    // If the clicked box was not previously open, open it
+    if (!box.classList.contains('open')) {
+        box.classList.add('open');
+        box.querySelector('.box-content').style.display = 'block';
+        box.querySelector('.toggle-button').textContent = '−';
     }
 }

@@ -16,7 +16,7 @@ section {
 a.link {
     position: relative;
     /* color: var(--primary) !important; */
-    padding-right: 50px !important;
+    padding-right: 50px;
 }
 
 a.link2 {
@@ -520,8 +520,14 @@ img {
 @media (max-width: 766px) {
     .menu .menu__inner .menu__item {
         display: block;
+        width: fit-content;
         padding: 0;
     }
+
+    a.link {
+        padding-right: 30px !important;
+    }
+
 }
 
 @media (min-width: 767px) {
@@ -553,7 +559,7 @@ img {
 @media (max-width: 766px) {
     .menu .menu__inner .menu__item .menu__link {
         justify-content: space-between;
-        padding: 20px;
+        padding: 0 20px;
     }
 }
 
@@ -1733,7 +1739,7 @@ section .videos .arrows svg {
 
     .menu .menu__inner .menu__item .menu__link {
         font-size: 16px;
-        padding-right: 30px !important;
+        /* padding-right: 30px !important; */
     }
 
 
@@ -1753,6 +1759,10 @@ section .videos .arrows svg {
     section:not(.videoSection):not(.navbar__left):not(.navbar__center) {
         padding: 50px !important;
 
+    }
+
+    a.link {
+        padding-right: 30px !important;
     }
 }
 
