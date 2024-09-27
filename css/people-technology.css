@@ -1166,6 +1166,16 @@ section.accordionPeople img {
 }
 
 
+.strategy-container{
+    padding: 40px 0;
+    margin: 0 91px;
+    font-size: 28px;
+}
+
+.strategy-container h2{
+    margin-left:  300px;
+}
+
 .strategy-container canvas {
     width: 100% !important;
     height: auto !important;
