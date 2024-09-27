@@ -16,7 +16,7 @@ section {
 a.link {
     position: relative;
     /* color: var(--primary) !important; */
-    padding-right: 50px !important;
+    padding-right: 50px;
 }
 
 a.link2 {
@@ -295,7 +295,7 @@ img {
 }
 
 .header .specialLink {
-    display: none;
+    display: none !important;
 }
 
 .header.is-active {
@@ -400,6 +400,10 @@ img {
         background-color: #fff;
         transform: translate(-100%);
         transition: all 0.4s ease-in-out;
+    }
+
+    .header .specialLink {
+        display: inline-block !important;
     }
 
     .menu.is-active {
@@ -516,8 +520,14 @@ img {
 @media (max-width: 766px) {
     .menu .menu__inner .menu__item {
         display: block;
+        width: fit-content;
         padding: 0;
     }
+
+    a.link {
+        padding-right: 30px !important;
+    }
+
 }
 
 @media (min-width: 767px) {
@@ -549,7 +559,7 @@ img {
 @media (max-width: 766px) {
     .menu .menu__inner .menu__item .menu__link {
         justify-content: space-between;
-        padding: 20px;
+        padding: 0 20px;
     }
 }
 
@@ -629,11 +639,16 @@ img {
 
 @media (min-width: 767px) {
     .submenu.megamenu__normal {
-        left: 50%;
+        left: 40%;
         max-width: 250px;
         width: 100%;
         height: auto;
         margin: 0 auto;
+    }
+
+    .submenu.megamenu__normal.people {
+        left: 20% !important;
+
     }
 }
 
@@ -741,7 +756,7 @@ img {
 
 @media (max-width: 766px) {
     .submenu .submenu__list li a {
-        display: block;
+        display: inline-block;
     }
 }
 
@@ -1724,7 +1739,7 @@ section .videos .arrows svg {
 
     .menu .menu__inner .menu__item .menu__link {
         font-size: 16px;
-        padding-right: 30px !important;
+        /* padding-right: 30px !important; */
     }
 
 
@@ -1744,6 +1759,10 @@ section .videos .arrows svg {
     section:not(.videoSection):not(.navbar__left):not(.navbar__center) {
         padding: 50px !important;
 
+    }
+
+    a.link {
+        padding-right: 30px !important;
     }
 }
 

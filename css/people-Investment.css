@@ -1,9 +1,9 @@
-body{
+body {
     overflow-x: hidden;
 }
 
 
-.container {
+.container:not(.navbar) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -474,16 +474,23 @@ section .videos .videoModel .closebtn svg {
 /* Hero Section Styles */
 .hero-section-end {
     position: relative;
-    min-height: 40vh; /* Adjust the height as needed */
+    min-height: 40vh;
+    /* Adjust the height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Add padding to ensure content does not touch the edges */
-    margin-top: 20px; /* Ensure there is a margin gap between preceding sections */
-    z-index: 1; /* Adjust z-index if needed */
-    width: 100%; /* Ensure full width to avoid horizontal scroll */
-    overflow: hidden; /* Ensures no overflow of internal elements */
-    background: #f8f9fa; /* Optional: set a background color to highlight the section */
+    padding: 20px;
+    /* Add padding to ensure content does not touch the edges */
+    margin-top: 20px;
+    /* Ensure there is a margin gap between preceding sections */
+    z-index: 1;
+    /* Adjust z-index if needed */
+    width: 100%;
+    /* Ensure full width to avoid horizontal scroll */
+    overflow: hidden;
+    /* Ensures no overflow of internal elements */
+    background: #f8f9fa;
+    /* Optional: set a background color to highlight the section */
 }
 
 #hero-video {
@@ -513,9 +520,12 @@ section .videos .videoModel .closebtn svg {
 
 .hero-text {
     text-align: center;
-    color: white; /* Adjust text color for readability */
-    padding: 20px; /* Add padding for spacing */
-    width: 100%; /* Use full width of the section */
+    color: white;
+    /* Adjust text color for readability */
+    padding: 20px;
+    /* Add padding for spacing */
+    width: 100%;
+    /* Use full width of the section */
 }
 
 .hero-text h1 {
@@ -525,17 +535,17 @@ section .videos .videoModel .closebtn svg {
 }
 
 .hero-button {
-    font-size: 18px; 
+    font-size: 18px;
     background-color: transparent;
-    border: 2px solid white; 
-    padding: 10px 20px; 
+    border: 2px solid white;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .hero-button:hover {
     background-color: #ffffff;
-    color: #000000; 
+    color: #000000;
 }
 
 .hero-button span {
