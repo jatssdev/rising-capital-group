@@ -8,6 +8,11 @@
     --primary: #961043;
 }
 
+section {
+    /* width: 100%; */
+    overflow: hidden;
+}
+
 a.link {
     position: relative;
     /* color: var(--primary) !important; */
@@ -1698,6 +1703,30 @@ section .videos .arrows svg {
 
 
     }
+
+    a.link::before {
+        width: 20px;
+    }
+
+
+    a.link svg {
+        height: 12px;
+        width: 12px;
+    }
+
+    .header img {
+        width: 80px;
+    }
+
+    .menu .menu__inner .menu__item {
+        padding: 15px 15px 15px 0;
+    }
+
+    .menu .menu__inner .menu__item .menu__link {
+        font-size: 16px;
+        padding-right: 30px !important;
+    }
+
 
     .peopleMain .cotent .images {
         grid-template-columns: 100%;

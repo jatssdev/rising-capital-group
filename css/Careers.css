@@ -1,3 +1,10 @@
+#particles-js-People {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
 .peopleMain {
     /* padding: 100px; */
     /* background-color: red; */
@@ -6,12 +13,6 @@
 
 }
 
-#particles-js-People {
-    position: absolute;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-}
 
 
 .peopleMain .cotent {

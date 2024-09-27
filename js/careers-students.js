@@ -16,25 +16,37 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// JavaScript to handle the toggle of the journey boxes
-document.addEventListener('DOMContentLoaded', function () {
-    const boxes = document.querySelectorAll('.journey-box');
+document.addEventListener('DOMContentLoaded', function() {
+    const allBoxes = document.querySelectorAll('.journey-box');
 
-    boxes.forEach(box => {
-        const toggleButton = box.querySelector('.toggle-button');
-        toggleButton.addEventListener('click', function () {
-            // Toggle the open class
-            box.classList.toggle('open');
-            
-            // Update the toggle button
-            if (box.classList.contains('open')) {
-                toggleButton.textContent = '×'; // Change to close symbol
-            } else {
-                toggleButton.textContent = '+'; // Change back to plus symbol
+    allBoxes.forEach(box => {
+        const header = box.querySelector('.box-header');
+        header.addEventListener('click', function() {
+            const boxContent = box.querySelector('.box-content');
+            const isOpen = box.classList.contains('open');
+
+            // // Close all boxes first
+            // allBoxes.forEach(b => {
+            //     b.classList.remove('open');
+            //     b.querySelector('.box-content').style.maxHeight = null;
+            //     b.querySelector('.toggle-button').textContent = '+';
+            // });
+
+            // If the clicked box was not open before, open it
+            if (!isOpen) {
+                box.classList.add('open');
+                boxContent.style.maxHeight = boxContent.scrollHeight + "px";
+                header.querySelector('.toggle-button').textContent = '−';
             }
         });
     });
 });
+
+
+
+
+
+
 
 // JavaScript for accordion functionality
 document.addEventListener('DOMContentLoaded', function () {
@@ -54,3 +66,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function toggleBox1(boxId) {
+    var box = document.getElementById(boxId);
+    var content = box.querySelector('.box-content');
+    var button = box.querySelector('.toggle-button');
+
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';  // Make the content visible
+        button.textContent = '−';  // Change button text to minus
+    } else {
+        content.style.display = 'none';  // Hide the content
+        button.textContent = '+';  // Change button text back to plus
+    }
+}

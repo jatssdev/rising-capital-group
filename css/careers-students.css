@@ -1,47 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Careers-students.css */
 
+/* Remove duplicate universal selector, as it's already in style.css */
+
+/* Use root variables from style.css */
+/* Assuming that :root is defined in style.css */
+/* :root {
+    --primary: #961043;
+} */
+
+/* Adjust body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5fafd;
+    /* font-family: Arial, sans-serif; */
+    /* background-color: #f5fafd; */
+    /* Use styles from style.css */
 }
 
+/* Adjust headings and paragraphs */
+h1 {
+    font-size: 48px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+/* Adjust .learn-section */
 .learn-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px;
-    background-color: #f5fafd;
+    background-color: #fff; /* Match body background-color */
 }
 
 .text-container {
     max-width: 50%;
 }
 
-h1 {
-    font-size: 48px;
-    color: #1c50ff;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    color: #1c50ff;
-    line-height: 1.6;
-}
-
 .pattern-container {
     max-width: 40%;
 }
 
+/* Adjust .pattern */
 .pattern {
     width: 150px;
     height: 150px;
-    background-image: linear-gradient(to bottom right, #1c50ff 25%, transparent 25%),
-        linear-gradient(to top right, #1c50ff 25%, transparent 25%);
+    background-image: linear-gradient(to bottom right, var(--primary) 25%, transparent 25%),
+        linear-gradient(to top right, var(--primary) 25%, transparent 25%);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
 }
@@ -63,7 +72,7 @@ p {
 
 /* Carousel Section */
 .carousel-section {
-    background-color: #f5fafd;
+    background-color: #fff;
     padding: 50px 100px;
 }
 
@@ -72,7 +81,6 @@ p {
     justify-content: space-between;
     margin-bottom: 20px;
     border-bottom: 1px solid #dcdcdc;
-    /* Added border for separator */
 }
 
 .tab {
@@ -81,18 +89,17 @@ p {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #1c50ff;
+    color: var(--primary);
     transition: all 0.3s ease-in-out;
 }
 
 .tab:hover {
-    color: #0056b3;
-    /* Slightly darker blue on hover */
+    color: #820e3a; /* Slightly darker shade of primary color */
 }
 
 .tab.active {
-    border-bottom: 2px solid #1c50ff;
-    color: #1c50ff;
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -124,12 +131,11 @@ p {
 
 .text-and-image {
     display: flex;
-    background-color: #1c50ff;
+    background-color: var(--primary);
     padding: 30px;
     border-radius: 10px;
     color: #ffffff;
     align-items: center;
-    /* Align image and text vertically centered */
 }
 
 .text-and-image .text {
@@ -153,7 +159,6 @@ p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
 
 /* Hero Section Styles */
 .hero-section {
@@ -224,11 +229,9 @@ p {
     margin-left: 10px;
 }
 
-
-
 /* Ambitious Individuals Section */
 .ambitious-section {
-    background-color: #f5fafd;
+    background-color: #fff;
     padding: 100px 0;
 }
 
@@ -248,7 +251,7 @@ p {
 
 .ambitious-text h1 {
     font-size: 40px;
-    color: #1c50ff;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -266,7 +269,7 @@ p {
 
 .ambitious-text ul li {
     font-size: 18px;
-    color: #1c50ff;
+    color: var(--primary);
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
@@ -276,22 +279,22 @@ p {
     content: '♦';
     position: absolute;
     left: 0;
-    color: #1c50ff;
+    color: var(--primary);
 }
 
 .explore-button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
-    color: #1c50ff;
-    border: 2px solid #1c50ff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .explore-button:hover {
-    background-color: #1c50ff;
+    background-color: var(--primary);
     color: #ffffff;
 }
 
@@ -306,15 +309,15 @@ p {
     border-radius: 10px;
 }
 
-
 /* Kickstart Your Journey Section */
 .journey-section {
-    background-color: #f5fafd;
+    background-color: #fff;
     padding: 100px 0;
 }
 
 .journey-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
@@ -324,12 +327,12 @@ p {
 
 .journey-text {
     flex: 1;
-    padding-right: 40px;
+    
 }
 
 .journey-text h1 {
     font-size: 40px;
-    color: #1c50ff;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -347,79 +350,72 @@ p {
 
 /* Journey Boxes */
 .journey-box {
-    background-color: #1c50ff;
-    color: #ffffff;
-    width: 30%;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    background-color: var(--primary);
+    color: white;
+    margin: 20px 0;
+    border-radius: 8px;
     overflow: hidden;
-    max-height: 80px; /* Set initial height */
-    transition: max-height 0.4s ease-in-out;
-}
-
-.journey-box.open {
-    max-height: 500px; /* Expand to show content */
-    transition: max-height 0.4s ease-in-out;
-}
-
-.journey-box h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.box-header {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle-button {
-    font-size: 24px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.journey-box .box-content {
-    opacity: 0;
-    max-height: 0;
-    transition: opacity 0.3s ease-in-out, max-height 0.4s ease-in-out;
-}
-
-.journey-box.open .box-content {
-    opacity: 1;
-    max-height: 1000px; /* Adjust as per content */
+    flex-direction: column;
 }
 
 .journey-box:hover {
-    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
 }
 
-.journey-box ul {
-    list-style: none;
-    padding: 0;
+.box-header {
+    padding: 15px 20px;
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
 
-.journey-box ul li {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    position: relative;
+.box-content {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;  /* Initially hides the content */
+    background-color: #fafafa; /* Ensure this is visible against the parent background */
 }
 
-.journey-box ul li::before {
-    content: '♦';
-    position: absolute;
-    left: 0;
-    color: #ffffff;
+.box-content.open {
+    max-height: 1000px; /* Adjust according to content size */
+}
+
+.toggle-button {
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.journey-box.open .box-content {
+    max-height: 1000px;
+    display: block;
+    
+}
+
+.journey-box.open .toggle-button {
+    transform: rotate(45deg);
 }
 
 
 /* Tips for Applying Section */
 .tips-section {
     padding: 50px 100px;
-    background-color: #f5fafd;
+    background-color: #fff;
 }
 
 .tips-container {
@@ -429,12 +425,12 @@ p {
 
 .tips-section h1 {
     font-size: 32px;
-    color: #1c50ff;
+    color: var(--primary);
     margin-bottom: 30px;
 }
 
 .tip-item {
-    border-bottom: 1px solid #1c50ff;
+    border-bottom: 1px solid var(--primary);
     padding: 15px 0;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -445,7 +441,7 @@ p {
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
-    color: #1c50ff;
+    color: var(--primary);
 }
 
 .tip-header span {
@@ -468,4 +464,56 @@ p {
 .tip-item.active .tip-header span {
     transform: rotate(45deg);
     transition: transform 0.3s ease;
+}
+
+
+.peopleMain {
+    /* padding: 100px; */
+    /* background-color: red; */
+    position: relative;
+    min-height: 100vh;
+
+}
+
+
+
+.peopleMain .cotent {
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 100px;
+
+}
+
+.peopleMain .cotent h1 {
+    font-size: 50px;
+    text-align: center;
+    color: var(--primary);
+    margin: 100px 0;
+}
+
+.peopleMain .cotent p {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary);
+    margin: 100px 0;
+}
+
+.peopleMain .cotent .images {
+    display: grid;
+    position: relative;
+    z-index: 5;
+
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.peopleMain .cotent .images .img {
+    height: 500px;
+}
+
+.peopleMain .cotent .images img {
+    width: 100%;
+    height: 100%;
 }
