@@ -20,7 +20,7 @@ body {
   padding: 40px 150px;
 }
 
-.header2 .leadershpire{
+.header2 .leadershpire {
   color: black;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 hr {
-  margin: 50px 100px;
+  margin: 50px 0;
   border: none;
   background-color: var(--primary);
   border-radius: 50%;
@@ -48,7 +48,7 @@ hr {
 .investDev,
 .BusinessDev,
 .ViceChairSenior {
-  padding: 50px;
+  padding: 50px 100px;
   background-color: white;
   color: var(--primary);
 }
@@ -82,7 +82,8 @@ hr {
 .ViceChairSenior-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 50px;
+
 }
 
 .section-grid div,
@@ -104,6 +105,32 @@ hr {
   position: relative;
   overflow: hidden;
   padding-bottom: 30px;
+}
+
+.section-grid div::after,
+.firm-management-grid div::after,
+.CoreInfra-grid div::after,
+.techManage-grid div::after,
+.investDev-grid div::after,
+.BusinessDev-grid div::after,
+.ViceChairSenior-grid div::after {
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  right: 5%;
+  bottom: 10px;
+}
+
+.section-grid div:hover::after,
+.firm-management-grid div:hover::after,
+.CoreInfra-grid div:hover::after,
+.techManage-grid div:hover::after,
+.investDev-grid div:hover::after,
+.BusinessDev-grid div:hover::after,
+.ViceChairSenior-grid div:hover::after {
+  background-color: white;
 }
 
 .section-grid div:hover,
@@ -180,7 +207,8 @@ hr {
   border-radius: 10px;
   object-fit: cover;
   margin-left: 20px;
-  opacity: 0; /* Hide the image initially */
+  opacity: 0;
+  /* Hide the image initially */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -192,7 +220,8 @@ hr {
 .investDev-grid div:hover img,
 .BusinessDev-grid div:hover img,
 .ViceChairSenior-grid div:hover img {
-  opacity: 1; /* Show the image */
+  opacity: 1;
+  /* Show the image */
   transform: scale(1.05);
 }
 
@@ -220,7 +249,7 @@ hr {
 .investDev-grid div:hover .arrow,
 .BusinessDev-grid div:hover .arrow,
 .ViceChairSenior-grid div:hover .arrow {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Section-specific Background Colors */
@@ -364,7 +393,8 @@ hr {
   .investDev-grid,
   .BusinessDev-grid,
   .ViceChairSenior-grid {
-    grid-template-columns: 1fr 1fr; /* Use two columns instead of three */
+    grid-template-columns: 1fr 1fr;
+    /* Use two columns instead of three */
   }
 
   .firm-management-grid div,
@@ -373,7 +403,8 @@ hr {
   .investDev-grid div,
   .BusinessDev-grid div,
   .ViceChairSenior-grid div {
-    padding: 30px; /* Adjust padding */
+    padding: 30px;
+    /* Adjust padding */
   }
 
   .section h1,
@@ -383,7 +414,8 @@ hr {
   .investDev h2,
   .BusinessDev h2,
   .ViceChairSenior h2 {
-    font-size: 30px; /* Adjust heading size */
+    font-size: 30px;
+    /* Adjust heading size */
   }
 
   .section p,
@@ -393,19 +425,23 @@ hr {
   .investDev p,
   .BusinessDev p,
   .ViceChairSenior p {
-    font-size: 14px; /* Adjust paragraph font size */
+    font-size: 14px;
+    /* Adjust paragraph font size */
   }
 
   .hero-section {
-    height: 300px; /* Adjust hero section height */
+    height: 300px;
+    /* Adjust hero section height */
   }
 
   .hero-text h1 {
-    font-size: 36px; /* Adjust font size in hero section */
+    font-size: 36px;
+    /* Adjust font size in hero section */
   }
 
   .hero-button {
-    font-size: 16px; /* Adjust button size */
+    font-size: 16px;
+    /* Adjust button size */
     padding: 8px 16px;
   }
 }
@@ -416,10 +452,14 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  backdrop-filter: blur(10px); /* Apply a 10px blur to the background */
-  display: none; /* Hidden by default */
-  z-index: 999; /* Ensure the overlay is on top */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  /* Apply a 10px blur to the background */
+  display: none;
+  /* Hidden by default */
+  z-index: 999;
+  /* Ensure the overlay is on top */
 }
 
 .popup {
@@ -428,28 +468,35 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 40px; /* Increased padding for better spacing */
+  padding: 40px;
+  /* Increased padding for better spacing */
   border-radius: 10px;
   z-index: 1000;
   display: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  max-width: 90%; /* Allows the popup to be responsive */
-  width: 600px; /* Increased width */
+  max-width: 90%;
+  /* Allows the popup to be responsive */
+  width: 600px;
+  /* Increased width */
   max-height: 90vh;
   flex-direction: column;
   overflow: hidden;
 }
 
 .popup-content {
-  max-height: 80vh; /* 80% of the viewport height */
-  overflow-y: auto; /* Enable vertical scrolling inside the popup */
+  max-height: 80vh;
+  /* 80% of the viewport height */
+  overflow-y: auto;
+  /* Enable vertical scrolling inside the popup */
   padding: 20px;
 }
 
 .popup-content img {
-  width: 150px; /* Adjust based on your needs */
+  width: 150px;
+  /* Adjust based on your needs */
   height: 150px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%;
+  /* Circular image */
 }
 
 .popup-content .close {
@@ -458,21 +505,27 @@ hr {
   right: 10px;
   cursor: pointer;
   font-size: 30px;
-  color: #666; /* Subtle color for the close button */
+  color: #666;
+  /* Subtle color for the close button */
 }
 
 .popup-content h3,
 .popup-content p {
-  margin: 0 0 10px; /* Adds bottom margin for spacing */
+  margin: 0 0 10px;
+  /* Adds bottom margin for spacing */
 }
 
 .popup-content h3 {
-  font-size: 24px; /* Adjust font size if needed */
-  color: #333; /* Dark grey color for text */
+  font-size: 24px;
+  /* Adjust font size if needed */
+  color: #333;
+  /* Dark grey color for text */
 }
 
 .popup-content p {
   font-size: 16px;
-  color: #555; /* Lighter grey for the paragraph */
-  line-height: 1.6; /* Improved line height for readability */
+  color: #555;
+  /* Lighter grey for the paragraph */
+  line-height: 1.6;
+  /* Improved line height for readability */
 }
