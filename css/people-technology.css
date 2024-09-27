@@ -1093,3 +1093,95 @@ section.accordionPeople img {
         flex-direction: column !important;
     }
 }
+
+.strategy-section {
+    background-color: #f4f4f4;
+    padding: 40px 0; /* Increased padding for better spacing */
+    color: white;
+    font-family: Arial, sans-serif; /* Ensures consistent font across devices */
+}
+
+.icon {
+    zoom: 1.5;
+    margin-bottom: 10px;
+}
+
+.strategy-section h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Increased spacing for better visual separation */
+    font-size: 24px; /* Larger font size for headings */
+}
+
+.strategy-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 20px; /* Adds margin for smaller screens */
+}
+
+.strategy-item {
+    width: 22%;
+    background: #961043;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    text-align: justify;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.strategy-item:hover {
+    transform: scale(1.1); /* Scales up the item by 10% */
+    z-index: 1; /* Ensures the item is above others during the zoom effect */
+}
+
+.strategy-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.strategy-title {
+    margin-bottom: 50px;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 992px) {
+    .strategy-item {
+        width: 45%; /* Adjusts to two columns on tablets */
+    }
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .strategy-section h2 {
+        font-size: 20px; /* Smaller font size for smaller screens */
+    }
+
+    .strategy-grid {
+        margin: 0 10px; /* Reduces side margins on smaller screens */
+    }
+
+    .strategy-item {
+        width: 90%; /* Single column layout on smaller screens */
+        margin: 10px auto; /* Centers the items */
+        padding: 15px; /* Slightly reduced padding */
+    }
+}
+
+/* Enhancements for very small devices */
+@media (max-width: 480px) {
+    .strategy-section {
+        padding: 20px 0; /* Reduced padding for very small screens */
+    }
+
+    .strategy-section h2 {
+        margin-bottom: 15px; /* Reduced margin above the grid */
+    }
+
+    .strategy-item img {
+        width: 50px; /* Smaller icons to fit better on small screens */
+        height: 50px;
+    }
+}
