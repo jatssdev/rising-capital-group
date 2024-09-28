@@ -1176,16 +1176,7 @@ section.accordionPeople img {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .strategy-item {
-        width: auto;
-        /* Adjust width to ensure they stay in one line */
-        flex: 1;
-        /* Allows items to grow and fill the space */
-        margin: 10px;
-        /* Reduced margin for smaller screens */
-    }
-}
+
 
 .icon {
     font-size: 30px;
@@ -1208,4 +1199,76 @@ section.accordionPeople img {
     width: 100% !important;
     height: auto !important;
     /* Ensures the canvas is responsive */
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+    .strategy-item {
+        width: 30%;
+    }
+    
+    .strategy-container h2 {
+        margin-left: 100px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .strategy-item {
+        width: 45%;
+    }
+    
+    .strategy-container h2 {
+        margin-left: 50px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .strategy-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .strategy-grid {
+        flex-direction: column;
+    }
+
+    .strategy-container {
+        margin: 0 20px;
+    }
+
+    .strategy-container h2 {
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .strategy-section h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .strategy-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .strategy-section h2 {
+        font-size: 22px;
+    }
+
+    .strategy-container {
+        padding: 20px 0;
+    }
+
+    .strategy-title {
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
 }

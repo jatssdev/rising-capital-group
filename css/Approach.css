@@ -20,6 +20,92 @@ section:not(.navbar__left):not(.navbar__center):not(.navbar__right):not(.videoSe
     width: 100%;
 }
 
+.strategy-section {
+    background-color: #F5F5F5;
+    padding: 40px 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow-x: hidden; /* Avoid horizontal scrolling */
+}
+
+.strategy-section h2 {
+    color: var(--primary); /* Change to a shade of blue for a professional look */
+    margin-bottom: 20px;
+    font-size: 2rem; /* 32px for better visibility */
+    text-align: center;
+    
+}
+
+.strategy-title {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto; /* Centering the paragraph */
+    max-width: 90%;
+}
+
+
+.strategy-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    gap: 20px; /* Adds space between items */
+    margin: 0;
+}
+
+.strategy-item {
+    width: calc(33.333% - 20px); /* Adjusts width for three items per row accounting for gap */
+    min-height: 250px; /* Ensures all boxes are of equal height */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    transition: transform 0.3s ease-in-out;
+}
+
+.strategy-item h3 {
+    color: var(--primary); /* Titles in blue to match the section heading */
+    font-size: 1.25rem; /* 20px for clear heading */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.strategy-item p {
+    font-size: 0.875rem; /* 14px for standard text size */
+    line-height: 1.5; /* Improves readability */
+}
+
+.strategy-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Slightly darker shadow on hover for depth */
+}
+
+@media (max-width: 1024px) {
+    .strategy-item {
+        width: calc(50% - 20px); /* Two items per row on tablet screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .strategy-item {
+        width: 100%; /* Full width items on mobile screens */
+    }
+}
+
+
 /* Header Section */
 .header2 {
     position: relative;
